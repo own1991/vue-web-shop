@@ -1,0 +1,323 @@
+{
+  "keys": "E:\\project\\shop\\server\\config\\config.default.js",
+  "middleware": "E:\\project\\shop\\server\\config\\config.default.js",
+  "cluster": {
+    "listen": {
+      "path": "E:\\project\\shop\\server\\config\\config.default.js",
+      "port": "E:\\project\\shop\\server\\config\\config.default.js",
+      "hostname": "E:\\project\\shop\\server\\config\\config.default.js"
+    }
+  },
+  "view": {
+    "mapping": {
+      ".html": "E:\\project\\shop\\server\\config\\config.default.js"
+    },
+    "root": "E:\\project\\shop\\server\\node_modules\\_egg-view@2.1.2@egg-view\\config\\config.default.js",
+    "cache": "E:\\project\\shop\\server\\node_modules\\_egg-view@2.1.2@egg-view\\config\\config.local.js",
+    "defaultExtension": "E:\\project\\shop\\server\\node_modules\\_egg-view@2.1.2@egg-view\\config\\config.default.js",
+    "defaultViewEngine": "E:\\project\\shop\\server\\node_modules\\_egg-view@2.1.2@egg-view\\config\\config.default.js"
+  },
+  "mongoose": {
+    "client": {
+      "url": "E:\\project\\shop\\server\\config\\config.default.js",
+      "options": "E:\\project\\shop\\server\\config\\config.default.js"
+    },
+    "open": "E:\\project\\shop\\server\\config\\config.default.js",
+    "url": "E:\\project\\shop\\server\\node_modules\\_egg-mongoose@3.2.0@egg-mongoose\\config\\config.default.js",
+    "options": "E:\\project\\shop\\server\\node_modules\\_egg-mongoose@3.2.0@egg-mongoose\\config\\config.default.js",
+    "plugins": "E:\\project\\shop\\server\\node_modules\\_egg-mongoose@3.2.0@egg-mongoose\\config\\config.default.js",
+    "loadModel": "E:\\project\\shop\\server\\node_modules\\_egg-mongoose@3.2.0@egg-mongoose\\config\\config.default.js",
+    "app": "E:\\project\\shop\\server\\node_modules\\_egg-mongoose@3.2.0@egg-mongoose\\config\\config.default.js",
+    "agent": "E:\\project\\shop\\server\\node_modules\\_egg-mongoose@3.2.0@egg-mongoose\\config\\config.default.js"
+  },
+  "security": {
+    "csrf": "E:\\project\\shop\\server\\config\\config.default.js",
+    "domainWhiteList": "E:\\project\\shop\\server\\node_modules\\_egg-security@2.7.1@egg-security\\config\\config.default.js",
+    "protocolWhiteList": "E:\\project\\shop\\server\\node_modules\\_egg-security@2.7.1@egg-security\\config\\config.default.js",
+    "defaultMiddleware": "E:\\project\\shop\\server\\node_modules\\_egg-security@2.7.1@egg-security\\config\\config.default.js",
+    "xframe": {
+      "enable": "E:\\project\\shop\\server\\node_modules\\_egg-security@2.7.1@egg-security\\config\\config.default.js",
+      "value": "E:\\project\\shop\\server\\node_modules\\_egg-security@2.7.1@egg-security\\config\\config.default.js"
+    },
+    "hsts": {
+      "enable": "E:\\project\\shop\\server\\node_modules\\_egg-security@2.7.1@egg-security\\config\\config.local.js",
+      "maxAge": "E:\\project\\shop\\server\\node_modules\\_egg-security@2.7.1@egg-security\\config\\config.default.js",
+      "includeSubdomains": "E:\\project\\shop\\server\\node_modules\\_egg-security@2.7.1@egg-security\\config\\config.default.js"
+    },
+    "dta": {
+      "enable": "E:\\project\\shop\\server\\node_modules\\_egg-security@2.7.1@egg-security\\config\\config.default.js"
+    },
+    "methodnoallow": {
+      "enable": "E:\\project\\shop\\server\\node_modules\\_egg-security@2.7.1@egg-security\\config\\config.default.js"
+    },
+    "noopen": {
+      "enable": "E:\\project\\shop\\server\\node_modules\\_egg-security@2.7.1@egg-security\\config\\config.default.js"
+    },
+    "nosniff": {
+      "enable": "E:\\project\\shop\\server\\node_modules\\_egg-security@2.7.1@egg-security\\config\\config.default.js"
+    },
+    "referrerPolicy": {
+      "enable": "E:\\project\\shop\\server\\node_modules\\_egg-security@2.7.1@egg-security\\config\\config.default.js",
+      "value": "E:\\project\\shop\\server\\node_modules\\_egg-security@2.7.1@egg-security\\config\\config.default.js"
+    },
+    "xssProtection": {
+      "enable": "E:\\project\\shop\\server\\node_modules\\_egg-security@2.7.1@egg-security\\config\\config.default.js",
+      "value": "E:\\project\\shop\\server\\node_modules\\_egg-security@2.7.1@egg-security\\config\\config.default.js"
+    },
+    "csp": {
+      "enable": "E:\\project\\shop\\server\\node_modules\\_egg-security@2.7.1@egg-security\\config\\config.default.js",
+      "policy": "E:\\project\\shop\\server\\node_modules\\_egg-security@2.7.1@egg-security\\config\\config.default.js"
+    },
+    "ssrf": {
+      "ipBlackList": "E:\\project\\shop\\server\\node_modules\\_egg-security@2.7.1@egg-security\\config\\config.default.js",
+      "checkAddress": "E:\\project\\shop\\server\\node_modules\\_egg-security@2.7.1@egg-security\\config\\config.default.js"
+    }
+  },
+  "session": {
+    "key": "E:\\project\\shop\\server\\config\\config.default.js",
+    "maxAge": "E:\\project\\shop\\server\\config\\config.default.js",
+    "overwrite": "E:\\project\\shop\\server\\config\\config.default.js",
+    "httpOnly": "E:\\project\\shop\\server\\config\\config.default.js",
+    "signed": "E:\\project\\shop\\server\\config\\config.default.js",
+    "rolling": "E:\\project\\shop\\server\\config\\config.default.js",
+    "renew": "E:\\project\\shop\\server\\config\\config.default.js",
+    "encrypt": "E:\\project\\shop\\server\\node_modules\\_egg-session@3.1.0@egg-session\\config\\config.default.js"
+  },
+  "bodyParser": {
+    "jsonLimit": "E:\\project\\shop\\server\\config\\config.default.js",
+    "enable": "E:\\project\\shop\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
+    "encoding": "E:\\project\\shop\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
+    "formLimit": "E:\\project\\shop\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
+    "textLimit": "E:\\project\\shop\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
+    "strict": "E:\\project\\shop\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
+    "queryString": {
+      "arrayLimit": "E:\\project\\shop\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
+      "depth": "E:\\project\\shop\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
+      "parameterLimit": "E:\\project\\shop\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js"
+    },
+    "onerror": "E:\\project\\shop\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js"
+  },
+  "jwt": {
+    "secret": "E:\\project\\shop\\server\\config\\config.default.js",
+    "enable": "E:\\project\\shop\\server\\node_modules\\_egg-jwt@3.1.7@egg-jwt\\config\\config.default.js"
+  },
+  "url": "E:\\project\\shop\\server\\config\\config.default.js",
+  "uploadDir": "E:\\project\\shop\\server\\config\\config.default.js",
+  "secret": "E:\\project\\shop\\server\\config\\config.default.js",
+  "helper": {
+    "shtml": "E:\\project\\shop\\server\\node_modules\\_egg-security@2.7.1@egg-security\\config\\config.default.js"
+  },
+  "jsonp": {
+    "limit": "E:\\project\\shop\\server\\node_modules\\_egg-jsonp@2.0.0@egg-jsonp\\config\\config.default.js",
+    "callback": "E:\\project\\shop\\server\\node_modules\\_egg-jsonp@2.0.0@egg-jsonp\\config\\config.default.js",
+    "csrf": "E:\\project\\shop\\server\\node_modules\\_egg-jsonp@2.0.0@egg-jsonp\\config\\config.default.js"
+  },
+  "onerror": {
+    "errorPageUrl": "E:\\project\\shop\\server\\node_modules\\_egg-onerror@2.1.0@egg-onerror\\config\\config.default.js",
+    "appErrorFilter": "E:\\project\\shop\\server\\node_modules\\_egg-onerror@2.1.0@egg-onerror\\config\\config.default.js",
+    "templatePath": "E:\\project\\shop\\server\\node_modules\\_egg-onerror@2.1.0@egg-onerror\\config\\config.default.js"
+  },
+  "i18n": {
+    "defaultLocale": "E:\\project\\shop\\server\\node_modules\\_egg-i18n@2.1.1@egg-i18n\\config\\config.default.js",
+    "dirs": "E:\\project\\shop\\server\\node_modules\\_egg-i18n@2.1.1@egg-i18n\\config\\config.default.js",
+    "queryField": "E:\\project\\shop\\server\\node_modules\\_egg-i18n@2.1.1@egg-i18n\\config\\config.default.js",
+    "cookieField": "E:\\project\\shop\\server\\node_modules\\_egg-i18n@2.1.1@egg-i18n\\config\\config.default.js",
+    "cookieDomain": "E:\\project\\shop\\server\\node_modules\\_egg-i18n@2.1.1@egg-i18n\\config\\config.default.js",
+    "cookieMaxAge": "E:\\project\\shop\\server\\node_modules\\_egg-i18n@2.1.1@egg-i18n\\config\\config.default.js"
+  },
+  "watcher": {
+    "type": "E:\\project\\shop\\server\\node_modules\\_egg-watcher@3.1.0@egg-watcher\\config\\config.local.js",
+    "eventSources": {
+      "default": "E:\\project\\shop\\server\\node_modules\\_egg-watcher@3.1.0@egg-watcher\\config\\config.default.js",
+      "development": "E:\\project\\shop\\server\\node_modules\\_egg-watcher@3.1.0@egg-watcher\\config\\config.default.js"
+    }
+  },
+  "customLogger": {
+    "scheduleLogger": {
+      "consoleLevel": "E:\\project\\shop\\server\\node_modules\\_egg-schedule@3.6.4@egg-schedule\\config\\config.default.js",
+      "file": "E:\\project\\shop\\server\\node_modules\\_egg-schedule@3.6.4@egg-schedule\\config\\config.default.js"
+    }
+  },
+  "schedule": {
+    "directory": "E:\\project\\shop\\server\\node_modules\\_egg-schedule@3.6.4@egg-schedule\\config\\config.default.js"
+  },
+  "multipart": {
+    "mode": "E:\\project\\shop\\server\\node_modules\\_egg-multipart@2.10.1@egg-multipart\\config\\config.default.js",
+    "autoFields": "E:\\project\\shop\\server\\node_modules\\_egg-multipart@2.10.1@egg-multipart\\config\\config.default.js",
+    "defaultCharset": "E:\\project\\shop\\server\\node_modules\\_egg-multipart@2.10.1@egg-multipart\\config\\config.default.js",
+    "fieldNameSize": "E:\\project\\shop\\server\\node_modules\\_egg-multipart@2.10.1@egg-multipart\\config\\config.default.js",
+    "fieldSize": "E:\\project\\shop\\server\\node_modules\\_egg-multipart@2.10.1@egg-multipart\\config\\config.default.js",
+    "fields": "E:\\project\\shop\\server\\node_modules\\_egg-multipart@2.10.1@egg-multipart\\config\\config.default.js",
+    "fileSize": "E:\\project\\shop\\server\\node_modules\\_egg-multipart@2.10.1@egg-multipart\\config\\config.default.js",
+    "files": "E:\\project\\shop\\server\\node_modules\\_egg-multipart@2.10.1@egg-multipart\\config\\config.default.js",
+    "fileExtensions": "E:\\project\\shop\\server\\node_modules\\_egg-multipart@2.10.1@egg-multipart\\config\\config.default.js",
+    "whitelist": "E:\\project\\shop\\server\\node_modules\\_egg-multipart@2.10.1@egg-multipart\\config\\config.default.js",
+    "tmpdir": "E:\\project\\shop\\server\\node_modules\\_egg-multipart@2.10.1@egg-multipart\\config\\config.default.js",
+    "cleanSchedule": {
+      "cron": "E:\\project\\shop\\server\\node_modules\\_egg-multipart@2.10.1@egg-multipart\\config\\config.default.js"
+    }
+  },
+  "development": {
+    "watchDirs": "E:\\project\\shop\\server\\node_modules\\_egg-development@2.4.3@egg-development\\config\\config.default.js",
+    "ignoreDirs": "E:\\project\\shop\\server\\node_modules\\_egg-development@2.4.3@egg-development\\config\\config.default.js",
+    "fastReady": "E:\\project\\shop\\server\\node_modules\\_egg-development@2.4.3@egg-development\\config\\config.default.js",
+    "reloadOnDebug": "E:\\project\\shop\\server\\node_modules\\_egg-development@2.4.3@egg-development\\config\\config.default.js",
+    "overrideDefault": "E:\\project\\shop\\server\\node_modules\\_egg-development@2.4.3@egg-development\\config\\config.default.js"
+  },
+  "logrotator": {
+    "filesRotateByHour": "E:\\project\\shop\\server\\node_modules\\_egg-logrotator@3.1.0@egg-logrotator\\config\\config.default.js",
+    "hourDelimiter": "E:\\project\\shop\\server\\node_modules\\_egg-logrotator@3.1.0@egg-logrotator\\config\\config.default.js",
+    "filesRotateBySize": "E:\\project\\shop\\server\\node_modules\\_egg-logrotator@3.1.0@egg-logrotator\\config\\config.default.js",
+    "maxFileSize": "E:\\project\\shop\\server\\node_modules\\_egg-logrotator@3.1.0@egg-logrotator\\config\\config.default.js",
+    "maxFiles": "E:\\project\\shop\\server\\node_modules\\_egg-logrotator@3.1.0@egg-logrotator\\config\\config.default.js",
+    "rotateDuration": "E:\\project\\shop\\server\\node_modules\\_egg-logrotator@3.1.0@egg-logrotator\\config\\config.default.js",
+    "maxDays": "E:\\project\\shop\\server\\node_modules\\_egg-logrotator@3.1.0@egg-logrotator\\config\\config.default.js"
+  },
+  "static": {
+    "prefix": "E:\\project\\shop\\server\\node_modules\\_egg-static@2.2.0@egg-static\\config\\config.default.js",
+    "dir": "E:\\project\\shop\\server\\node_modules\\_egg-static@2.2.0@egg-static\\config\\config.default.js",
+    "dynamic": "E:\\project\\shop\\server\\node_modules\\_egg-static@2.2.0@egg-static\\config\\config.default.js",
+    "preload": "E:\\project\\shop\\server\\node_modules\\_egg-static@2.2.0@egg-static\\config\\config.default.js",
+    "buffer": "E:\\project\\shop\\server\\node_modules\\_egg-static@2.2.0@egg-static\\config\\config.default.js",
+    "maxFiles": "E:\\project\\shop\\server\\node_modules\\_egg-static@2.2.0@egg-static\\config\\config.default.js"
+  },
+  "ejs": {
+    "root": "E:\\project\\shop\\server\\node_modules\\_egg-view-ejs@2.0.0@egg-view-ejs\\config\\config.default.js",
+    "cache": "E:\\project\\shop\\server\\node_modules\\_egg-view-ejs@2.0.0@egg-view-ejs\\config\\config.local.js",
+    "debug": "E:\\project\\shop\\server\\node_modules\\_egg-view-ejs@2.0.0@egg-view-ejs\\config\\config.default.js",
+    "compileDebug": "E:\\project\\shop\\server\\node_modules\\_egg-view-ejs@2.0.0@egg-view-ejs\\config\\config.default.js",
+    "delimiter": "E:\\project\\shop\\server\\node_modules\\_egg-view-ejs@2.0.0@egg-view-ejs\\config\\config.default.js",
+    "strict": "E:\\project\\shop\\server\\node_modules\\_egg-view-ejs@2.0.0@egg-view-ejs\\config\\config.default.js"
+  },
+  "env": "E:\\project\\shop\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
+  "name": "E:\\project\\shop\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
+  "cookies": "E:\\project\\shop\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
+  "proxy": "E:\\project\\shop\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
+  "maxIpsCount": "E:\\project\\shop\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
+  "maxProxyCount": "E:\\project\\shop\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
+  "protocolHeaders": "E:\\project\\shop\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
+  "ipHeaders": "E:\\project\\shop\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
+  "hostHeaders": "E:\\project\\shop\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
+  "pkg": {
+    "name": "E:\\project\\shop\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
+    "version": "E:\\project\\shop\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
+    "description": "E:\\project\\shop\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
+    "private": "E:\\project\\shop\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
+    "dependencies": {
+      "egg": "E:\\project\\shop\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
+      "egg-cors": "E:\\project\\shop\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
+      "egg-jwt": "E:\\project\\shop\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
+      "egg-mongoose": "E:\\project\\shop\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
+      "egg-scripts": "E:\\project\\shop\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
+      "egg-view-ejs": "E:\\project\\shop\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
+      "md5": "E:\\project\\shop\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
+      "mz-modules": "E:\\project\\shop\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
+      "request": "E:\\project\\shop\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
+      "silly-datetime": "E:\\project\\shop\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
+      "svg-captcha": "E:\\project\\shop\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js"
+    },
+    "devDependencies": {
+      "autod": "E:\\project\\shop\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
+      "autod-egg": "E:\\project\\shop\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
+      "egg-bin": "E:\\project\\shop\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
+      "egg-ci": "E:\\project\\shop\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
+      "egg-mock": "E:\\project\\shop\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
+      "eslint": "E:\\project\\shop\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
+      "eslint-config-egg": "E:\\project\\shop\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
+      "webstorm-disable-index": "E:\\project\\shop\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js"
+    },
+    "engines": {
+      "node": "E:\\project\\shop\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js"
+    },
+    "scripts": {
+      "start": "E:\\project\\shop\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
+      "stop": "E:\\project\\shop\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
+      "dev": "E:\\project\\shop\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
+      "debug": "E:\\project\\shop\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
+      "test": "E:\\project\\shop\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
+      "test-local": "E:\\project\\shop\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
+      "cov": "E:\\project\\shop\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
+      "lint": "E:\\project\\shop\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
+      "ci": "E:\\project\\shop\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
+      "autod": "E:\\project\\shop\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js"
+    },
+    "ci": {
+      "version": "E:\\project\\shop\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js"
+    },
+    "repository": {
+      "type": "E:\\project\\shop\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
+      "url": "E:\\project\\shop\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js"
+    },
+    "author": "E:\\project\\shop\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
+    "license": "E:\\project\\shop\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js"
+  },
+  "baseDir": "E:\\project\\shop\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
+  "HOME": "E:\\project\\shop\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
+  "rundir": "E:\\project\\shop\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
+  "dump": {
+    "ignore": "E:\\project\\shop\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js"
+  },
+  "confusedConfigurations": {
+    "bodyparser": "E:\\project\\shop\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
+    "notFound": "E:\\project\\shop\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
+    "sitefile": "E:\\project\\shop\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
+    "middlewares": "E:\\project\\shop\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
+    "httpClient": "E:\\project\\shop\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js"
+  },
+  "notfound": {
+    "pageUrl": "E:\\project\\shop\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js"
+  },
+  "siteFile": {
+    "/favicon.ico": "E:\\project\\shop\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js"
+  },
+  "logger": {
+    "dir": "E:\\project\\shop\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
+    "encoding": "E:\\project\\shop\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
+    "env": "E:\\project\\shop\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
+    "level": "E:\\project\\shop\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
+    "consoleLevel": "E:\\project\\shop\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
+    "disableConsoleAfterReady": "E:\\project\\shop\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
+    "outputJSON": "E:\\project\\shop\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
+    "buffer": "E:\\project\\shop\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
+    "appLogName": "E:\\project\\shop\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
+    "coreLogName": "E:\\project\\shop\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
+    "agentLogName": "E:\\project\\shop\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
+    "errorLogName": "E:\\project\\shop\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
+    "coreLogger": {
+      "consoleLevel": "E:\\project\\shop\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.local.js"
+    },
+    "allowDebugAtProd": "E:\\project\\shop\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js"
+  },
+  "httpclient": {
+    "enableDNSCache": "E:\\project\\shop\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
+    "dnsCacheLookupInterval": "E:\\project\\shop\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
+    "dnsCacheMaxLength": "E:\\project\\shop\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
+    "request": {
+      "timeout": "E:\\project\\shop\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js"
+    },
+    "httpAgent": {
+      "keepAlive": "E:\\project\\shop\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
+      "freeSocketTimeout": "E:\\project\\shop\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
+      "maxSockets": "E:\\project\\shop\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
+      "maxFreeSockets": "E:\\project\\shop\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js"
+    },
+    "httpsAgent": {
+      "keepAlive": "E:\\project\\shop\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
+      "freeSocketTimeout": "E:\\project\\shop\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
+      "maxSockets": "E:\\project\\shop\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
+      "maxFreeSockets": "E:\\project\\shop\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js"
+    }
+  },
+  "meta": {
+    "enable": "E:\\project\\shop\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
+    "logging": "E:\\project\\shop\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js"
+  },
+  "coreMiddleware": "E:\\project\\shop\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
+  "workerStartTimeout": "E:\\project\\shop\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
+  "serverTimeout": "E:\\project\\shop\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
+  "clusterClient": {
+    "maxWaitTime": "E:\\project\\shop\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
+    "responseTimeout": "E:\\project\\shop\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js"
+  },
+  "onClientError": "E:\\project\\shop\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js"
+}
