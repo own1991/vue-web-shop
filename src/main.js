@@ -9,11 +9,13 @@ import axios from './http'
 //引入vant
 import Vant from 'vant';
 import 'vant/lib/index.css';
-
+//引入封装的全局方法
+import './global/'
 Vue.use(Vant);
 Vue.config.productionTip = false
 Vue.prototype.$dayjs = dayjs
 Vue.prototype.$axios = axios
+
 new Vue({
     router,
     store,

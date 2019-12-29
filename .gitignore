@@ -2,7 +2,7 @@
 node_modules
 /dist
 .history
-
+server
 # local env files
 .env.local
 .env.*.local

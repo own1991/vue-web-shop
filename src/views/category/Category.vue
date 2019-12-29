@@ -1,6 +1,6 @@
 <template>
  <div>
-
+   分类
  </div>
 </template>
 
@@ -21,7 +21,7 @@
 
    },
    mounted() {
-
+     console.log(this.$route.params.mallCategoryId);
    },
    watch: {
 
