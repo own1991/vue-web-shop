@@ -43,6 +43,7 @@ export default {
   margin: 10px 0;
   text-align: center;
   color: red;
+  font-size: 16px;
 }
 .hotgoodsbox {
   display: flex;

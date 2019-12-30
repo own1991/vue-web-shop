@@ -74,7 +74,7 @@ const routes = [{
     },
     //详情页
     {
-        path: '/details:id',
+        path: '/details',
         name: 'details',
         component: () =>
             import ('../views/details/Details'),
@@ -107,7 +107,7 @@ const routes = [{
     },
     //我的订单
     {
-        path: '/order:id',
+        path: '/order',
         name: 'order',
         component: () =>
             import ('../views/order/Order'),
@@ -201,7 +201,9 @@ const router = new VueRouter({
     routes
 })
 router.beforeEach((to, from, next) => {
-    document.title = to.meta.title
+    if (to.meta.title) {
+        document.title = to.meta.title;
+    }
     next()
 })
 

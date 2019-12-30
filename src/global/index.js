@@ -7,7 +7,7 @@ Vue.prototype.$goto = function(val) {
         this.$router.push(val)
     } else {
         console.log(val);
-        this.$router.push({ path: "details", query: { id: val } });
+        this.$router.push({ path: "/details", query: { id: val } });
     }
 
 

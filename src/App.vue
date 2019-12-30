@@ -1,8 +1,11 @@
 <template>
-  <div>
-    <router-view/>
+  <div id="app">
+    <router-view />
   </div>
 </template>
 
 <style lang="scss">
+#app {
+  background: #ededed;
+}
 </style>

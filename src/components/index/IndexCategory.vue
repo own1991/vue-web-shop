@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <div v-for="item in categoryData" :key="item.id" @click="goto(item.mallCategoryId)">
+    <div v-for="(item,index) in categoryData" :key="item.id" @click="goto(index)">
       <img :src="item.image" alt />
       <div class="title">{{item.mallCategoryName}}</div>
     </div>

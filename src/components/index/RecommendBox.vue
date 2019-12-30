@@ -7,8 +7,8 @@
       <span class="oldprice">￥{{item.price}}</span>
     </div>
     <div class="bttom-group">
-      <van-icon name="shopping-cart" />
-      <div class="desc" @click="$goto(item.goodsId)">查看详情</div>
+      <van-icon name="shopping-cart" @click.prevent="call()" />
+      <div class="desc" @click.prevent="$goto(item.goodsId)">查看详情</div>
     </div>
   </div>
 </template>
@@ -25,8 +25,14 @@ export default {
     }
   },
   components: {},
-  methods: {},
-  mounted() {},
+  methods: {
+    call(){
+      console.log(111);
+    }
+  },
+  mounted() {
+    
+  },
   watch: {},
   computed: {}
 };

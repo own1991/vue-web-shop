@@ -1,11 +1,13 @@
 <template>
-  <div>
-    <slot name="back">
-      <van-icon name="arrow-left" />
-    </slot>
-    <slot name=title>
-        <div></div>
-    </slot>
+  <div class="container">
+    <div class="back">
+      <slot name="back">
+        <van-icon name="arrow-left" />
+      </slot>
+    </div>
+    <div class="title">
+      <slot name="title">1111</slot>
+    </div>
   </div>
 </template>
 
@@ -24,4 +26,27 @@ export default {
 </script>
 
 <style scoped lang='scss'>
+.container {
+  height: 6vh;
+  width: 100%;
+  background: white;
+  border-bottom: 1px solid lightgray;
+  position: relative;
+  .back {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    margin-top: -8px;
+  }
+  .title{
+    width: 80px;
+    text-align: center;
+    font-size: 16px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -8px;
+    margin-left: -40px;
+  }
+}
 </style>

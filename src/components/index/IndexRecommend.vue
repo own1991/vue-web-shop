@@ -1,8 +1,7 @@
 <template>
   <div class="container">
     <div class="title">推荐商品</div>
-    <van-swipe :stop-propagation="false" indicator-color="white">
-      <div class="wrapperX" ref="wrapperX">
+     <better-scrollX>
         <div class="recommend-group">
           <recommend-box
             class="recommend-box"
@@ -11,14 +10,13 @@
             :item="item"
           />
         </div>
-      </div>
-    </van-swipe>
+      </better-scrollX>
   </div>
 </template>
 
 <script>
-import BScroll from "@better-scroll/core";
 import recommendBox from "../../components/index/RecommendBox";
+import betterScrollX from "../../components/slot/BetterScrollX";
 export default {
   props: {
     recommendData: {
@@ -30,19 +28,13 @@ export default {
     return {};
   },
   components: {
-    recommendBox
+    recommendBox,betterScrollX
   },
   methods: {
-    init() {
-      this.bs = new BScroll(".wrapperX", {
-        scrollX: true,
-        click: true,
-        probeType: 3 // listening scroll hook
-      });
-    }
+    
   },
   mounted() {
-    this.init();
+
   },
   watch: {},
   computed: {}
@@ -52,19 +44,12 @@ export default {
 <style scoped lang='scss'>
 .container {
   width: 100%;
-  background: white;
   .title {
     padding: 10px;
     background: white;
   }
 }
-/deep/.van-swipe__indicators {
-  display: none;
-}
-.wrapperX {
-  width: 375px;
-  overflow: hidden;
-  white-space: nowrap;
+
   .recommend-group {
     width: 2125px;
     height: 200px;
@@ -74,5 +59,5 @@ export default {
     display: inline-block;
     border: 0.1px solid rgb(243, 243, 243);
   }
-}
+
 </style>

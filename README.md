@@ -26,7 +26,11 @@
    :stop-propagation='false' 
    ```
 
-3. ...
+3. better-scroll 运用两层，click属性必须外层为true内层为false，不然子元素点击事件会触发两次
+
+   https://www.imooc.com/article/18232
+
+   
 
 
 

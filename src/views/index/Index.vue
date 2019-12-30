@@ -23,7 +23,7 @@
           <index-floor :title="floorName.floor2" floor="2F" :data="Data.floor2" />
           <!-- 商品楼 -->
           <index-floor :title="floorName.floor3" floor="3F" :data="Data.floor3" />
-          <index-hotGoods :hotGoodsData=Data.hotGoods class="hotGoods" />
+          <index-hotGoods :hotGoodsData=Data.hotGoods />
         </van-pull-refresh>
       </div>
     </better-scroll>
@@ -84,7 +84,6 @@ export default {
 <style scoped lang='scss'>
 .container {
   width: 100%;
-  background: #ededed;
   .slides {
     height: 166px;
     width: 100%;
@@ -102,9 +101,6 @@ export default {
     height: 31px;
     margin: 10px 10px;
     width: 355px;
-  }
-  .hotGoods{
-    padding-bottom:50px; 
   }
 }
 </style>

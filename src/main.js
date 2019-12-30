@@ -18,6 +18,12 @@ Vue.prototype.$dayjs = dayjs
 Vue.prototype.$axios = axios
     //引入api.js
 Vue.prototype.$api = api
+
+import Router from 'vue-router'
+const originalPush = Router.prototype.push
+Router.prototype.push = function push(location) {
+    return originalPush.call(this, location).catch(err => err)
+}
 new Vue({
     router,
     store,
