@@ -8,17 +8,23 @@
     <better-scroll>
       <div>
         <!-- 下拉刷新 -->
-        <!-- <van-pull-refresh v-model="isLoading" @refresh="onRefresh"> -->
-        <!-- 轮播图组件 -->
-        <index-slides :slidesData="Data.slides" class="slides" />
-        <!-- 分类组件 -->
-        <index-category :categoryData="Data.category" class="category" />
-        <!-- AD -->
-        <img :src="advertesPicture" alt class="advertesPicture" />
-        <!-- 推荐 -->
-        <index-recommend :recommendData="Data.recommend" class="recommend" />
-        <div class="height"></div>
-        <!-- </van-pull-refresh> -->
+        <van-pull-refresh v-model="isLoading" @refresh="onRefresh">
+          <!-- 轮播图组件 -->
+          <index-slides :slidesData="Data.slides" class="slides" />
+          <!-- 分类组件 -->
+          <index-category :categoryData="Data.category" class="category" />
+          <!-- AD -->
+          <img :src="advertesPicture" alt class="advertesPicture" />
+          <!-- 推荐 -->
+          <index-recommend :recommendData="Data.recommend" class="recommend" />
+          <!-- 商品楼 -->
+          <index-floor :title="floorName.floor1" floor="1F" :data="Data.floor1" />
+          <!-- 商品楼 -->
+          <index-floor :title="floorName.floor2" floor="2F" :data="Data.floor2" />
+          <!-- 商品楼 -->
+          <index-floor :title="floorName.floor3" floor="3F" :data="Data.floor3" />
+          <index-hotGoods :hotGoodsData=Data.hotGoods class="hotGoods" />
+        </van-pull-refresh>
       </div>
     </better-scroll>
   </div>
@@ -29,12 +35,15 @@ import indexSlides from "../../components/index/IndexSlides";
 import indexCategory from "../../components/index/IndexCategory";
 import indexRecommend from "../../components/index/IndexRecommend";
 import betterScroll from "../../components/slot/BetterScroll";
+import indexFloor from "../../components/index/IndexFloor";
+import indexHotGoods from "../../components/index/IndexHotGoods";
 export default {
   data() {
     return {
       Data: {},
       advertesPicture: null,
-      isLoading: false
+      isLoading: false,
+      floorName: {}
     };
   },
   props: {},
@@ -43,15 +52,17 @@ export default {
     indexSlides,
     indexCategory,
     indexRecommend,
+    indexFloor,
+    indexHotGoods,
     betterScroll
   },
   methods: {
     getData() {
-      this.$axios.req("/recommend").then(res => {
-        console.log(res);
+      this.$api.getRecommend().then(res => {
         if ((res.code = 200)) {
           this.Data = res.data;
           this.advertesPicture = res.data.advertesPicture.PICTURE_ADDRESS;
+          this.floorName = res.data.floorName;
         }
       });
     },
@@ -92,8 +103,8 @@ export default {
     margin: 10px 10px;
     width: 355px;
   }
-  .recommend{
-    height: 500px;
+  .hotGoods{
+    padding-bottom:50px; 
   }
 }
 </style>

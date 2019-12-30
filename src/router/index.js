@@ -17,8 +17,14 @@ const routes = [{
             path: "",
             name: "Home",
             component: () =>
-                import ('../views/index/Index')
-        }]
+                import ('../views/index/Index'),
+            meta: {
+                title: '首页',
+                isMeta: true
+            }
+        }],
+
+
     },
     //分类
     {
@@ -28,8 +34,13 @@ const routes = [{
             path: "",
             name: "category",
             component: () =>
-                import ('../views/category/Category')
+                import ('../views/category/Category'),
+            meta: {
+                title: '分类',
+                isMeta: true
+            }
         }]
+
     },
     //购物车
     {
@@ -39,7 +50,11 @@ const routes = [{
             path: "",
             name: "shoppingCart",
             component: () =>
-                import ('../views/shoppingCart/ShoppingCart')
+                import ('../views/shoppingCart/ShoppingCart'),
+            meta: {
+                title: '购物车',
+                isMeta: true
+            }
         }]
     },
     //我的
@@ -50,7 +65,11 @@ const routes = [{
             path: "",
             name: "my",
             component: () =>
-                import ('../views/my/My')
+                import ('../views/my/My'),
+            meta: {
+                title: '我的',
+                isMeta: true
+            }
         }]
     },
     //详情页
@@ -59,6 +78,10 @@ const routes = [{
         name: 'details',
         component: () =>
             import ('../views/details/Details'),
+        meta: {
+            title: '详情',
+            isMeta: true
+        }
     },
     //最近浏览
     {
@@ -66,6 +89,10 @@ const routes = [{
         name: 'browse',
         component: () =>
             import ('../views/browse/Browse'),
+        meta: {
+            title: '最近浏览',
+            isMeta: true
+        }
     },
     //结算
     {
@@ -73,6 +100,10 @@ const routes = [{
         name: 'shoppingPayMent',
         component: () =>
             import ('../views/shoppingPayMent/ShoppingPayMent'),
+        meta: {
+            title: '结算',
+            isMeta: true
+        }
     },
     //我的订单
     {
@@ -80,6 +111,10 @@ const routes = [{
         name: 'order',
         component: () =>
             import ('../views/order/Order'),
+        meta: {
+            title: '我的订单',
+            isMeta: true
+        }
     },
     //评价中心
     {
@@ -87,6 +122,10 @@ const routes = [{
         name: 'evaluate',
         component: () =>
             import ('../views/evaluate/Evaluate'),
+        meta: {
+            title: '评价中心',
+            isMeta: true
+        }
     },
     //评价晒图
     {
@@ -94,6 +133,10 @@ const routes = [{
         name: 'rate',
         component: () =>
             import ('../views/rate/Rate'),
+        meta: {
+            title: '评价晒单',
+            isMeta: true
+        }
     },
     //查看评价
     {
@@ -101,6 +144,10 @@ const routes = [{
         name: 'aevaluated',
         component: () =>
             import ('../views/aevaluated/Aevaluated'),
+        meta: {
+            title: '查看评价',
+            isMeta: true
+        }
     },
     //城市定位
     {
@@ -108,6 +155,10 @@ const routes = [{
         name: 'city',
         component: () =>
             import ('../views/city/City'),
+        meta: {
+            title: '城市定位',
+            isMeta: true
+        }
     },
     //地址列表
     {
@@ -115,6 +166,10 @@ const routes = [{
         name: 'address',
         component: () =>
             import ('../views/address/Address'),
+        meta: {
+            title: '我的地址',
+            isMeta: true
+        }
     },
     //地址修改
     {
@@ -122,6 +177,10 @@ const routes = [{
         name: 'addressEdit',
         component: () =>
             import ('../views/addressEdit/AddressEdit'),
+        meta: {
+            title: '地址修改',
+            isMeta: true
+        }
     },
     //登录
     {
@@ -129,6 +188,10 @@ const routes = [{
         name: 'login',
         component: () =>
             import ('../views/login/Login'),
+        meta: {
+            title: '登录/注册',
+            isMeta: true
+        }
     },
 ]
 
@@ -136,6 +199,10 @@ const router = new VueRouter({
     mode: 'history',
     base: process.env.BASE_URL,
     routes
+})
+router.beforeEach((to, from, next) => {
+    document.title = to.meta.title
+    next()
 })
 
 export default router

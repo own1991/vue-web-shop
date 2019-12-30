@@ -55,15 +55,12 @@ export default {
       function onComplete(data) {
         // data是具体的定位信息
         _this.city=data.addressComponent.city
-        console.log(data);
       }
 
       function onError(data) {
-        console.log(data);
         // 定位出错
       }
     });
-    console.log(this.citys);
   },
   watch: {},
   computed: {}

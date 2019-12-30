@@ -2,7 +2,7 @@
   <div class="core-container">
     <div class="wrapper" ref="wrapper">
       <div class="scroll-content">
-        <slot class="height"></slot>
+        <slot></slot>
       </div>
     </div>
   </div>
@@ -37,7 +37,7 @@ export default {
 <style lang='scss'>
 .core-container {
   .wrapper {
-    height: 570px;
+    height:90vh;
     overflow: hidden;
   }
 }
