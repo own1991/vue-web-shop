@@ -18,7 +18,9 @@ Vue.prototype.$dayjs = dayjs
 Vue.prototype.$axios = axios
     //引入api.js
 Vue.prototype.$api = api
-
+    //
+import FastClick from 'fastclick'
+FastClick.attach(document.body);
 import Router from 'vue-router'
 const originalPush = Router.prototype.push
 Router.prototype.push = function push(location) {

@@ -2,11 +2,11 @@
   <div>
     <router-view />
     <!-- 标签栏路由模式，用于搭配vue-router使用。路由模式下会匹配页面路径和标签的to属性，并自动选中对应的标签 -->
-    <van-tabbar route>
-      <van-tabbar-item replace to="/home" icon="wap-home">首页</van-tabbar-item>
-      <van-tabbar-item replace to="/category" icon="wap-nav">分类</van-tabbar-item>
-      <van-tabbar-item replace to="/shoppingCart" icon="shopping-cart">购物车</van-tabbar-item>
-      <van-tabbar-item replace to="/my" icon="manager">我的</van-tabbar-item>
+    <van-tabbar v-model="active">
+      <van-tabbar-item replace to="/home" name="home" icon="wap-home">首页</van-tabbar-item>
+      <van-tabbar-item replace to="/category" name="category" icon="wap-nav">分类</van-tabbar-item>
+      <van-tabbar-item replace to="/shoppingCart" name="shoppingCart" icon="shopping-cart">购物车</van-tabbar-item>
+      <van-tabbar-item replace to="/my" name="my" icon="manager">我的</van-tabbar-item>
     </van-tabbar>
   </div>
 </template>
@@ -14,19 +14,29 @@
 <script>
 export default {
   data() {
-    return {};
+    return {
+      active: "home"
+    };
   },
   props: {},
   components: {},
   methods: {},
-  mounted() {},
-  watch: {},
-  computed: {}
+  mounted() {
+    this.active = this.$route.name;
+  },
+  watch: {
+    $route(val) {
+      this.active = val.name;
+    }
+  },
+  computed: {
+    
+  }
 };
 </script>
 
 <style scoped lang='scss'>
-/deep/ .van-tabbar{
+/deep/ .van-tabbar {
   height: 8vh;
 }
 </style>

@@ -1,37 +1,34 @@
 <template>
- <div>
-   购物车
- </div>
+  <div>
+    <global-top>
+      <div slot="back"></div>
+      <div slot="title">购物车</div>
+    </global-top>
+    <guest-shop v-if="!username" />
+    <user-shop v-else />
+  </div>
 </template>
 
 <script>
- export default {
-   data () {
-     return {
-
-     }
-   },
-   props: {
-
-   },
-   components: {
-
-   },
-   methods: {
-
-   },
-   mounted() {
-
-   },
-   watch: {
-
-   },
-   computed: {
-
-   }
- }
+import guestShop from "../../components/shoppingCart/GuestShop";
+import userShop from "../../components/shoppingCart/UserShop";
+export default {
+  data() {
+    return {
+      username:''
+    };
+  },
+  props: {},
+  components: {
+    guestShop,
+    userShop
+  },
+  methods: {},
+  mounted() {},
+  watch: {},
+  computed: {}
+};
 </script>
 
 <style scoped lang='scss'>
-
 </style>

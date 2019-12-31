@@ -2,7 +2,7 @@
   <div class="container">
     <div class="back">
       <slot name="back">
-        <van-icon name="arrow-left" />
+        <van-icon name="arrow-left" @click="$router.go(-1)" />
       </slot>
     </div>
     <div class="title">
@@ -38,7 +38,7 @@ export default {
     top: 50%;
     margin-top: -8px;
   }
-  .title{
+  .title {
     width: 80px;
     text-align: center;
     font-size: 16px;

@@ -27,7 +27,7 @@ export default {
   components: {},
   methods: {
     call(){
-      console.log(111);
+      
     }
   },
   mounted() {

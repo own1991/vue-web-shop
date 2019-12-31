@@ -23,17 +23,25 @@ export default {
   props: {},
   data() {
     return {
-      city: "未获取",
       value: "",
+      city: ""
     };
   },
   components: {},
   methods: {
     onSearch() {},
-    getcity() {}
+    getcity() {
+      if (localStorage.getItem("city")) {
+        console.log(localStorage.getItem("city"));
+        this.city = localStorage.getItem("city");
+      } else {
+        this, (city = "未获取");
+      }
+    }
   },
   mounted() {
-    let _this=this
+    this.getcity();
+    let _this = this;
     AMap.plugin("AMap.Geolocation", function() {
       var geolocation = new AMap.Geolocation({
         // 是否使用高精度定位，默认：true
@@ -54,7 +62,7 @@ export default {
 
       function onComplete(data) {
         // data是具体的定位信息
-        _this.city=data.addressComponent.city
+        _this.city = data.addressComponent.city;
       }
 
       function onError(data) {

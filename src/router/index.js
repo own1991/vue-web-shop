@@ -15,7 +15,7 @@ const routes = [{
         component: Home,
         children: [{
             path: "",
-            name: "Home",
+            name: "home",
             component: () =>
                 import ('../views/index/Index'),
             meta: {
@@ -75,7 +75,7 @@ const routes = [{
     //详情页
     {
         path: '/details',
-        name: 'details',
+        name: 'detail',
         component: () =>
             import ('../views/details/Details'),
         meta: {

@@ -1,6 +1,6 @@
 <template>
-  <div class="wrapper" ref="wrapper">
-    <div class="scroll-content">
+  <div ref="wrapper">
+    <div>
       <slot></slot>
     </div>
   </div>
@@ -10,7 +10,7 @@
 import BScroll from "@better-scroll/core";
 export default {
   props: {
-    change: {
+    arr: {
       type: Array,
       default: () => []
     }
@@ -22,19 +22,15 @@ export default {
   methods: {
     init() {
       this.bs = new BScroll(".wrapper", {
-        startY:0,
-        scrollY: true,
+        startY: 0,
         click: true,
+        scrollY: true,
+        startY: 0,
         probeType: 3 // listening scroll hook
-      });
-      this._registerHooks(["scroll", "scrollEnd"], pos => {});
-    },
-    _registerHooks(hookNames, handler) {
-      hookNames.forEach(name => {
-        this.bs.on(name, handler);
       });
     }
   },
+  created() {},
   mounted() {
     this.$nextTick(() => {
       this.init();
@@ -45,10 +41,15 @@ export default {
       this.init();
     });
   },
-  beforeDestroy() {},
   watch: {
-    change(val) {
-      console.log(11);
+    arr(val) {
+      this.bs.refresh();
+      this.bs = new BScroll(".wrapper", {
+        startY: 0,
+        scrollY: true,
+        click: true,
+        probeType: 3 // listening scroll hook
+      });
     }
   },
   computed: {}
@@ -56,8 +57,4 @@ export default {
 </script>
 
 <style lang='scss'>
-.wrapper {
-  height: 84vh;
-  overflow: hidden;
-}
 </style>

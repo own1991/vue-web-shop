@@ -9,7 +9,12 @@
 <script>
 import BScroll from "@better-scroll/core";
 export default {
-  props: {},
+  props: {
+    arr: {
+      type: Array,
+      default: () => []
+    }
+  },
   data() {
     return {};
   },
@@ -25,7 +30,13 @@ export default {
   mounted() {
     this.init();
   },
-  watch: {},
+  watch: {
+    arr(val) {
+      setTimeout(() => {
+        this.refresh();
+      }, this.refreshDelay);
+    }
+  },
   computed: {}
 };
 </script>

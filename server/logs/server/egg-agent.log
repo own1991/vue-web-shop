@@ -1,1 +1,11 @@
 2019-12-31 00:00:01,015 INFO 17732 [egg-logrotator] agent logger reload: got log-reload message
+2019-12-31 08:15:26,942 INFO 2500 [egg:logger] init all loggers with options: {"dir":"E:\\project\\shop\\server\\logs\\server","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"server-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"agent"}
+2019-12-31 08:15:26,957 INFO 2500 [egg:core] dump config after load, 9ms
+2019-12-31 08:15:27,160 INFO 2500 [egg-watcher] Start watching: ["E:\\project\\shop\\server\\app","E:\\project\\shop\\server\\config","E:\\project\\shop\\server\\mocks","E:\\project\\shop\\server\\mocks_proxy","E:\\project\\shop\\server\\app.js"]
+2019-12-31 08:15:27,160 INFO 2500 [egg-watcher] Start watching: "E:\\project\\shop\\server\\app"
+2019-12-31 08:15:27,161 INFO 2500 [egg-watcher] Start watching: "E:\\project\\shop\\server\\config"
+2019-12-31 08:15:27,162 INFO 2500 [egg-watcher] Start watching: "E:\\project\\shop\\server\\mocks"
+2019-12-31 08:15:27,163 INFO 2500 [egg-watcher] Start watching: "E:\\project\\shop\\server\\mocks_proxy"
+2019-12-31 08:15:27,164 INFO 2500 [egg-watcher] Start watching: "E:\\project\\shop\\server\\app.js"
+2019-12-31 08:15:27,165 INFO 2500 [egg-watcher:agent] watcher start success
+2019-12-31 08:15:27,204 INFO 2500 [egg:core] dump config after ready, 14ms

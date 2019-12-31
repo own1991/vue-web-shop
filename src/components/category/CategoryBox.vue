@@ -27,7 +27,6 @@ export default {
   components: {},
   methods: {},
   mounted() {
-    console.log(this.item);
   },
   watch: {},
   computed: {}
@@ -52,7 +51,7 @@ export default {
     height: 100%;
   }
   .title {
-      width: 180px;
+      width: 160px;
       height: 20px;
     font-size: 14px;
     margin-top: 20px;

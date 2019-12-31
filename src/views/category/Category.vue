@@ -5,24 +5,24 @@
       <div slot="title">商品分类</div>
     </global-top>
     <div class="main">
+      <!-- 左侧导航栏 -->
       <van-sidebar v-model="mallCategoryId" class="sidebar">
         <van-sidebar-item
           v-for="item in category"
-          @click="call(item)"
+          @click="change(item)"
           :key="item.id"
           :title="item.mallCategoryName"
         />
       </van-sidebar>
+      <!-- 右侧内容 -->
       <div class="detail">
-        <categoryTabs class="categoryTabs" :category="data"/>
-        
+        <categoryTabs class="categoryTabs" :category="data" :dataid="dataid" />
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import globalTop from "../../components/slot/GlobalTop";
 import categoryTabs from "../../components/category/CategoryTabs";
 
 export default {
@@ -30,34 +30,47 @@ export default {
     return {
       category: [],
       mallCategoryId: 0,
-      data:[],
-      initial:''
+      data: [],
+      dataid: "",
     };
   },
   props: {},
   components: {
-    globalTop,
     categoryTabs
   },
   methods: {
+    //获取一、二级分类的数据（包括id）
     getData() {
       this.$api.getRecommend().then(res => {
         if (res.code == 200) {
+          // 加载一级分类
           this.category = res.data.category;
-          this.data=res.data.category[0].bxMallSubDto;
+          //根据mallCategoryId来加载二级分类的列表和id
+          this.data = res.data.category[this.mallCategoryId].bxMallSubDto;
+          this.dataid =
+            res.data.category[this.mallCategoryId].bxMallSubDto[0].mallSubId;
+          this.actived = res.data.category[this.mallCategoryId].bxMallSubDto[0].mallSubId;
         }
       });
     },
-    call(item) {
-      this.data=item.bxMallSubDto
+    change(item) {
+      //点击导航修改mallCategoryId
       this.mallCategoryId = item.mallCategoryId;
     }
   },
   mounted() {
+    //挂载时获取mallCategoryId并进行异步获取
+    this.$route.params.mallCategoryId
+      ? (this.mallCategoryId = this.$route.params.mallCategoryId)
+      : (this.mallCategoryId = 0);
     this.getData();
-    this.mallCategoryId = this.$route.params.mallCategoryId;
   },
-  watch: {},
+  watch: {
+    //监听mallCategoryId，修改时进行异步获取
+    mallCategoryId(val) {
+      this.getData();
+    }
+  },
   computed: {}
 };
 </script>

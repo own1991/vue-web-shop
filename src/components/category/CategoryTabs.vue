@@ -1,19 +1,19 @@
 <template>
   <div>
-    <van-tabs v-model="active" @change="getDetail">
+    <!-- 顶部 -->
+    <van-tabs v-model="$parent.dataid" @change="getDetail">
       <van-tab
         v-for="item in category"
         :key="item.id"
         :title="item.mallSubName"
         :name="item.mallSubId"
-      >
-        <div class="main">
-          <betterScroll>
-            <category-box v-for="desc in dataList" :key="desc.id" :item="desc" />
-          </betterScroll>
-        </div>
-      </van-tab>
+      ></van-tab>
     </van-tabs>
+    <div class="main">
+      <betterScroll class="wrapper">
+        <category-box v-for="desc in dataList" :key="desc.id" :item="desc" />
+      </betterScroll>
+    </div>
   </div>
 </template>
 
@@ -25,11 +25,14 @@ export default {
     category: {
       type: Array,
       default: () => []
-    }
+    },
+    dataid: {
+      type: String,
+      default: ""
+    },
   },
   data() {
-    return {
-      active: 0,
+    return {    
       dataList: []
     };
   },
@@ -38,6 +41,7 @@ export default {
     categoryBox
   },
   methods: {
+    // 获取每项列表
     getDetail(name, title) {
       this.$api.category(name).then(res => {
         if (res.code === 200) {
@@ -46,16 +50,21 @@ export default {
       });
     }
   },
-  mounted() {},
+  mounted() {
+  },
   watch: {
-    category(val) {
-      this.active = 1;
-      this.getDetail(val[0].mallSubId, "");
-    }
+    //监听dataid的变化进行异步获取
+    dataid(val) {
+      this.getDetail(val, "");
+    },
   },
   computed: {}
 };
 </script>
 
 <style scoped lang='scss'>
+.wrapper {
+  height: 80vh;
+  overflow: hidden;
+}
 </style>

@@ -5,7 +5,7 @@
       <!-- 顶部组件 -->
       <index-top />
     </van-sticky>
-    <better-scroll>
+    <better-scroll class="wrapper">
       <div>
         <!-- 下拉刷新 -->
         <van-pull-refresh v-model="isLoading" @refresh="onRefresh">
@@ -23,7 +23,7 @@
           <index-floor :title="floorName.floor2" floor="2F" :data="Data.floor2" />
           <!-- 商品楼 -->
           <index-floor :title="floorName.floor3" floor="3F" :data="Data.floor3" />
-          <index-hotGoods :hotGoodsData=Data.hotGoods />
+          <index-hotGoods :hotGoodsData="Data.hotGoods" />
         </van-pull-refresh>
       </div>
     </better-scroll>
@@ -102,5 +102,9 @@ export default {
     margin: 10px 10px;
     width: 355px;
   }
+}
+.wrapper {
+  height: 84vh;
+  overflow: hidden;
 }
 </style>

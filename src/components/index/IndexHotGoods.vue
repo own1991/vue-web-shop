@@ -29,9 +29,7 @@ export default {
   },
   components: {},
   methods: {},
-  mounted() {
-    console.log(this.hotGoodsData);
-  },
+  mounted() {},
   watch: {},
   computed: {}
 };
