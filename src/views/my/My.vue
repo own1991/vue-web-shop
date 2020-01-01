@@ -1,19 +1,21 @@
 <template>
   <div>
-    <global-top>
-      <div slot="back"></div>
-      <div slot="title">我的</div>
-    </global-top>
+    <user-info v-if="!flag" />
+    <user-change v-else />
   </div>
 </template>
 
 <script>
+import userInfo from "../../components/my/UserInfo";
+import userChange from "../../components/my/UserChange";
 export default {
   data() {
-    return {};
+    return {
+      flag:false
+    };
   },
   props: {},
-  components: {},
+  components: { userInfo, userChange },
   methods: {},
   mounted() {},
   watch: {},

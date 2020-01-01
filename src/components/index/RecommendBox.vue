@@ -41,11 +41,11 @@ export default {
 <style scoped lang='scss'>
 .container {
   width: 125px;
-  height: 200px;
+  height: 190px;
   font-size: 14px;
   img {
     width: 80%;
-    margin: 10%;
+    margin:5% 10%;
   }
   .van-ellipsis {
     padding: 0 5px;

@@ -20,8 +20,15 @@ export default {
   },
   props: {},
   components: {},
-  methods: {},
+  methods: {
+    getnickname() {
+      if (localStorage.getItem("nickname")) {
+        this.$store.state.nickname = localStorage.getItem("nickname");
+      }
+    }
+  },
   mounted() {
+    this.getnickname()
     this.active = this.$route.name;
   },
   watch: {
@@ -29,9 +36,7 @@ export default {
       this.active = val.name;
     }
   },
-  computed: {
-    
-  }
+  computed: {}
 };
 </script>
 

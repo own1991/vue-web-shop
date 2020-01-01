@@ -21,7 +21,7 @@ export default {
   components: {},
   methods: {
     goto(val) {
-      this.$router.push({ path: "/category", params: { mallCategoryId: val } });
+      this.$router.push({ name: "category", params: { mallCategoryId: val } });
     }
   },
   mounted() {},

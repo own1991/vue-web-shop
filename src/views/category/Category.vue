@@ -31,7 +31,7 @@ export default {
       category: [],
       mallCategoryId: 0,
       data: [],
-      dataid: "",
+      dataid: ""
     };
   },
   props: {},
@@ -49,21 +49,26 @@ export default {
           this.data = res.data.category[this.mallCategoryId].bxMallSubDto;
           this.dataid =
             res.data.category[this.mallCategoryId].bxMallSubDto[0].mallSubId;
-          this.actived = res.data.category[this.mallCategoryId].bxMallSubDto[0].mallSubId;
+          this.actived =
+            res.data.category[this.mallCategoryId].bxMallSubDto[0].mallSubId;
         }
       });
     },
     change(item) {
       //点击导航修改mallCategoryId
       this.mallCategoryId = item.mallCategoryId;
+    },
+    getId() {
+      console.log(this.$route);
+      if (this.$route.params.mallCategoryId) {
+        this.mallCategoryId = this.$route.params.mallCategoryId;
+      }
+      this.getData();
     }
   },
   mounted() {
     //挂载时获取mallCategoryId并进行异步获取
-    this.$route.params.mallCategoryId
-      ? (this.mallCategoryId = this.$route.params.mallCategoryId)
-      : (this.mallCategoryId = 0);
-    this.getData();
+     this.getId()
   },
   watch: {
     //监听mallCategoryId，修改时进行异步获取

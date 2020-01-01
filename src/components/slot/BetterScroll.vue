@@ -44,12 +44,14 @@ export default {
   watch: {
     arr(val) {
       this.bs.refresh();
-      this.bs = new BScroll(".wrapper", {
-        startY: 0,
-        scrollY: true,
-        click: true,
-        probeType: 3 // listening scroll hook
-      });
+      setTimeout(() => {
+        this.bs = new BScroll(".wrapper", {
+          startY: 0,
+          scrollY: true,
+          click: true,
+          probeType: 3 // listening scroll hook
+        });
+      }, 20);
     }
   },
   computed: {}

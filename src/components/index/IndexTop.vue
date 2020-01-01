@@ -1,41 +1,51 @@
 <template>
   <div class="container">
     <div @click="$goto('/city')" class="city">
-      <span>{{city}}</span>
+      <span v-if="city" class="van-ellipsis" :alt="city">{{city}}</span>
+      <span v-else class="van-ellipsis" :alt="city">获取中...</span>
       <van-icon name="arrow-down" />
     </div>
     <van-search
       class="search"
-      v-model="value"
+      v-model="keyword"
       placeholder="请输入搜索关键词"
-      show-action
+      :show-action="show"
       shape="round"
-      @search="onSearch"
+      @focus="show=true"
+      @cancel="show=false"
       background="none"
-    >
-      <div slot="action" @click="onSearch">搜索</div>
-    </van-search>
+    ></van-search>
+    <keep-alive>
+      <transition v-if="show" name="fade" @click="show=!show">
+        <div class="box">
+          <searchHistory v-if="keyword===''"></searchHistory>
+          <searching v-else :keyword="keyword"></searching>
+        </div>
+      </transition>
+    </keep-alive>
   </div>
 </template>
 
 <script>
+import searchHistory from "./searchBox/SearchHistory";
+import searching from "./searchBox/Searching";
 export default {
   props: {},
   data() {
     return {
-      value: "",
-      city: ""
+      show: false,
+      keyword: ""
     };
   },
-  components: {},
+  components: {
+    searchHistory,
+    searching
+  },
   methods: {
     onSearch() {},
     getcity() {
-      if (localStorage.getItem("city")) {
-        console.log(localStorage.getItem("city"));
-        this.city = localStorage.getItem("city");
-      } else {
-        this, (city = "未获取");
+      if (!this.$store.state.city) {
+        this.$store.state.city = this.$store.state.currentCity;
       }
     }
   },
@@ -55,23 +65,28 @@ export default {
         //  定位按钮的排放位置,  RB表示右下
         buttonPosition: "RB"
       });
-
       geolocation.getCurrentPosition();
       AMap.event.addListener(geolocation, "complete", onComplete);
       AMap.event.addListener(geolocation, "error", onError);
-
       function onComplete(data) {
         // data是具体的定位信息
-        _this.city = data.addressComponent.city;
+        _this.$store.state.currentCity = data.addressComponent.city;
       }
-
       function onError(data) {
         // 定位出错
+         _this.$store.state.currentCity = '获取失败'
       }
     });
   },
   watch: {},
-  computed: {}
+  computed: {
+    city() {
+      if (!this.$store.state.city) {
+        this.$store.state.city = this.$store.state.currentCity;
+      }
+      return this.$store.state.city;
+    }
+  }
 };
 </script>
 
@@ -79,22 +94,49 @@ export default {
 .container {
   display: flex;
   width: 100%;
-  height: 34px;
+  height: 6vh;
   padding: 8px 0;
   background: #f2f2f2;
+  z-index: 999;
 }
 .city {
-  width: 60px;
+  width: 65px;
   display: flex;
   font-size: 14px;
-  line-height: 34px;
-  height: 34px;
+  line-height: 6vh;
+  height: 6vh;
   margin-left: 10px;
+  position: relative;
   .van-icon {
-    line-height: 34px;
+    position: absolute;
+    right: -10px;
+    line-height: 6vh;
   }
 }
 .search {
   width: 300px;
+  height: 4vh;
+  margin-top: 1vh;
+}
+.box {
+  position: fixed;
+  margin-top: 7vh;
+  width: 100%;
+  height: 94vh;
+  background: white;
+  z-index: 9;
+}
+
+.fade-enter,
+.fade-leave-to {
+  transform: translateX(375px);
+}
+.fade-leave,
+.fade-enter-to {
+  transform: translateX(0);
+}
+.fade-enter-active,
+.fade-leave-active {
+  transition: all 0.5s;
 }
 </style>

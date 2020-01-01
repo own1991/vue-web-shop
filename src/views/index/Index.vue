@@ -5,10 +5,10 @@
       <!-- 顶部组件 -->
       <index-top />
     </van-sticky>
-    <better-scroll class="wrapper">
-      <div>
-        <!-- 下拉刷新 -->
-        <van-pull-refresh v-model="isLoading" @refresh="onRefresh">
+    <!-- 下拉刷新 -->
+    <van-pull-refresh v-model="isLoading" @refresh="onRefresh">
+      <better-scroll class="wrapper">
+        <div>
           <!-- 轮播图组件 -->
           <index-slides :slidesData="Data.slides" class="slides" />
           <!-- 分类组件 -->
@@ -23,10 +23,11 @@
           <index-floor :title="floorName.floor2" floor="2F" :data="Data.floor2" />
           <!-- 商品楼 -->
           <index-floor :title="floorName.floor3" floor="3F" :data="Data.floor3" />
+          <!-- 热销商品 -->
           <index-hotGoods :hotGoodsData="Data.hotGoods" />
-        </van-pull-refresh>
-      </div>
-    </better-scroll>
+        </div>
+      </better-scroll>
+    </van-pull-refresh>
   </div>
 </template>
 <script>
@@ -34,7 +35,6 @@ import indexTop from "../../components/index/IndexTop";
 import indexSlides from "../../components/index/IndexSlides";
 import indexCategory from "../../components/index/IndexCategory";
 import indexRecommend from "../../components/index/IndexRecommend";
-import betterScroll from "../../components/slot/BetterScroll";
 import indexFloor from "../../components/index/IndexFloor";
 import indexHotGoods from "../../components/index/IndexHotGoods";
 export default {
@@ -43,7 +43,8 @@ export default {
       Data: {},
       advertesPicture: null,
       isLoading: false,
-      floorName: {}
+      floorName: {},
+      flag:true
     };
   },
   props: {},
@@ -54,7 +55,6 @@ export default {
     indexRecommend,
     indexFloor,
     indexHotGoods,
-    betterScroll
   },
   methods: {
     getData() {
@@ -90,7 +90,7 @@ export default {
     margin-bottom: 10px;
   }
   .category {
-    height: 86px;
+    height: 70px;
     width: 355px;
     margin: 0 10px;
     padding: 10px 0;

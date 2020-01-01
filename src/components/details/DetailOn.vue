@@ -10,7 +10,7 @@
         <div v-else>取消收藏</div>
       </div>
     </div>
-    <div class="desc">
+    <div class="store">
       <div><van-icon name="shop-o" />有赞的店</div>
       <div>进入店铺</div>
     </div>
@@ -51,13 +51,18 @@ export default {
   color: red;
   font-size: 16px;
 }
-.desc {
+.desc,.store {
+  font-size: 16px;
+  color: gray;
   margin: 15px 0;
   padding: 10px;
   display: flex;
   justify-content: space-around;
   border-top: 1px solid #e6e6e6;
   border-bottom: 1px solid #e6e6e6;
+}
+.store{
+  color: #000;
 }
 .van-icon-shop-o{
   width: 20px;

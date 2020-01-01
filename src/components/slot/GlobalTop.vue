@@ -1,12 +1,14 @@
 <template>
-  <div class="container">
-    <div class="back">
-      <slot name="back">
-        <van-icon name="arrow-left" @click="$router.go(-1)" />
-      </slot>
-    </div>
-    <div class="title">
-      <slot name="title">1111</slot>
+  <div class="top">
+    <div class="container">
+      <div class="back">
+        <slot name="back">
+          <van-icon name="arrow-left" @click="$router.go(-1)" />
+        </slot>
+      </div>
+      <div class="title">
+        <slot name="title">1111</slot>
+      </div>
     </div>
   </div>
 </template>
@@ -26,12 +28,18 @@ export default {
 </script>
 
 <style scoped lang='scss'>
+.top {
+  padding-top: 6vh;
+  position: relative;
+}
 .container {
+  position: fixed;
   height: 6vh;
   width: 100%;
   background: white;
   border-bottom: 1px solid lightgray;
-  position: relative;
+  z-index: 100;
+  top: 0;
   .back {
     position: absolute;
     left: 10px;

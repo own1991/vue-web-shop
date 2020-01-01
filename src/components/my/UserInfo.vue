@@ -1,0 +1,148 @@
+<template>
+  <div>
+    <global-top>
+      <div slot="back"></div>
+      <div slot="title">会员中心</div>
+    </global-top>
+    <div class="user-top">
+      <div>
+        <van-icon v-if="nickname" name="setting" class="setting" @click="$parent.flag=true" />
+      </div>
+      <div>
+        <img src="../../assets/icon.svg" alt class="icon" />
+      </div>
+      <div v-if="!nickname" @click="$goto('/login')">登录/注册</div>
+      <div v-else>
+        <div>欢迎您，{{nickname}}</div>
+        <div @click="outline">退出登录</div>
+      </div>
+    </div>
+    <van-tabbar :fixed="false" active-color="#646566" class="control">
+      <van-tabbar-item icon="paid">待付款</van-tabbar-item>
+      <van-tabbar-item icon="send-gift-o">待发货</van-tabbar-item>
+      <van-tabbar-item icon="logistics">待收货</van-tabbar-item>
+      <van-tabbar-item icon="records">评价</van-tabbar-item>
+      <van-tabbar-item icon="points">已完成</van-tabbar-item>
+    </van-tabbar>
+    <div class="contorl-title">
+      <van-icon name="cart-circle-o" />
+      <div>全部订单</div>
+      <div>
+        <van-icon name="arrow" />
+      </div>
+    </div>
+    <div class="contorl-title interval">
+      <van-icon name="points" />
+      <div>收藏商品</div>
+      <div>
+        <van-icon name="arrow" />
+      </div>
+    </div>
+    <div class="contorl-title">
+      <van-icon name="aim" />
+      <div>地址管理</div>
+      <div>
+        <van-icon name="arrow" />
+      </div>
+    </div>
+    <div class="contorl-title">
+      <van-icon name="tosend" />
+      <div>最近浏览</div>
+      <div>
+        <van-icon name="arrow" />
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  props: {},
+  data() {
+    return {
+      userpic: ""
+    };
+  },
+  components: {},
+  methods: {
+    outline() {
+      this.$api
+        .loginOut()
+        .then(res => {
+          console.log(res);
+          if (true) {
+            this.$store.state.nickname = "";
+            localStorage.removeItem("nickname");
+            this.$toast("退出成功");
+          } else {
+            this.$toast(res.msg);
+          }
+        })
+        .catch(err => {
+          console.log(err);
+        });
+    }
+  },
+  mounted() {},
+  watch: {},
+  computed: {
+    nickname() {
+      return this.$store.state.nickname;
+    }
+  }
+};
+</script>
+
+<style scoped lang='scss'>
+.user-top {
+  width: 100%;
+  height: 200px;
+  background: #e30c7b;
+  text-align: center;
+  color: white;
+  position: relative;
+  .setting {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    font-size: 24px;
+  }
+  div {
+    padding: 8px;
+  }
+  .icon {
+    width: 70px;
+    height: 70px;
+  }
+}
+.control {
+  height: 80px;
+  /deep/ .van-icon {
+    font-size: 28px;
+  }
+  /deep/.van-tabbar-item__text {
+    font-size: 14px;
+  }
+}
+.interval {
+  margin-top: 15px;
+}
+.contorl-title {
+  display: flex;
+  padding: 15px;
+  background: white;
+  border: 0.1px solid rgb(243, 243, 243);
+  position: relative;
+  :nth-child(2) {
+    padding-left: 5px;
+  }
+  :nth-last-child(1) {
+    position: absolute;
+    right: 5px;
+  }
+  div {
+    font-size: 14px;
+    color: rgb(94, 94, 94);
+  }
+}
+</style>

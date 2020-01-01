@@ -4,12 +4,17 @@ import Vuex from 'vuex'
 Vue.use(Vuex)
 
 export default new Vuex.Store({
-  state: {
-  },
-  mutations: {
-  },
-  actions: {
-  },
-  modules: {
-  }
+    state: {
+        keywords: [],
+        city: '',
+        currentCity: '',
+        nickname: ''
+    },
+    mutations: {
+        pushkeywords(state, data) {
+            state.keywords.push(data)
+        }
+    },
+    actions: {},
+    modules: {}
 })

@@ -1,34 +1,41 @@
 <template>
   <div class="container">
+    <!-- 返回按钮 -->
     <div class="back" @click="$router.go(-1)">
       <van-icon name="arrow-left" />
     </div>
+    <!-- 图片轮播 -->
     <detail-swipe :item="goodsOne" />
+    <!-- 产品信息 -->
     <detail-on :item="goodsOne" />
+    <!-- 详情和用户评论 -->
     <van-tabs v-model="active">
       <van-tab title="商品详情">
         <div v-html="goodsOne.detail"></div>
       </van-tab>
       <van-tab title="用户评论" class="desc">暂无评论</van-tab>
     </van-tabs>
+    <detail-button></detail-button>
   </div>
 </template>
 
 <script>
 import detailSwipe from "../../components/details/DetailSwipe";
 import detailOn from "../../components/details/DetailOn";
+import detailButton from "../../components/details/DetailButton";
 export default {
   name: "detail",
   data() {
     return {
       goodsOne: {},
-      active:0
+      active: 0
     };
   },
   props: {},
   components: {
     detailSwipe,
-    detailOn
+    detailOn,
+    detailButton
   },
   methods: {
     getgood() {
@@ -51,6 +58,7 @@ export default {
 <style scoped lang='scss'>
 .container {
   width: 100%;
+  background: white;
   position: relative;
 }
 .back {
@@ -65,10 +73,13 @@ export default {
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background: rgba($color: #000000, $alpha: 0.2);
+    color: rgb(182, 182, 182);
+    background: rgba($color: #cecece, $alpha: 0.5);
   }
 }
-.desc{
+.desc {
+  padding: 20px;
+  margin-bottom: 10vh;
   text-align: center;
 }
 </style>

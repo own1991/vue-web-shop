@@ -1,0 +1,9 @@
+2020-01-01 21:29:57,462 ERROR 12928 nodejs.unhandledExceptionError: read ECONNRESET
+    at TCP.onStreamRead (internal/stream_base_commons.js:201:27)
+errno: -4077
+code: "ECONNRESET"
+syscall: "read"
+name: "unhandledExceptionError"
+pid: 12928
+hostname: Trayvon
+

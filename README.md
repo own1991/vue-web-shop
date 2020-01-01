@@ -30,13 +30,9 @@
 
    https://www.imooc.com/article/18232
 
-   
+4. 动画效果的入场动画无法实现；
 
-
-
-
-
-
+   需要添加组件缓存，keep-alive
 
 ## 其它
 

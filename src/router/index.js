@@ -75,13 +75,13 @@ const routes = [{
     //详情页
     {
         path: '/details',
-        name: 'detail',
+        name: 'details',
         component: () =>
             import ('../views/details/Details'),
         meta: {
             title: '详情',
             isMeta: true
-        }
+        },
     },
     //最近浏览
     {
