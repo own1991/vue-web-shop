@@ -41,6 +41,7 @@
 </template>
 
 <script>
+import $city from "../../js/city"
 import citiesSearch from "../../components/cities/CitiesSearch";
 export default {
   data() {
@@ -59,9 +60,9 @@ export default {
     //获取全部城市信息
     getCities() {
       //获取热门城市
-      this.hotCities = this.$city.data.hotCities;
+      this.hotCities = $city.data.hotCities;
       //获取A-Z城市信息
-      this.cities = this.$city.data.cities;
+      this.cities = $city.data.cities;
       //获取城市名称（用于模糊搜索）
       Object.keys(this.cities).map(item => {
         this.arr.push(...this.cities[item]);

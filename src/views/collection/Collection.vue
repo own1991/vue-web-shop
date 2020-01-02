@@ -1,7 +1,7 @@
 <template>
   <div>
     <global-top>
-      <div slot="title">最近浏览</div>
+      <div slot="title">我的收藏</div>
     </global-top>
     <div v-if="browseList.length>0">
       <goods-box v-for="item in browseList" :key="item.id" :item="item">
@@ -18,26 +18,31 @@
 import goodsBox from "../../components/box/GoodsBox";
 export default {
   data() {
-    return {};
+    return {
+      browseList: []
+    };
   },
   props: {},
   components: {
     goodsBox
   },
   methods: {
-    del(detail) {
-      this.$store.state.browseList = this.$store.state.browseList.filter(
-        item => item.id !== detail.id
-      );
+    del(item) {
+      this.$api.cancelCollection(item.cid).then(res => {
+        this.getbrowseList();
+      });
+    },
+    getbrowseList() {
+      this.$api.getCollection().then(res => {
+        this.browseList = res.data.list;
+      });
     }
   },
-  mounted() {},
+  mounted() {
+    this.getbrowseList();
+  },
   watch: {},
-  computed: {
-    browseList() {
-      return this.$store.state.browseList;
-    }
-  }
+  computed: {}
 };
 </script>
 
@@ -46,9 +51,5 @@ export default {
   padding: 40px;
   text-align: center;
   background: white;
-}
-.btn {
-  width: 100%;
-  height: 100%;
 }
 </style>

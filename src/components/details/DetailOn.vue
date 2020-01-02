@@ -5,23 +5,26 @@
     <div class="desc">
       <div>运费：0</div>
       <div>剩余：{{item.amount}}</div>
-      <div @click="flag=!flag">
+      <div @click="collection(item)">
         <div v-if="flag">点击收藏</div>
         <div v-else>取消收藏</div>
       </div>
     </div>
     <div class="store">
-      <div><van-icon name="shop-o" />有赞的店</div>
+      <div>
+        <van-icon name="shop-o" />有赞的店
+      </div>
       <div>进入店铺</div>
     </div>
   </div>
 </template>
 
 <script>
+import axios from "axios";
 export default {
   data() {
     return {
-      flag: false
+      flag: null
     };
   },
   props: {
@@ -31,8 +34,43 @@ export default {
     }
   },
   components: {},
-  methods: {},
-  mounted() {},
+  methods: {
+    //点击收藏
+    collection(goods) {
+      if (this.flag) {
+        this.$api.collection(goods).then(res => {
+          if (res.code === 200) {
+            this.$toast(res.msg);
+            this.getisCollection(goods.id);
+          } else {
+            this.$toast("收藏失败");
+          }
+        });
+      } else {
+        this.$api.cancelCollection(goods.id).then(res => {
+          if (res.code === 200) {
+            this.$toast(res.msg);
+            this.getisCollection(goods.id);
+          } else {
+            this.$toast("取消失败");
+          }
+        });
+      }
+    },
+    //取消收藏
+    getisCollection(id) {
+      this.$api.isCollection(id).then(res => {
+        if (res.isCollection === 1) {
+          this.flag = false;
+        } else {
+          this.flag = true;
+        }
+      });
+    }
+  },
+  mounted() {
+    this.getisCollection(this.$route.query.id);
+  },
   watch: {},
   computed: {}
 };
@@ -51,7 +89,8 @@ export default {
   color: red;
   font-size: 16px;
 }
-.desc,.store {
+.desc,
+.store {
   font-size: 16px;
   color: gray;
   margin: 15px 0;
@@ -61,10 +100,10 @@ export default {
   border-top: 1px solid #e6e6e6;
   border-bottom: 1px solid #e6e6e6;
 }
-.store{
+.store {
   color: #000;
 }
-.van-icon-shop-o{
+.van-icon-shop-o {
   width: 20px;
   height: 18px;
 }

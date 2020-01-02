@@ -31,7 +31,7 @@
         <van-icon name="arrow" />
       </div>
     </div>
-    <div class="contorl-title interval">
+    <div class="contorl-title interval" @click="$goto('/collection')">
       <van-icon name="points" />
       <div>收藏商品</div>
       <div>
@@ -45,7 +45,7 @@
         <van-icon name="arrow" />
       </div>
     </div>
-    <div class="contorl-title">
+    <div class="contorl-title" @click="$goto('/browse')">
       <van-icon name="tosend" />
       <div>最近浏览</div>
       <div>
@@ -69,8 +69,7 @@ export default {
       this.$api
         .loginOut()
         .then(res => {
-          console.log(res);
-          if (true) {
+          if (res.code === 0) {
             this.$store.state.nickname = "";
             localStorage.removeItem("nickname");
             this.$toast("退出成功");

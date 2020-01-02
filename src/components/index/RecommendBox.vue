@@ -1,13 +1,13 @@
 <template>
   <div class="container">
-    <img :src="item.image" alt />
+    <img :src="item.image" alt @click="$goto(item.goodsId)" />
     <div class="van-ellipsis">{{item.goodsName}}</div>
     <div class="price">
       ￥{{item.mallPrice}}
       <span class="oldprice">￥{{item.price}}</span>
     </div>
     <div class="bttom-group">
-      <van-icon name="shopping-cart" @click.prevent="call()" />
+      <van-icon name="shopping-cart" @click.prevent="$addShop(item.goodsId)" />
       <div class="desc" @click.prevent="$goto(item.goodsId)">查看详情</div>
     </div>
   </div>
@@ -25,14 +25,8 @@ export default {
     }
   },
   components: {},
-  methods: {
-    call(){
-      
-    }
-  },
-  mounted() {
-    
-  },
+  methods: {},
+  mounted() {},
   watch: {},
   computed: {}
 };
@@ -45,7 +39,7 @@ export default {
   font-size: 14px;
   img {
     width: 80%;
-    margin:5% 10%;
+    margin: 5% 10%;
   }
   .van-ellipsis {
     padding: 0 5px;

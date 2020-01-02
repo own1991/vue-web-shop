@@ -35,7 +35,7 @@ export default {
      * deleteShop   购物车商品删除      参数 id：需要删除的商品cid
      */
     getCard() {
-        return service.req(`/getCard`)
+        return service.req(`/getCard`, {})
     },
 
     editCart(count, id, mallPrice) {
@@ -79,7 +79,7 @@ export default {
     },
 
     isCollection(id) {
-        return service.req(`/isCollection`, { id })
+        return service.req('/isCollection', { id })
     },
 
     addShop(id) {
@@ -96,7 +96,7 @@ export default {
      * comment  商品评论(id,rate,content, anonymous(是否匿名), _id, order_id, image=[])
      */
     loginOut() {
-        return service.req(`/loginOut`)
+        return service.req(`/loginOut`, {})
     },
 
     user() {
@@ -161,10 +161,8 @@ export default {
         })
     },
 
-    getCollection(page = 1) {
-        return service.req(`/collection/list`, {
-            params: { page }
-        })
+    getCollection() {
+        return service.req('/collection/list?page=1')
     },
 
     register(nickname, password, verify, sms) {

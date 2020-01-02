@@ -1,23 +1,22 @@
 <template>
   <div>
     <better-scroll class="wrapper">
-      <div v-for="item in dataList" :key="item.id" class="box" @click="goto(item.id)">
-        <div>
-          <img :src="item.image" alt />
-        </div>
-        <div>
-          <div class="title van-ellipsis" v-html="$util.keyWord(item.name,keyword)"></div>
-          <div class="price">
-            ￥{{item.present_price}}
-            <span>{{item.orl_price}}</span>
-          </div>
-        </div>
+      <div>
+        <goods-box
+          v-for="item in dataList"
+          :key="item.id"
+          :item="item"
+          :keyword="keyword"
+        >
+          <div slot="del"></div>
+        </goods-box>
       </div>
     </better-scroll>
   </div>
 </template>
 
 <script>
+import goodsBox from "../../box/GoodsBox";
 export default {
   props: {
     keyword: {
@@ -30,21 +29,15 @@ export default {
       dataList: []
     };
   },
-  components: {},
+  components: {
+    goodsBox
+  },
   methods: {
-    //保存关键字，并跳转
-    goto(item) {
-      if (!this.$store.state.keywords.includes(this.keyword)) {
-        this.$store.commit("pushkeywords", this.keyword);
-      }
-      //跳转
-      this.$router.push({ name: "details", query: { id: item } });
-    },
+    
     getdata() {
       this.$api.search(this.keyword, 1).then(res => {
         if (res.code === 200) {
           this.dataList = res.data.list;
-          console.log(this.dataList);
         }
       });
     }
@@ -66,31 +59,5 @@ export default {
 .wrapper {
   overflow: hidden;
   height: 94vh;
-}
-.box {
-  height: 100px;
-  display: flex;
-  padding: 0 20px;
-  border-bottom: 0.1px solid rgb(243, 243, 243);
-  img {
-    height: 80px;
-    padding: 10px;
-  }
-  .title {
-    width: 220px;
-    margin-top: 30px;
-    font-size: 14px;
-  }
-  .price {
-    margin-top: 10px;
-    color: red;
-    font-weight: 800;
-    font-size: 14px;
-    span {
-      text-decoration: line-through;
-      color: gray;
-      font-weight: normal;
-    }
-  }
 }
 </style>

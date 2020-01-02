@@ -1,13 +1,13 @@
 <template>
   <div class="container">
     <div @click="$goto('/city')" class="city">
-      <span v-if="city" class="van-ellipsis" :alt="city">{{city}}</span>
-      <span v-else class="van-ellipsis" :alt="city">获取中...</span>
+      <div v-if="city" class="van-ellipsis" :alt="city">{{city}}</div>
+      <div v-else class="van-ellipsis" :alt="city">获取中...</div>
       <van-icon name="arrow-down" />
     </div>
     <van-search
       class="search"
-      v-model="keyword"
+      v-model="value"
       placeholder="请输入搜索关键词"
       :show-action="show"
       shape="round"
@@ -34,7 +34,8 @@ export default {
   data() {
     return {
       show: false,
-      keyword: ""
+      value: "",
+      keyword:""
     };
   },
   components: {
@@ -74,11 +75,15 @@ export default {
       }
       function onError(data) {
         // 定位出错
-         _this.$store.state.currentCity = '获取失败'
+        _this.$store.state.currentCity = "获取失败";
       }
     });
   },
-  watch: {},
+  watch: {
+    value(val){
+      this.keyword=val.trim()
+    }
+  },
   computed: {
     city() {
       if (!this.$store.state.city) {
@@ -100,6 +105,10 @@ export default {
   z-index: 999;
 }
 .city {
+  div {
+    width: 100%;
+    text-align: center;
+  }
   width: 65px;
   display: flex;
   font-size: 14px;

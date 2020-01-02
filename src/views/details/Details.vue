@@ -15,7 +15,7 @@
       </van-tab>
       <van-tab title="用户评论" class="desc">暂无评论</van-tab>
     </van-tabs>
-    <detail-button></detail-button>
+    <detail-button :item='goodsOne.id'></detail-button>
   </div>
 </template>
 
@@ -30,6 +30,16 @@ export default {
       goodsOne: {},
       active: 0
     };
+  },
+  beforeRouteLeave(to, from, next) {
+    if (
+      !this.$store.state.browseList.some(
+        item => item.id === this.goodsOne.id
+      )
+    ) {
+      this.$store.commit("pushBrowseList", this.goodsOne);
+    }
+    next();
   },
   props: {},
   components: {

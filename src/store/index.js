@@ -6,14 +6,20 @@ Vue.use(Vuex)
 export default new Vuex.Store({
     state: {
         keywords: [],
+        browseList: [],
         city: '',
         currentCity: '',
-        nickname: ''
+        nickname: '',
+        shopNum: 0
     },
     mutations: {
-        pushkeywords(state, data) {
+        pushKeywords(state, data) {
             state.keywords.push(data)
+        },
+        pushBrowseList(state, data) {
+            state.browseList.push(data)
         }
+
     },
     actions: {},
     modules: {}

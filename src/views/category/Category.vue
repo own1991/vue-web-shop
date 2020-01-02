@@ -59,7 +59,6 @@ export default {
       this.mallCategoryId = item.mallCategoryId;
     },
     getId() {
-      console.log(this.$route);
       if (this.$route.params.mallCategoryId) {
         this.mallCategoryId = this.$route.params.mallCategoryId;
       }

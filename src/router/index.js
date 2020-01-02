@@ -94,6 +94,17 @@ const routes = [{
             isMeta: true
         }
     },
+    //我的收藏
+    {
+        path: '/collection',
+        name: 'collection',
+        component: () =>
+            import ('../views/collection/Collection'),
+        meta: {
+            title: '我的收藏',
+            isMeta: true
+        }
+    },
     //结算
     {
         path: '/shoppingPayMent',
