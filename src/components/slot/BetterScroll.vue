@@ -21,13 +21,17 @@ export default {
   components: {},
   methods: {
     init() {
-      this.bs = new BScroll(".wrapper", {
-        startY: 0,
-        click: true,
-        scrollY: true,
-        startY: 0,
-        probeType: 3 // listening scroll hook
-      });
+      if (!this.bs) {
+        this.bs = new BScroll(".wrapper", {
+          startY: 0,
+          click: true,
+          scrollY: true,
+          startY: 0,
+          probeType: 3 // listening scroll hook
+        });
+      } else {
+        this.bs.refresh();
+      }
     }
   },
   created() {},

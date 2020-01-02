@@ -100,7 +100,7 @@ export default {
   display: flex;
   width: 100%;
   height: 6vh;
-  padding: 8px 0;
+  padding: 1vh 0;
   background: #f2f2f2;
   z-index: 999;
 }
@@ -131,7 +131,7 @@ export default {
   position: fixed;
   margin-top: 7vh;
   width: 100%;
-  height: 94vh;
+  height: 93vh;
   background: white;
   z-index: 9;
 }

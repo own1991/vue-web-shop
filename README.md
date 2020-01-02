@@ -33,6 +33,21 @@
 4. 动画效果的入场动画无法实现；
 
    需要添加组件缓存，keep-alive
+   
+5. 点击事件会触发2次
+
+  解决办法（如果this.scorll不存在，新建，否则重置！
+
+  ```javascript
+  if ( ! this.scorll) {
+   new Scroll()
+  } else {
+    this.scroll().refresh()
+  }
+  ```
+
+  http://www.bubuko.com/infodetail-2216820.html
+  better-scroll会将点击事件去掉，如果滚动部分需要有点击事件，需要在参数里加上click：true。同时，在PC上或某些手机端，由于未成功将touchend事件move掉，点击事件会执行两次。better-scroll派发的event事件和原生js的event有属性上的区别，其中有一个属性为event._constructed。better-scroll派发的事件中event._constructed为true，原生点击事件中没有这个属性。
 
 ## 其它
 

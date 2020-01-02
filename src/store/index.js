@@ -10,7 +10,7 @@ export default new Vuex.Store({
         city: '',
         currentCity: '',
         nickname: '',
-        shopNum: 0
+        shopList: []
     },
     mutations: {
         pushKeywords(state, data) {
@@ -18,7 +18,10 @@ export default new Vuex.Store({
         },
         pushBrowseList(state, data) {
             state.browseList.push(data)
-        }
+        },
+        editshopList(state, data) {
+            state.shopList.map(item => item.check = data)
+        },
 
     },
     actions: {},
