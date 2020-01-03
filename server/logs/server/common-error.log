@@ -1656,3 +1656,328 @@ model: undefined
 pid: 8276
 hostname: Trayvon
 
+2020-01-03 10:53:45,316 ERROR 9200 [-/127.0.0.1/-/31ms POST /v1/order] nodejs.TypeError: Cannot read property 'length' of undefined
+    at OperatingGoodsController.order (E:\project\shop\server\app\controller\api\operatingGoods.js:178:42)
+    at Object.callFn (E:\project\shop\server\node_modules\_egg-core@4.17.4@egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (E:\project\shop\server\node_modules\_egg-core@4.17.4@egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:190:18
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:36:12
+    at dispatch (E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:195:33)
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at E:\project\shop\server\app\middleware\isLogin.js:15:19
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at E:\project\shop\server\node_modules\_egg-development@2.4.3@egg-development\app\middleware\egg_loader_trace.js:9:56
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+
+pid: 9200
+hostname: STU008
+
+2020-01-03 10:53:47,848 ERROR 9200 [-/127.0.0.1/-/2ms POST /v1/order] nodejs.TypeError: Cannot read property 'length' of undefined
+    at OperatingGoodsController.order (E:\project\shop\server\app\controller\api\operatingGoods.js:178:42)
+    at Object.callFn (E:\project\shop\server\node_modules\_egg-core@4.17.4@egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (E:\project\shop\server\node_modules\_egg-core@4.17.4@egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:190:18
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:36:12
+    at dispatch (E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:195:33)
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at E:\project\shop\server\app\middleware\isLogin.js:15:19
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at E:\project\shop\server\node_modules\_egg-development@2.4.3@egg-development\app\middleware\egg_loader_trace.js:9:56
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+
+pid: 9200
+hostname: STU008
+
+2020-01-03 10:53:49,264 ERROR 9200 [-/127.0.0.1/-/1ms POST /v1/order] nodejs.TypeError: Cannot read property 'length' of undefined
+    at OperatingGoodsController.order (E:\project\shop\server\app\controller\api\operatingGoods.js:178:42)
+    at Object.callFn (E:\project\shop\server\node_modules\_egg-core@4.17.4@egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (E:\project\shop\server\node_modules\_egg-core@4.17.4@egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:190:18
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:36:12
+    at dispatch (E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:195:33)
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at E:\project\shop\server\app\middleware\isLogin.js:15:19
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at E:\project\shop\server\node_modules\_egg-development@2.4.3@egg-development\app\middleware\egg_loader_trace.js:9:56
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+
+pid: 9200
+hostname: STU008
+
+2020-01-03 10:55:29,858 ERROR 9200 [-/127.0.0.1/-/4ms POST /v1/order] nodejs.TypeError: Cannot read property 'present_price' of null
+    at OperatingGoodsController.order (E:\project\shop\server\app\controller\api\operatingGoods.js:184:40)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async E:\project\shop\server\app\middleware\isLogin.js:15:13
+    at async E:\project\shop\server\node_modules\_egg-development@2.4.3@egg-development\app\middleware\egg_loader_trace.js:9:50
+    at async xframe (E:\project\shop\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\xframe.js:7:5)
+    at async xssProtection (E:\project\shop\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\xssProtection.js:7:5)
+    at async nosniff (E:\project\shop\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\nosniff.js:8:5)
+    at async noopen (E:\project\shop\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\noopen.js:8:5)
+    at async session (E:\project\shop\server\node_modules\_koa-session@5.12.3@koa-session\index.js:41:7)
+    at async bodyParser (E:\project\shop\server\node_modules\_koa-bodyparser@4.2.1@koa-bodyparser\index.js:86:5)
+    at async E:\project\shop\server\node_modules\_koa-static-cache@5.1.2@koa-static-cache\index.js:51:63
+    at async notfound (E:\project\shop\server\node_modules\_egg@2.26.0@egg\app\middleware\notfound.js:5:5)
+    at async meta (E:\project\shop\server\node_modules\_egg@2.26.0@egg\app\middleware\meta.js:12:5)
+
+pid: 9200
+hostname: STU008
+
+2020-01-03 10:55:31,298 ERROR 9200 [-/127.0.0.1/-/2ms POST /v1/order] nodejs.TypeError: Cannot read property 'present_price' of null
+    at OperatingGoodsController.order (E:\project\shop\server\app\controller\api\operatingGoods.js:184:40)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async E:\project\shop\server\app\middleware\isLogin.js:15:13
+    at async E:\project\shop\server\node_modules\_egg-development@2.4.3@egg-development\app\middleware\egg_loader_trace.js:9:50
+    at async xframe (E:\project\shop\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\xframe.js:7:5)
+    at async xssProtection (E:\project\shop\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\xssProtection.js:7:5)
+    at async nosniff (E:\project\shop\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\nosniff.js:8:5)
+    at async noopen (E:\project\shop\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\noopen.js:8:5)
+    at async session (E:\project\shop\server\node_modules\_koa-session@5.12.3@koa-session\index.js:41:7)
+    at async bodyParser (E:\project\shop\server\node_modules\_koa-bodyparser@4.2.1@koa-bodyparser\index.js:86:5)
+    at async E:\project\shop\server\node_modules\_koa-static-cache@5.1.2@koa-static-cache\index.js:51:63
+    at async notfound (E:\project\shop\server\node_modules\_egg@2.26.0@egg\app\middleware\notfound.js:5:5)
+    at async meta (E:\project\shop\server\node_modules\_egg@2.26.0@egg\app\middleware\meta.js:12:5)
+
+pid: 9200
+hostname: STU008
+
+2020-01-03 12:42:12,488 ERROR 9200 [-/127.0.0.1/-/49ms POST /v1/address] nodejs.MongoError: E11000 duplicate key error collection: shoppingMall.address index: _id_ dup key: { : ObjectId('5e0eb1e14942de23f0708500') }
+    at Function.create (E:\project\shop\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\error.js:44:12)
+    at toError (E:\project\shop\server\node_modules\_mongodb@3.4.1@mongodb\lib\utils.js:150:22)
+    at E:\project\shop\server\node_modules\_mongodb@3.4.1@mongodb\lib\operations\common_functions.js:265:39
+    at E:\project\shop\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\connection\pool.js:420:18
+    at processTicksAndRejections (internal/process/task_queues.js:75:11)
+driver: true
+name: "MongoError"
+index: 0
+code: 11000
+errmsg: "E11000 duplicate key error collection: shoppingMall.address index: _id_ dup key: { : ObjectId('5e0eb1e14942de23f0708500') }"
+pid: 9200
+hostname: STU008
+
+2020-01-03 12:42:17,610 ERROR 9200 [-/127.0.0.1/-/5ms POST /v1/address] nodejs.MongoError: E11000 duplicate key error collection: shoppingMall.address index: _id_ dup key: { : ObjectId('5e0eb1e14942de23f0708500') }
+    at Function.create (E:\project\shop\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\error.js:44:12)
+    at toError (E:\project\shop\server\node_modules\_mongodb@3.4.1@mongodb\lib\utils.js:150:22)
+    at E:\project\shop\server\node_modules\_mongodb@3.4.1@mongodb\lib\operations\common_functions.js:265:39
+    at E:\project\shop\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\connection\pool.js:420:18
+    at processTicksAndRejections (internal/process/task_queues.js:75:11)
+driver: true
+name: "MongoError"
+index: 0
+code: 11000
+errmsg: "E11000 duplicate key error collection: shoppingMall.address index: _id_ dup key: { : ObjectId('5e0eb1e14942de23f0708500') }"
+pid: 9200
+hostname: STU008
+
+2020-01-03 13:19:46,003 ERROR 9200 [-/127.0.0.1/-/5ms POST /v1/address] nodejs.MongoError: E11000 duplicate key error collection: shoppingMall.address index: _id_ dup key: { : ObjectId('5e0ece744942de23f0708503') }
+    at Function.create (E:\project\shop\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\error.js:44:12)
+    at toError (E:\project\shop\server\node_modules\_mongodb@3.4.1@mongodb\lib\utils.js:150:22)
+    at E:\project\shop\server\node_modules\_mongodb@3.4.1@mongodb\lib\operations\common_functions.js:265:39
+    at E:\project\shop\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\connection\pool.js:420:18
+    at processTicksAndRejections (internal/process/task_queues.js:75:11)
+driver: true
+name: "MongoError"
+index: 0
+code: 11000
+errmsg: "E11000 duplicate key error collection: shoppingMall.address index: _id_ dup key: { : ObjectId('5e0ece744942de23f0708503') }"
+pid: 9200
+hostname: STU008
+
+2020-01-03 13:19:46,820 ERROR 9200 [-/127.0.0.1/-/5ms POST /v1/address] nodejs.MongoError: E11000 duplicate key error collection: shoppingMall.address index: _id_ dup key: { : ObjectId('5e0ece744942de23f0708503') }
+    at Function.create (E:\project\shop\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\error.js:44:12)
+    at toError (E:\project\shop\server\node_modules\_mongodb@3.4.1@mongodb\lib\utils.js:150:22)
+    at E:\project\shop\server\node_modules\_mongodb@3.4.1@mongodb\lib\operations\common_functions.js:265:39
+    at E:\project\shop\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\connection\pool.js:420:18
+    at processTicksAndRejections (internal/process/task_queues.js:75:11)
+driver: true
+name: "MongoError"
+index: 0
+code: 11000
+errmsg: "E11000 duplicate key error collection: shoppingMall.address index: _id_ dup key: { : ObjectId('5e0ece744942de23f0708503') }"
+pid: 9200
+hostname: STU008
+
+2020-01-03 13:19:52,702 ERROR 9200 [-/127.0.0.1/-/4ms POST /v1/address] nodejs.MongoError: E11000 duplicate key error collection: shoppingMall.address index: _id_ dup key: { : ObjectId('5e0ece744942de23f0708503') }
+    at Function.create (E:\project\shop\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\error.js:44:12)
+    at toError (E:\project\shop\server\node_modules\_mongodb@3.4.1@mongodb\lib\utils.js:150:22)
+    at E:\project\shop\server\node_modules\_mongodb@3.4.1@mongodb\lib\operations\common_functions.js:265:39
+    at E:\project\shop\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\connection\pool.js:420:18
+    at processTicksAndRejections (internal/process/task_queues.js:75:11)
+driver: true
+name: "MongoError"
+index: 0
+code: 11000
+errmsg: "E11000 duplicate key error collection: shoppingMall.address index: _id_ dup key: { : ObjectId('5e0ece744942de23f0708503') }"
+pid: 9200
+hostname: STU008
+
+2020-01-03 15:11:34,545 ERROR 9200 [-/127.0.0.1/-/18ms POST /v1/order] nodejs.TypeError: Cannot read property 'length' of undefined
+    at OperatingGoodsController.order (E:\project\shop\server\app\controller\api\operatingGoods.js:178:42)
+    at Object.callFn (E:\project\shop\server\node_modules\_egg-core@4.17.4@egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (E:\project\shop\server\node_modules\_egg-core@4.17.4@egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:190:18
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:36:12
+    at dispatch (E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:195:33)
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at E:\project\shop\server\app\middleware\isLogin.js:15:19
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at E:\project\shop\server\node_modules\_egg-development@2.4.3@egg-development\app\middleware\egg_loader_trace.js:9:56
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+
+pid: 9200
+hostname: STU008
+
+2020-01-03 15:11:34,768 ERROR 9200 [-/127.0.0.1/-/4ms POST /v1/order] nodejs.TypeError: Cannot read property 'length' of undefined
+    at OperatingGoodsController.order (E:\project\shop\server\app\controller\api\operatingGoods.js:178:42)
+    at Object.callFn (E:\project\shop\server\node_modules\_egg-core@4.17.4@egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (E:\project\shop\server\node_modules\_egg-core@4.17.4@egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:190:18
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:36:12
+    at dispatch (E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:195:33)
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at E:\project\shop\server\app\middleware\isLogin.js:15:19
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at E:\project\shop\server\node_modules\_egg-development@2.4.3@egg-development\app\middleware\egg_loader_trace.js:9:56
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+
+pid: 9200
+hostname: STU008
+
+2020-01-03 15:11:35,720 ERROR 9200 [-/127.0.0.1/-/2ms POST /v1/order] nodejs.TypeError: Cannot read property 'length' of undefined
+    at OperatingGoodsController.order (E:\project\shop\server\app\controller\api\operatingGoods.js:178:42)
+    at Object.callFn (E:\project\shop\server\node_modules\_egg-core@4.17.4@egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (E:\project\shop\server\node_modules\_egg-core@4.17.4@egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:190:18
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:36:12
+    at dispatch (E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:195:33)
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at E:\project\shop\server\app\middleware\isLogin.js:15:19
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at E:\project\shop\server\node_modules\_egg-development@2.4.3@egg-development\app\middleware\egg_loader_trace.js:9:56
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+
+pid: 9200
+hostname: STU008
+
+2020-01-03 15:12:00,945 ERROR 9200 [-/127.0.0.1/-/2ms POST /v1/order] nodejs.TypeError: Cannot read property 'length' of undefined
+    at OperatingGoodsController.order (E:\project\shop\server\app\controller\api\operatingGoods.js:178:42)
+    at Object.callFn (E:\project\shop\server\node_modules\_egg-core@4.17.4@egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (E:\project\shop\server\node_modules\_egg-core@4.17.4@egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:190:18
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:36:12
+    at dispatch (E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:195:33)
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at E:\project\shop\server\app\middleware\isLogin.js:15:19
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at E:\project\shop\server\node_modules\_egg-development@2.4.3@egg-development\app\middleware\egg_loader_trace.js:9:56
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+
+pid: 9200
+hostname: STU008
+
+2020-01-03 15:14:22,513 ERROR 9200 [-/127.0.0.1/-/1ms POST /v1/order] nodejs.TypeError: Cannot read property 'length' of undefined
+    at OperatingGoodsController.order (E:\project\shop\server\app\controller\api\operatingGoods.js:178:42)
+    at Object.callFn (E:\project\shop\server\node_modules\_egg-core@4.17.4@egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (E:\project\shop\server\node_modules\_egg-core@4.17.4@egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:190:18
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:36:12
+    at dispatch (E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:195:33)
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at E:\project\shop\server\app\middleware\isLogin.js:15:19
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at E:\project\shop\server\node_modules\_egg-development@2.4.3@egg-development\app\middleware\egg_loader_trace.js:9:56
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+
+pid: 9200
+hostname: STU008
+
+2020-01-03 15:49:19,130 ERROR 9200 [-/127.0.0.1/-/107ms POST /v1/order] nodejs.ValidationError: OrderList validation failed: mallPrice: Cast to Number failed for value "NaN" at path "mallPrice", order_list.1.count: Cast to Number failed for value "[ '1', '2' ]" at path "count", order_list.1.mallPrice: Cast to Number failed for value "NaN" at path "mallPrice", order_list.0.count: Cast to Number failed for value "[ '1', '2' ]" at path "count", order_list.0.mallPrice: Cast to Number failed for value "NaN" at path "mallPrice"
+    at new ValidationError (E:\project\shop\server\node_modules\_mongoose@5.8.3@mongoose\lib\error\validation.js:31:11)
+    at model.Document.invalidate (E:\project\shop\server\node_modules\_mongoose@5.8.3@mongoose\lib\document.js:2461:32)
+    at model.$set (E:\project\shop\server\node_modules\_mongoose@5.8.3@mongoose\lib\document.js:1199:12)
+    at model._handleIndex (E:\project\shop\server\node_modules\_mongoose@5.8.3@mongoose\lib\document.js:934:14)
+    at model.$set (E:\project\shop\server\node_modules\_mongoose@5.8.3@mongoose\lib\document.js:878:22)
+    at model.Document (E:\project\shop\server\node_modules\_mongoose@5.8.3@mongoose\lib\document.js:136:12)
+    at model.Model (E:\project\shop\server\node_modules\_mongoose@5.8.3@mongoose\lib\model.js:99:12)
+    at new model (E:\project\shop\server\node_modules\_mongoose@5.8.3@mongoose\lib\model.js:4586:15)
+    at OperatingGoodsController.order (E:\project\shop\server\app\controller\api\operatingGoods.js:223:25)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async E:\project\shop\server\app\middleware\isLogin.js:15:13
+    at async E:\project\shop\server\node_modules\_egg-development@2.4.3@egg-development\app\middleware\egg_loader_trace.js:9:50
+    at async xframe (E:\project\shop\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\xframe.js:7:5)
+    at async xssProtection (E:\project\shop\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\xssProtection.js:7:5)
+    at async nosniff (E:\project\shop\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\nosniff.js:8:5)
+errors: {"mallPrice":{"stringValue":"\"NaN\"","kind":"Number","value":null,"path":"mallPrice","reason":{"stringValue":"\"NaN\"","kind":"number","value":null,"path":"mallPrice","reason":{"generatedMessage":true,"code":"ERR_ASSERTION","actual":false,"expected":true,"operator":"=="},"message":"Cast to number failed for value \"NaN\" at path \"mallPrice\"","name":"CastError"},"message":"Cast to Number failed for value \"NaN\" at path \"mallPrice\"","name":"CastError"},"order_list.1.count":{"stringValue":"\"[ '1', '2' ]\"","kind":"Number","value":["1","2"],"path":"count","reason":{"stringValue":"\"[ '1', '2' ]\"","kind":"number","value":"~order_list.1.count~value","path":"count","reason":{"generatedMessage":true,"code":"ERR_ASSERTION","actual":false,"expected":true,"operator":"=="},"message":"Cast to number failed for value \"[ '1', '2' ]\" at path \"count\"","name":"CastError"},"message":"Cast to Number failed for value \"[ '1', '2' ]\" at path \"count\"","name":"CastError"},"order_list.1.mallPrice":{"stringValue":"\"NaN\"","kind":"Number","value":null,"path":"mallPrice","reason":{"stringValue":"\"NaN\"","kind":"number","value":null,"path":"mallPrice","reason":{"generatedMessage":true,"code":"ERR_ASSERTION","actual":false,"expected":true,"operator":"=="},"message":"Cast to number failed for value \"NaN\" at path \"mallPrice\"","name":"CastError"},"message":"Cast to Number failed for value \"NaN\" at path \"mallPrice\"","name":"CastError"},"order_list.0.count":{"stringValue":"\"[ '1', '2' ]\"","kind":"Number","value":"~order_list.1.count~value","path":"count","reason":{"stringValue":"\"[ '1', '2' ]\"","kind":"number","value":"~order_list.1.count~value","path":"count","reason":{"generatedMessage":true,"code":"ERR_ASSERTION","actual":false,"expected":true,"operator":"=="},"message":"Cast to number failed for value \"[ '1', '2' ]\" at path \"count\"","name":"CastError"},"message":"Cast to Number failed for value \"[ '1', '2' ]\" at path \"count\"","name":"CastError"},"order_list.0.mallPrice":{"stringValue":"\"NaN\"","kind":"Number","value":null,"path":"mallPrice","reason":{"stringValue":"\"NaN\"","kind":"number","value":null,"path":"mallPrice","reason":{"generatedMessage":true,"code":"ERR_ASSERTION","actual":false,"expected":true,"operator":"=="},"message":"Cast to number failed for value \"NaN\" at path \"mallPrice\"","name":"CastError"},"message":"Cast to Number failed for value \"NaN\" at path \"mallPrice\"","name":"CastError"}}
+_message: "OrderList validation failed"
+message: "OrderList validation failed: mallPrice: Cast to Number failed for value \"NaN\" at path \"mallPrice\", order_list.1.count: Cast to Number failed for value \"[ '1', '2' ]\" at path \"count\", order_list.1.mallPrice: Cast to Number failed for value \"NaN\" at path \"mallPrice\", order_list.0.count: Cast to Number failed for value \"[ '1', '2' ]\" at path \"count\", order_list.0.mallPrice: Cast to Number failed for value \"NaN\" at path \"mallPrice\""
+name: "ValidationError"
+pid: 9200
+hostname: STU008
+
+2020-01-03 16:32:41,355 ERROR 9200 [-/127.0.0.1/-/10ms POST /v1/order] nodejs.CastError: Cast to string failed for value "{ cid: '418fc60784d04e71beffe1ce5174c947' }" at path "id" for model "Goods"
+    at new CastError (E:\project\shop\server\node_modules\_mongoose@5.8.3@mongoose\lib\error\cast.js:39:11)
+    at SchemaString.cast (E:\project\shop\server\node_modules\_mongoose@5.8.3@mongoose\lib\schema\string.js:583:11)
+    at SchemaString.SchemaType.applySetters (E:\project\shop\server\node_modules\_mongoose@5.8.3@mongoose\lib\schematype.js:975:12)
+    at SchemaString.SchemaType._castForQuery (E:\project\shop\server\node_modules\_mongoose@5.8.3@mongoose\lib\schematype.js:1389:15)
+    at SchemaString.castForQuery (E:\project\shop\server\node_modules\_mongoose@5.8.3@mongoose\lib\schema\string.js:645:15)
+    at SchemaString.SchemaType.castForQueryWrapper (E:\project\shop\server\node_modules\_mongoose@5.8.3@mongoose\lib\schematype.js:1358:15)
+    at cast (E:\project\shop\server\node_modules\_mongoose@5.8.3@mongoose\lib\cast.js:260:34)
+    at model.Query.Query.cast (E:\project\shop\server\node_modules\_mongoose@5.8.3@mongoose\lib\query.js:4698:12)
+    at model.Query.Query._castConditions (E:\project\shop\server\node_modules\_mongoose@5.8.3@mongoose\lib\query.js:1876:10)
+    at model.Query.<anonymous> (E:\project\shop\server\node_modules\_mongoose@5.8.3@mongoose\lib\query.js:2131:8)
+    at model.Query._wrappedThunk [as _findOne] (E:\project\shop\server\node_modules\_mongoose@5.8.3@mongoose\lib\helpers\query\wrapThunk.js:16:8)
+    at E:\project\shop\server\node_modules\_kareem@2.3.1@kareem\index.js:369:33
+    at processTicksAndRejections (internal/process/task_queues.js:75:11)
+stringValue: "\"{ cid: '418fc60784d04e71beffe1ce5174c947' }\""
+kind: "string"
+value: {"cid":"418fc60784d04e71beffe1ce5174c947"}
+path: "id"
+reason: null
+message: "Cast to string failed for value \"{ cid: '418fc60784d04e71beffe1ce5174c947' }\" at path \"id\" for model \"Goods\""
+name: "CastError"
+model: undefined
+pid: 9200
+hostname: STU008
+

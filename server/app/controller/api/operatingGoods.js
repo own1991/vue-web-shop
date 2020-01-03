@@ -39,7 +39,7 @@ class OperatingGoodsController extends BaseController {
     async addShop() {
         const { id } = this.ctx.request.body
         const { ctx } = this
-        const { _id } = ctx.session.userInfo   // 用户id
+        const { _id } = ctx.session.userInfo // 用户id
         if (!ctx.request.body.id) {
             this.error('缺少重要参数id')
             return
@@ -53,7 +53,7 @@ class OperatingGoodsController extends BaseController {
                     count: goodsData.count += 1
                 }
             })
-        } else {  // 说明没有这条数据
+        } else { // 说明没有这条数据
             // 查到这条商品数据
             let goods = await ctx.model.Goods.findOne({ id: id })
             let newGoods = new ctx.model.ShopList({
@@ -110,7 +110,7 @@ class OperatingGoodsController extends BaseController {
             return
         }
         const { _id } = ctx.session.userInfo
-        if (data.isDefault == true) {   // 设置默认地址
+        if (data.isDefault == true) { // 设置默认地址
             await ctx.model.Address.updateMany({ uid: _id, isDefault: true }, {
                 $set: {
                     'isDefault': false,
@@ -118,18 +118,18 @@ class OperatingGoodsController extends BaseController {
             })
         }
 
-        if (data.id) {    // 说明是更新地址
+        if (data.id) { // 说明是更新地址
             await ctx.model.Address.updateOne({ _id: data.id, uid: _id }, data)
             this.success('修改成功')
 
-        } else {  // 新增地址
+        } else { // 新增地址
             const datas = Object.assign(data, {
                 uid: _id,
                 add_time: +new Date()
             })
             const address = new ctx.model.Address(datas)
             await address.save()
-            // 保存后查询一次
+                // 保存后查询一次
             const addressDef = await ctx.model.Address.find({ uid: _id })
             if (addressDef.length == 1) { // 如果数据库只有1条，设置这一条为默认地址
                 if (!addressDef.isDefault) {
@@ -166,17 +166,17 @@ class OperatingGoodsController extends BaseController {
             return
         }
         const uid = ctx.session.userInfo._id
-        // 订单信息
-        let platform = '622'           // 订单头
+            // 订单信息
+        let platform = '622' // 订单头
         let r1 = Math.floor(Math.random() * 10)
         let r2 = Math.floor(Math.random() * 10)
-        let sysDate = ctx.helper.format(new Date(), 'YYYYMMDDHHmmss')          // 系统时间
-        let add_time = ctx.helper.format(new Date(), 'YYYY-MM-DD HH:mm:ss')   // 订单创建时间
-        let order_id = platform + r1 + sysDate + r2;   // 订单id
+        let sysDate = ctx.helper.format(new Date(), 'YYYYMMDDHHmmss') // 系统时间
+        let add_time = ctx.helper.format(new Date(), 'YYYY-MM-DD HH:mm:ss') // 订单创建时间
+        let order_id = platform + r1 + sysDate + r2; // 订单id
         let shopList = []
-        // 根据id查询出购物车订单
+            // 根据id查询出购物车订单
         for (let i = 0; i < data.orderId.length; i++) {
-            if (data.idDirect) {    // 说明不是从购物车过来（直接购买）
+            if (data.idDirect === '1') { // 说明不是从购物车过来（直接购买）
                 const res = await ctx.model.Goods.findOne({ id: data.orderId[0] })
 
                 shopList[i] = {
@@ -189,7 +189,7 @@ class OperatingGoodsController extends BaseController {
                     uid,
                     order_id
                 }
-            } else {    // 购物车来的
+            } else { // 购物车来的
                 let item = await ctx.model.ShopList.find({ uid, cid: data.orderId[i] })
                 let datas = item[0]
 
@@ -210,19 +210,19 @@ class OperatingGoodsController extends BaseController {
             return x + y.present_price * y.count;
         }, 0)
         let orders = {
-            uid,
-            status: 4,
-            order_id,
-            tel: data.tel,
-            address: data.address,
-            add_time,
-            mallPrice,
-            order_list: shopList
-        }
-        // 存入数据库
+                uid,
+                status: 4,
+                order_id,
+                tel: data.tel,
+                address: data.address,
+                add_time,
+                mallPrice,
+                order_list: shopList
+            }
+            // 存入数据库
         let orderList = new ctx.model.OrderList(orders)
         await orderList.save()
-        // 删除购物车列表的商品
+            // 删除购物车列表的商品
         if (!data.idDirect) {
             await ctx.model.ShopList.deleteMany({ uid, cid: data.orderId })
         }
@@ -242,7 +242,7 @@ class OperatingGoodsController extends BaseController {
             return
         }
         const userInfo = ctx.session.userInfo
-        // 评论有没有上传图片
+            // 评论有没有上传图片
         let images = []
         if (data.image.length) {
             for (let i = 0; i < data.image.length; i++) {
@@ -253,7 +253,7 @@ class OperatingGoodsController extends BaseController {
         const datas = {
             comment_uid: userInfo._id,
             cid: data.id,
-            comment_time: ctx.helper.format(new Date(), 'YYYY-MM-DD HH:mm:ss'),   // 订单创建时间,
+            comment_time: ctx.helper.format(new Date(), 'YYYY-MM-DD HH:mm:ss'), // 订单创建时间,
             rate: data.rate,
             anonymous: data.anonymous,
             content: data.content,
@@ -261,8 +261,8 @@ class OperatingGoodsController extends BaseController {
         }
         const comment = new ctx.model.Comment(datas)
         await comment.save()
-        // 删除需要评论的那条数据或者把是否已经评论的状态改变(这里是改变状态)
-        // 1，查到对应的订单,直接修改
+            // 删除需要评论的那条数据或者把是否已经评论的状态改变(这里是改变状态)
+            // 1，查到对应的订单,直接修改
         await ctx.model.OrderList.findOneAndUpdate({ uid: userInfo._id, order_id: data.order_id, 'order_list._id': data._id }, {
             $set: {
                 'order_list.$.isComment': true

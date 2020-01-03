@@ -10,7 +10,8 @@ export default new Vuex.Store({
         city: '',
         currentCity: '',
         nickname: '',
-        shopList: []
+        shopList: [],
+        address: ''
     },
     mutations: {
         pushKeywords(state, data) {
@@ -23,6 +24,17 @@ export default new Vuex.Store({
             state.shopList.map(item => item.check = data)
         },
 
+    },
+    getters: {
+        getSum: state => { //通过方法访问
+            let add = 0;
+            state.shopList.map(item => {
+                if (item.check) {
+                    add += item.mallPrice * item.count;
+                }
+            });
+            return add.toFixed(2);
+        }
     },
     actions: {},
     modules: {}

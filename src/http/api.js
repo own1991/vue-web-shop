@@ -1,4 +1,5 @@
 import service from './index'
+import axios from 'axios'
 // 所有接口的api封装
 export default {
     /**

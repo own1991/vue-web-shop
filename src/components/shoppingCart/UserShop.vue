@@ -13,7 +13,7 @@
       </div>
       <van-divider :style="{ padding: '0 3px' }" />
       <van-button class="btn" type="primary" @click="del()">删除</van-button>
-      <van-button class="btn" type="primary" @click="goto()">结算</van-button>
+      <van-button class="btn" type="primary" @click="$goto('/shoppingPayMent')">结算</van-button>
     </div>
     <better-scroll class="wrapper">
       <div class="goodsbox" v-for="item in $store.state.shopList" :key="item.id">
@@ -56,13 +56,11 @@ export default {
           });
         }
       });
-      
+      this.$toast("删除完毕");
       this.getCardData();
     },
     changeAll() {
-      console.log(this.checked);
       this.$store.commit("editshopList", this.checked);
-      // this.$store.state.shopList.map(item => (item.checked = this.checked));
     },
     getCardData() {
       this.$api.getCard().then(res => {
@@ -87,13 +85,7 @@ export default {
       this.$store.state.shopList;
     },
     sum() {
-      let add = 0;
-      this.$store.state.shopList.map(item => {
-        if (item.check) {
-          add += item.mallPrice * item.count;
-        }
-      });
-      return add.toFixed(2);
+      return this.$store.getters.getSum;
     }
   }
 };

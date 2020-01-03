@@ -38,7 +38,7 @@
         <van-icon name="arrow" />
       </div>
     </div>
-    <div class="contorl-title">
+    <div class="contorl-title" @click="$goto('/address')">
       <van-icon name="aim" />
       <div>地址管理</div>
       <div>
