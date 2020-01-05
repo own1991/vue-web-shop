@@ -13,9 +13,14 @@
       <van-tab title="商品详情">
         <div v-html="goodsOne.detail"></div>
       </van-tab>
-      <van-tab title="用户评论" class="desc">暂无评论</van-tab>
+      <van-tab title="用户评论" class="desc">
+        <div v-if="!flag">暂无评论</div>
+        <div v-else>
+          <detail-comm />
+        </div>
+      </van-tab>
     </van-tabs>
-    <detail-button :item='goodsOne.id'></detail-button>
+    <detail-button :item="goodsOne"></detail-button>
   </div>
 </template>
 
@@ -23,6 +28,7 @@
 import detailSwipe from "../../components/details/DetailSwipe";
 import detailOn from "../../components/details/DetailOn";
 import detailButton from "../../components/details/DetailButton";
+import detailComm from "../../components/details/DetailComm";
 export default {
   name: "detail",
   data() {
@@ -33,9 +39,7 @@ export default {
   },
   beforeRouteLeave(to, from, next) {
     if (
-      !this.$store.state.browseList.some(
-        item => item.id === this.goodsOne.id
-      )
+      !this.$store.state.browseList.some(item => item.id === this.goodsOne.id)
     ) {
       this.$store.commit("pushBrowseList", this.goodsOne);
     }
@@ -45,7 +49,8 @@ export default {
   components: {
     detailSwipe,
     detailOn,
-    detailButton
+    detailButton,
+    detailComm
   },
   methods: {
     getgood() {

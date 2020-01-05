@@ -4,10 +4,10 @@
       <div slot="title">订单结算</div>
     </global-top>
     <div>
-      <shopping-address :defaultAddress="defaultAddress"></shopping-address>
+      <shopping-address :list="list" :defaultAddress="defaultAddress"></shopping-address>
     </div>
     <!-- <better-S -->
-    <div>
+    <div v-if="checkList.length>0">
       <van-card
         v-for="item in checkList"
         :key="item.id"
@@ -28,7 +28,8 @@ export default {
   data() {
     return {
       items: [],
-      defaultAddress: {}
+      defaultAddress: {},
+      list: []
     };
   },
   props: {},
@@ -37,6 +38,10 @@ export default {
   },
   methods: {
     onSubmit() {
+      if (!this.defaultAddress) {
+        this.$toast("无收货地址，无法购买");
+        return;
+      }
       let obj = {
         // 收货地址
         address: this.defaultAddress.addressDetail,
@@ -47,17 +52,32 @@ export default {
         // 总价格
         totalPrice: this.sum,
         // 用来判断是购物车结算还是直接购买
-        idDirect: '0',
+        // idDirect: fasle,
         // 商品数量
         count: this.count
       };
+      //如果时立即购买，则传入以下值
+      if (this.$route.params.item) {
+        obj.orderId = [this.$route.params.item.id];
+        obj.totalPrice =
+          this.$route.params.item.count *
+          this.$route.params.item.present_price.toFixed(2);
+        obj.idDirect = true;
+      }
+      console.log(obj);
       this.$api.placeOrder(obj).then(res => {
         if (res.code === 200) {
-          console.log(res);
+          this.$toast(res.msg);
+          this.$router.push("/");
         }
       });
     },
     getDefaultAddress() {
+      this.$api.getAddress().then(res => {
+        if (this.code === 200) {
+          this.list = res.address;
+        }
+      });
       this.$api.getDefaultAddress().then(res => {
         if (res.code === 200) {
           this.defaultAddress = res.defaultAdd;
@@ -67,20 +87,35 @@ export default {
     }
   },
   mounted() {
-    console.log(this.checkList);
+    console.log(this.$route.params);
     this.getDefaultAddress();
   },
   watch: {},
   computed: {
+    // 购物车
     checkList() {
-      return this.$store.state.shopList.filter(item => item.check === true);
+      if (this.$route.params.item) {
+        return [this.$route.params.item];
+      } else {
+        return this.$store.state.shopList.filter(item => item.check === true);
+      }
     },
+    //计算总价
     sum() {
-      return this.$store.getters.getSum;
+      if (this.$route.params.item) {
+        return (
+          this.$route.params.item.count *
+          this.$route.params.item.present_price.toFixed(2)
+        );
+      } else {
+        return this.$store.getters.getSum;
+      }
     },
+    // 第一个商品的数量
     count() {
-      return this.$store.state.shopList[0].count;
+      return this.checkList[0].count;
     },
+    //所有商品的id
     ids() {
       let arr = [];
       this.$store.state.shopList.map(item => {

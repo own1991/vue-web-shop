@@ -2,7 +2,11 @@
   <div class="usershop">
     <div class="container">
       <div class="checkbox">
-        <van-checkbox v-model="checked" @change="changeAll()" checked-color="#07c160">全选</van-checkbox>
+        <van-checkbox
+          v-model="checked"
+          @change="changeAll()"
+          checked-color="#07c160"
+        >{{checked?'取消全选':'全选'}}</van-checkbox>
       </div>
       <div class="total">
         <div>
@@ -66,14 +70,17 @@ export default {
       this.$api.getCard().then(res => {
         if (res.code === 200) {
           this.$store.state.shopList = res.shopList;
+          this.$store.dispatch("getShopList");
         }
       });
     },
     // 修改商品数量
     onChange(val) {
-      this.$api
-        .editCart(val.count, val.cid, val.mallPrice)
-        .then(res => console.log(res));
+      this.$api.editCart(val.count, val.cid, val.mallPrice).then(res => {
+        if (res.code === 200) {
+          this.$store.dispatch("getShopList");
+        }
+      });
     }
   },
   mounted() {

@@ -18,13 +18,13 @@
       </div>
     </div>
     <van-tabbar :fixed="false" active-color="#646566" class="control">
-      <van-tabbar-item icon="paid">待付款</van-tabbar-item>
-      <van-tabbar-item icon="send-gift-o">待发货</van-tabbar-item>
-      <van-tabbar-item icon="logistics">待收货</van-tabbar-item>
-      <van-tabbar-item icon="records">评价</van-tabbar-item>
-      <van-tabbar-item icon="points">已完成</van-tabbar-item>
+      <van-tabbar-item @click="$goto('/order?id=1')" icon="paid">待付款</van-tabbar-item>
+      <van-tabbar-item @click="$goto('/order?id=2')" icon="send-gift-o">待发货</van-tabbar-item>
+      <van-tabbar-item @click="$goto('/order?id=3')" icon="logistics">待收货</van-tabbar-item>
+      <van-tabbar-item @click="$goto('/evaluate')" :info="tobe" icon="records">评价</van-tabbar-item>
+      <van-tabbar-item @click="$goto('/order?id=4')" icon="points">已完成</van-tabbar-item>
     </van-tabbar>
-    <div class="contorl-title">
+    <div class="contorl-title" @click="$goto('/order?id=0')">
       <van-icon name="cart-circle-o" />
       <div>全部订单</div>
       <div>
@@ -80,13 +80,27 @@ export default {
         .catch(err => {
           console.log(err);
         });
+    },
+    tobeEvaluated() {
+      this.$api.tobeEvaluated().then(res => {
+        if (res.code === 200) {
+          this.$store.state.tobeEvaluated = res.data.list;
+        }
+      });
     }
   },
-  mounted() {},
+  mounted() {
+    this.tobeEvaluated();
+  },
   watch: {},
   computed: {
     nickname() {
       return this.$store.state.nickname;
+    },
+    tobe() {
+      if (this.$store.state.tobeEvaluated.length > 0) {
+        return this.$store.state.tobeEvaluated.length;
+      } else return;
     }
   }
 };

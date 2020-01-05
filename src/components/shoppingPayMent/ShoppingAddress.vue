@@ -1,7 +1,7 @@
 <template>
   <div class="container">
-    <div class="adress-box" v-if="defaultAddress===null">
-      <div class="add" @click="$goto('/addressEdit')">点击添加收货地址</div>
+    <div class="adress-box" v-if="!defaultAddress">
+      <div class="add" @click="$goto('/address')">点击添加收货地址</div>
     </div>
     <div v-else>
       <div class="adress-box">
@@ -34,6 +34,10 @@ export default {
     defaultAddress: {
       type: Object,
       default: () => {}
+    },
+    list: {
+      type: Array,
+      default: () => []
     }
   },
   components: {},

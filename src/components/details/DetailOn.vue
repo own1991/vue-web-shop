@@ -20,7 +20,6 @@
 </template>
 
 <script>
-import axios from "axios";
 export default {
   data() {
     return {
@@ -47,7 +46,7 @@ export default {
           }
         });
       } else {
-        this.$api.cancelCollection(goods.id).then(res => {
+        this.$api.cancelCollection(this.$route.query.id).then(res => {
           if (res.code === 200) {
             this.$toast(res.msg);
             this.getisCollection(goods.id);
@@ -60,6 +59,7 @@ export default {
     //取消收藏
     getisCollection(id) {
       this.$api.isCollection(id).then(res => {
+        console.log(res);
         if (res.isCollection === 1) {
           this.flag = false;
         } else {

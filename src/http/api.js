@@ -101,7 +101,7 @@ export default {
     },
 
     user() {
-        return service.req(`/queryUser`)
+        return service.req(`/queryUser`, {})
     },
 
     saveUser({...args }) {
@@ -194,15 +194,11 @@ export default {
     },
 
     alreadyEvaluated(page = 1) {
-        return service.req('/alreadyEvaluated', {
-            params: { page }
-        })
+        return service.req(`/alreadyEvaluated?page=1`)
     },
 
     tobeEvaluated(page = 1) {
-        return service.req('/tobeEvaluated', {
-            params: { page }
-        })
+        return service.req('/tobeEvaluated?page=1')
     },
 
     evaluateOne(_id) {

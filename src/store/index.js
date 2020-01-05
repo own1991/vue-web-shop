@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-
+import $api from '../http/api'
 Vue.use(Vuex)
 
 export default new Vuex.Store({
@@ -11,7 +11,9 @@ export default new Vuex.Store({
         currentCity: '',
         nickname: '',
         shopList: [],
-        address: ''
+        address: '',
+        Num: '',
+        tobeEvaluated: {}
     },
     mutations: {
         pushKeywords(state, data) {
@@ -34,8 +36,25 @@ export default new Vuex.Store({
                 }
             });
             return add.toFixed(2);
+        },
+        getnum: state => {
+            if (state.Num > 0) {
+                return state.Num
+            } else return;
         }
     },
-    actions: {},
+    actions: {
+        getShopList({ state }) {
+            $api.getCard().then(res => {
+                if (res.code === 200) {
+                    let num = 0;
+                    res.shopList.map(item => {
+                        num += item.count;
+                    });
+                    state.Num = num;
+                }
+            });
+        }
+    },
     modules: {}
 })

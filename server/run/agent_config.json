@@ -68,7 +68,7 @@
     "onerror": {
       "errorPageUrl": "",
       "appErrorFilter": null,
-      "templatePath": "E:\\project\\shop\\server\\node_modules\\_egg-onerror@2.1.0@egg-onerror\\lib\\onerror_page.mustache"
+      "templatePath": "F:\\project\\Shopping\\server\\node_modules\\_egg-onerror@2.1.0@egg-onerror\\lib\\onerror_page.mustache"
     },
     "i18n": {
       "defaultLocale": "en_US",
@@ -81,8 +81,8 @@
     "watcher": {
       "type": "development",
       "eventSources": {
-        "default": "E:\\project\\shop\\server\\node_modules\\_egg-watcher@3.1.0@egg-watcher\\lib\\event-sources\\default",
-        "development": "E:\\project\\shop\\server\\node_modules\\_egg-watcher@3.1.0@egg-watcher\\lib\\event-sources\\development"
+        "default": "F:\\project\\Shopping\\server\\node_modules\\_egg-watcher@3.1.0@egg-watcher\\lib\\event-sources\\default",
+        "development": "F:\\project\\Shopping\\server\\node_modules\\_egg-watcher@3.1.0@egg-watcher\\lib\\event-sources\\development"
       }
     },
     "customLogger": {
@@ -105,7 +105,7 @@
       "files": 10,
       "fileExtensions": [],
       "whitelist": null,
-      "tmpdir": "C:\\Users\\ADMINI\\x7e1\\AppData\\Local\\Temp\\egg-multipart-tmp\\server",
+      "tmpdir": "C:\\Users\\Trayvon\\AppData\\Local\\Temp\\egg-multipart-tmp\\server",
       "cleanSchedule": {
         "cron": "0 30 4 * * *"
       }
@@ -128,14 +128,14 @@
     },
     "static": {
       "prefix": "/public/",
-      "dir": "E:\\project\\shop\\server\\app\\public",
+      "dir": "F:\\project\\Shopping\\server\\app\\public",
       "dynamic": true,
       "preload": false,
       "buffer": false,
       "maxFiles": 1000
     },
     "view": {
-      "root": "E:\\project\\shop\\server\\app\\view",
+      "root": "F:\\project\\Shopping\\server\\app\\view",
       "cache": false,
       "defaultExtension": ".html",
       "defaultViewEngine": "",
@@ -157,7 +157,7 @@
       "open": "<Function open>"
     },
     "ejs": {
-      "root": "E:\\project\\shop\\server\\app\\view",
+      "root": "F:\\project\\Shopping\\server\\app\\view",
       "cache": false,
       "debug": false,
       "compileDebug": true,
@@ -231,9 +231,9 @@
       "author": "",
       "license": "MIT"
     },
-    "baseDir": "E:\\project\\shop\\server",
-    "HOME": "C:\\Users\\Administrator",
-    "rundir": "E:\\project\\shop\\server\\run",
+    "baseDir": "F:\\project\\Shopping\\server",
+    "HOME": "C:\\Users\\Trayvon",
+    "rundir": "F:\\project\\Shopping\\server\\run",
     "dump": {
       "ignore": "<Set>"
     },
@@ -265,7 +265,7 @@
       "onerror": "<Function onerror>"
     },
     "logger": {
-      "dir": "E:\\project\\shop\\server\\logs\\server",
+      "dir": "F:\\project\\Shopping\\server\\logs\\server",
       "encoding": "utf8",
       "env": "local",
       "level": "INFO",
@@ -346,8 +346,8 @@
       "dependencies": [],
       "optionalDependencies": [],
       "env": [],
-      "from": "E:\\project\\shop\\server\\node_modules\\_egg@2.26.0@egg\\config\\plugin.js",
-      "path": "E:\\project\\shop\\server\\node_modules\\_egg-session@3.1.0@egg-session",
+      "from": "F:\\project\\Shopping\\server\\node_modules\\_egg@2.26.0@egg\\config\\plugin.js",
+      "path": "F:\\project\\Shopping\\server\\node_modules\\_egg-session@3.1.0@egg-session",
       "version": "3.1.0"
     },
     "security": {
@@ -359,8 +359,8 @@
         "session"
       ],
       "env": [],
-      "from": "E:\\project\\shop\\server\\node_modules\\_egg@2.26.0@egg\\config\\plugin.js",
-      "path": "E:\\project\\shop\\server\\node_modules\\_egg-security@2.7.1@egg-security",
+      "from": "F:\\project\\Shopping\\server\\node_modules\\_egg@2.26.0@egg\\config\\plugin.js",
+      "path": "F:\\project\\Shopping\\server\\node_modules\\_egg-security@2.7.1@egg-security",
       "version": "2.7.1"
     },
     "jsonp": {
@@ -372,8 +372,8 @@
         "security"
       ],
       "env": [],
-      "from": "E:\\project\\shop\\server\\node_modules\\_egg@2.26.0@egg\\config\\plugin.js",
-      "path": "E:\\project\\shop\\server\\node_modules\\_egg-jsonp@2.0.0@egg-jsonp",
+      "from": "F:\\project\\Shopping\\server\\node_modules\\_egg@2.26.0@egg\\config\\plugin.js",
+      "path": "F:\\project\\Shopping\\server\\node_modules\\_egg-jsonp@2.0.0@egg-jsonp",
       "version": "2.0.0"
     },
     "onerror": {
@@ -385,8 +385,8 @@
         "jsonp"
       ],
       "env": [],
-      "from": "E:\\project\\shop\\server\\node_modules\\_egg@2.26.0@egg\\config\\plugin.js",
-      "path": "E:\\project\\shop\\server\\node_modules\\_egg-onerror@2.1.0@egg-onerror",
+      "from": "F:\\project\\Shopping\\server\\node_modules\\_egg@2.26.0@egg\\config\\plugin.js",
+      "path": "F:\\project\\Shopping\\server\\node_modules\\_egg-onerror@2.1.0@egg-onerror",
       "version": "2.1.0"
     },
     "i18n": {
@@ -396,8 +396,8 @@
       "dependencies": [],
       "optionalDependencies": [],
       "env": [],
-      "from": "E:\\project\\shop\\server\\node_modules\\_egg@2.26.0@egg\\config\\plugin.js",
-      "path": "E:\\project\\shop\\server\\node_modules\\_egg-i18n@2.1.1@egg-i18n",
+      "from": "F:\\project\\Shopping\\server\\node_modules\\_egg@2.26.0@egg\\config\\plugin.js",
+      "path": "F:\\project\\Shopping\\server\\node_modules\\_egg-i18n@2.1.1@egg-i18n",
       "version": "2.1.1"
     },
     "watcher": {
@@ -407,8 +407,8 @@
       "dependencies": [],
       "optionalDependencies": [],
       "env": [],
-      "from": "E:\\project\\shop\\server\\node_modules\\_egg@2.26.0@egg\\config\\plugin.js",
-      "path": "E:\\project\\shop\\server\\node_modules\\_egg-watcher@3.1.0@egg-watcher",
+      "from": "F:\\project\\Shopping\\server\\node_modules\\_egg@2.26.0@egg\\config\\plugin.js",
+      "path": "F:\\project\\Shopping\\server\\node_modules\\_egg-watcher@3.1.0@egg-watcher",
       "version": "3.1.0"
     },
     "schedule": {
@@ -418,8 +418,8 @@
       "dependencies": [],
       "optionalDependencies": [],
       "env": [],
-      "from": "E:\\project\\shop\\server\\node_modules\\_egg@2.26.0@egg\\config\\plugin.js",
-      "path": "E:\\project\\shop\\server\\node_modules\\_egg-schedule@3.6.4@egg-schedule",
+      "from": "F:\\project\\Shopping\\server\\node_modules\\_egg@2.26.0@egg\\config\\plugin.js",
+      "path": "F:\\project\\Shopping\\server\\node_modules\\_egg-schedule@3.6.4@egg-schedule",
       "version": "3.6.4"
     },
     "multipart": {
@@ -431,8 +431,8 @@
         "schedule"
       ],
       "env": [],
-      "from": "E:\\project\\shop\\server\\node_modules\\_egg@2.26.0@egg\\config\\plugin.js",
-      "path": "E:\\project\\shop\\server\\node_modules\\_egg-multipart@2.10.1@egg-multipart",
+      "from": "F:\\project\\Shopping\\server\\node_modules\\_egg@2.26.0@egg\\config\\plugin.js",
+      "path": "F:\\project\\Shopping\\server\\node_modules\\_egg-multipart@2.10.1@egg-multipart",
       "version": "2.10.1"
     },
     "development": {
@@ -446,8 +446,8 @@
       "env": [
         "local"
       ],
-      "from": "E:\\project\\shop\\server\\node_modules\\_egg@2.26.0@egg\\config\\plugin.js",
-      "path": "E:\\project\\shop\\server\\node_modules\\_egg-development@2.4.3@egg-development",
+      "from": "F:\\project\\Shopping\\server\\node_modules\\_egg@2.26.0@egg\\config\\plugin.js",
+      "path": "F:\\project\\Shopping\\server\\node_modules\\_egg-development@2.4.3@egg-development",
       "version": "2.4.3"
     },
     "logrotator": {
@@ -459,8 +459,8 @@
       ],
       "optionalDependencies": [],
       "env": [],
-      "from": "E:\\project\\shop\\server\\node_modules\\_egg@2.26.0@egg\\config\\plugin.js",
-      "path": "E:\\project\\shop\\server\\node_modules\\_egg-logrotator@3.1.0@egg-logrotator",
+      "from": "F:\\project\\Shopping\\server\\node_modules\\_egg@2.26.0@egg\\config\\plugin.js",
+      "path": "F:\\project\\Shopping\\server\\node_modules\\_egg-logrotator@3.1.0@egg-logrotator",
       "version": "3.1.0"
     },
     "static": {
@@ -470,8 +470,8 @@
       "dependencies": [],
       "optionalDependencies": [],
       "env": [],
-      "from": "E:\\project\\shop\\server\\node_modules\\_egg@2.26.0@egg\\config\\plugin.js",
-      "path": "E:\\project\\shop\\server\\node_modules\\_egg-static@2.2.0@egg-static",
+      "from": "F:\\project\\Shopping\\server\\node_modules\\_egg@2.26.0@egg\\config\\plugin.js",
+      "path": "F:\\project\\Shopping\\server\\node_modules\\_egg-static@2.2.0@egg-static",
       "version": "2.2.0"
     },
     "view": {
@@ -481,8 +481,8 @@
       "dependencies": [],
       "optionalDependencies": [],
       "env": [],
-      "from": "E:\\project\\shop\\server\\node_modules\\_egg@2.26.0@egg\\config\\plugin.js",
-      "path": "E:\\project\\shop\\server\\node_modules\\_egg-view@2.1.2@egg-view",
+      "from": "F:\\project\\Shopping\\server\\node_modules\\_egg@2.26.0@egg\\config\\plugin.js",
+      "path": "F:\\project\\Shopping\\server\\node_modules\\_egg-view@2.1.2@egg-view",
       "version": "2.1.2"
     },
     "mongoose": {
@@ -492,8 +492,8 @@
       "dependencies": [],
       "optionalDependencies": [],
       "env": [],
-      "from": "E:\\project\\shop\\server\\config\\plugin.js",
-      "path": "E:\\project\\shop\\server\\node_modules\\_egg-mongoose@3.2.0@egg-mongoose",
+      "from": "F:\\project\\Shopping\\server\\config\\plugin.js",
+      "path": "F:\\project\\Shopping\\server\\node_modules\\_egg-mongoose@3.2.0@egg-mongoose",
       "version": "3.2.0"
     },
     "ejs": {
@@ -505,8 +505,8 @@
       ],
       "optionalDependencies": [],
       "env": [],
-      "from": "E:\\project\\shop\\server\\config\\plugin.js",
-      "path": "E:\\project\\shop\\server\\node_modules\\_egg-view-ejs@2.0.0@egg-view-ejs",
+      "from": "F:\\project\\Shopping\\server\\config\\plugin.js",
+      "path": "F:\\project\\Shopping\\server\\node_modules\\_egg-view-ejs@2.0.0@egg-view-ejs",
       "version": "2.0.0"
     },
     "jwt": {
@@ -518,8 +518,8 @@
         "onerror"
       ],
       "env": [],
-      "from": "E:\\project\\shop\\server\\config\\plugin.js",
-      "path": "E:\\project\\shop\\server\\node_modules\\_egg-jwt@3.1.7@egg-jwt",
+      "from": "F:\\project\\Shopping\\server\\config\\plugin.js",
+      "path": "F:\\project\\Shopping\\server\\node_modules\\_egg-jwt@3.1.7@egg-jwt",
       "version": "3.1.7"
     }
   }

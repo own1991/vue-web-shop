@@ -5,7 +5,13 @@
     <van-tabbar v-model="active">
       <van-tabbar-item replace to="/home" name="home" icon="wap-home">首页</van-tabbar-item>
       <van-tabbar-item replace to="/category" name="category" icon="wap-nav">分类</van-tabbar-item>
-      <van-tabbar-item replace to="/shoppingCart" name="shoppingCart" icon="shopping-cart">购物车</van-tabbar-item>
+      <van-tabbar-item
+        replace
+        to="/shoppingCart"
+        :info="Num"
+        name="shoppingCart"
+        icon="shopping-cart"
+      >购物车</van-tabbar-item>
       <van-tabbar-item replace to="/my" name="my" icon="manager">我的</van-tabbar-item>
     </van-tabbar>
   </div>
@@ -25,18 +31,26 @@ export default {
       if (localStorage.getItem("nickname")) {
         this.$store.state.nickname = localStorage.getItem("nickname");
       }
-    }
+    },
+    
   },
   mounted() {
-    this.getnickname()
+    this.getnickname();
+    this.$store.dispatch("getShopList");
     this.active = this.$route.name;
+  
   },
   watch: {
     $route(val) {
       this.active = val.name;
     }
   },
-  computed: {}
+  computed: {
+    Num() {
+      return this.$store.getters.getnum;
+    }
+
+  }
 };
 </script>
 

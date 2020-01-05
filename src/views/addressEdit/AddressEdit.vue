@@ -13,7 +13,6 @@
       :area-columns-placeholder="['请选择', '请选择', '请选择']"
       @save="onSave"
       @delete="onDelete"
-      @change-detail="onChangeDetail"
     />
   </div>
 </template>
@@ -31,32 +30,30 @@ export default {
   props: {},
   components: {},
   methods: {
+    //保存地址修改
     onSave(content) {
+      //判断是修改还是添加
       if (this.$route.params.item) {
         content.id = content._id;
       }
-      console.log(content);
       this.$api.postAddress(content).then(res => {
         if (res.code === 200) {
-          if (content.isDefault) {
-            this.$api.setDefaultAddress(content.id).then(res => {
-              if (res.code === 200) {
-                this.$toast("添加成功");
-                if (content.id) {
-                  this.$toast("修改成功");
-                }
-              }
-            });
+          if (content.id) {
+            this.$toast("修改成功");
           } else {
             this.$toast("添加成功");
-            if (content.id) {
-              this.$toast("修改成功");
-            }
           }
-          this.$router.go(-1);
         }
       });
+      //如果是修改了默认地址，更新一下列表
+      if (content.check) {
+        this.$api.setDefaultAddress(content._id).then(res => {
+          console.log(res);
+        });
+      }
+      this.$router.go(-1);
     },
+    //删除地址
     onDelete(content) {
       this.$api.deleteAddress(content._id).then(res => {
         if (res.code === 200) {
@@ -65,18 +62,7 @@ export default {
         }
       });
     },
-    onChangeDetail(val) {
-      if (val) {
-        this.searchResult = [
-          {
-            name: "课得在线",
-            address: "东门大桥"
-          }
-        ];
-      } else {
-        this.searchResult = [];
-      }
-    },
+    //接受params传参
     getAddress() {
       if (this.$route.params.item) {
         this.list = this.$route.params.item;

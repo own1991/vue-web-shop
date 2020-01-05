@@ -16,8 +16,7 @@ Vue.prototype.$util = util
 Vue.prototype.$addShop = function(item) {
     this.$api.addShop(item).then(res => {
         if (res.code === 200) {
-            console.log(res);
-            // this.$store.state.shopNum++
+            this.$store.dispatch('getShopList')
             this.$toast(res.msg);
         }
     });

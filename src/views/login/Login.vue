@@ -75,6 +75,7 @@ export default {
             localStorage.setItem("nickname", this.nickname);
             history.back();
             this.$toast("登录成功");
+            
           } else {
             this.$toast(res.msg);
           }

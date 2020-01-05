@@ -140,7 +140,7 @@ const routes = [{
     },
     //评价晒图
     {
-        path: '/rate:id',
+        path: '/rate',
         name: 'rate',
         component: () =>
             import ('../views/rate/Rate'),

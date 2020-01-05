@@ -176,7 +176,7 @@ class OperatingGoodsController extends BaseController {
         let shopList = []
             // 根据id查询出购物车订单
         for (let i = 0; i < data.orderId.length; i++) {
-            if (data.idDirect === '1') { // 说明不是从购物车过来（直接购买）
+            if (data.idDirect) { // 说明不是从购物车过来（直接购买）
                 const res = await ctx.model.Goods.findOne({ id: data.orderId[0] })
 
                 shopList[i] = {
