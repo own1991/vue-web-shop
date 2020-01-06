@@ -5,8 +5,8 @@
     </div>
     <div class="name">{{item.name}}</div>
     <div class="btn">
-      <div class="isComment" v-if="isComment" @click="done">查看评价</div>
-      <div class="noComment" v-else @click="tobe">评价晒图</div>
+      <div class="noComment" v-if="isComment===false" @click="tobes">评价晒图</div>
+      <div class="isComment" v-else @click="dones">查看评价</div>
     </div>
   </div>
 </template>
@@ -17,6 +17,10 @@ export default {
     item: {
       type: Object,
       default: () => {}
+    },
+    _id: {
+      type: String,
+      default: ''
     }
   },
   data() {
@@ -24,16 +28,14 @@ export default {
   },
   components: {},
   methods: {
-    tobe() {
+    tobes() {
       this.$router.push({ name: "rate", query: { id: this.item.cid } });
     },
-    done() {
-      this.$router.push({ name: "rate", query: { id: this.item.cid } });
+    dones() {
+      this.$router.push({ name: "aevaluated", query: { id: this._id } });
     }
   },
-  mounted() {
-    console.log(this.item);
-  },
+  mounted() {},
   watch: {},
   computed: {
     isComment() {
@@ -71,6 +73,10 @@ export default {
     .noComment {
       border: 1px solid red;
       color: red;
+    }
+    .isComment{
+      border: 1px solid gray;
+      color: gray;
     }
   }
 }

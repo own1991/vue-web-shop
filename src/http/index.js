@@ -19,7 +19,7 @@ service.defaults.baseURL = isProduction ? '' : '/api'
 // 超时时间
 // service.defaults.timeout = 10000
 // 请求头类型
-service.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded'
+// service.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded'
 
 // 请求拦截器
 service.interceptors.request.use(config => {

@@ -73,6 +73,7 @@ export default {
             this.$store.state.nickname = "";
             localStorage.removeItem("nickname");
             this.$toast("退出成功");
+            this.$router.go(0)
           } else {
             this.$toast(res.msg);
           }

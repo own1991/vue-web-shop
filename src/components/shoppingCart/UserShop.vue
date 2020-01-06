@@ -1,10 +1,10 @@
 <template>
   <div class="usershop">
-    <div class="container">
+    <div class="container" v-if="shopList.length>0">
       <div class="checkbox">
         <van-checkbox
           v-model="checked"
-          @change="changeAll()"
+          @click="changeAll"
           checked-color="#07c160"
         >{{checked?'取消全选':'全选'}}</van-checkbox>
       </div>
@@ -19,10 +19,11 @@
       <van-button class="btn" type="primary" @click="del()">删除</van-button>
       <van-button class="btn" type="primary" @click="$goto('/shoppingPayMent')">结算</van-button>
     </div>
+    <div v-else>暂无数据</div>
     <better-scroll class="wrapper">
       <div class="goodsbox" v-for="item in $store.state.shopList" :key="item.id">
         <div class="checkbox">
-          <van-checkbox v-model="item.check" checked-color="#07c160"></van-checkbox>
+          <van-checkbox v-model="item.check" checked-color="#07c160" @change="change"></van-checkbox>
         </div>
         <div class="img">
           <img :src="item.image_path" alt />
@@ -52,19 +53,25 @@ export default {
   },
   methods: {
     del() {
+      let arr = [];
       this.$store.state.shopList.map(item => {
         if (item.check) {
-          console.log(item);
-          this.$api.deleteShop(item.cid).then(res => {
-            console.log(res);
-          });
+          arr.push(item.cid);
         }
       });
-      this.$toast("删除完毕");
-      this.getCardData();
+      this.$api.deleteShop(arr).then(res => {
+        if (res.code === 200) {
+          this.$toast("删除完毕");
+          this.getCardData();
+        }
+      });
     },
     changeAll() {
-      this.$store.commit("editshopList", this.checked);
+      this.checked = !this.checked;
+      this.$store.state.shopList.map(item => (item.check = this.checked));
+    },
+    change() {
+      this.checked = this.$store.state.shopList.every(item => item.check);
     },
     getCardData() {
       this.$api.getCard().then(res => {
@@ -89,7 +96,9 @@ export default {
   watch: {},
   computed: {
     shopList() {
-      this.$store.state.shopList;
+      if(this.$store.state.shopList){
+        return this.$store.state.shopList;
+      }
     },
     sum() {
       return this.$store.getters.getSum;

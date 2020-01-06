@@ -196,3 +196,881 @@ name: "unhandledExceptionError"
 pid: 6036
 hostname: Trayvon
 
+2020-01-06 08:31:05,351 ERROR 3028 [-/127.0.0.1/-/16ms POST /v1/goodsOne/comment] nodejs.TypeError: Cannot read property 'length' of undefined
+    at OperatingGoodsController.comment (E:\project\shop\server\app\controller\api\operatingGoods.js:247:24)
+    at Object.callFn (E:\project\shop\server\node_modules\_egg-core@4.17.4@egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (E:\project\shop\server\node_modules\_egg-core@4.17.4@egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:190:18
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:36:12
+    at dispatch (E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:195:33)
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at E:\project\shop\server\app\middleware\isLogin.js:15:19
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at E:\project\shop\server\node_modules\_egg-development@2.4.3@egg-development\app\middleware\egg_loader_trace.js:9:56
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+
+pid: 3028
+hostname: STU008
+
+2020-01-06 08:31:28,759 ERROR 3028 [-/127.0.0.1/-/2ms POST /v1/goodsOne/comment] nodejs.TypeError: Cannot read property 'length' of undefined
+    at OperatingGoodsController.comment (E:\project\shop\server\app\controller\api\operatingGoods.js:247:24)
+    at Object.callFn (E:\project\shop\server\node_modules\_egg-core@4.17.4@egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (E:\project\shop\server\node_modules\_egg-core@4.17.4@egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:190:18
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:36:12
+    at dispatch (E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:195:33)
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at E:\project\shop\server\app\middleware\isLogin.js:15:19
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at E:\project\shop\server\node_modules\_egg-development@2.4.3@egg-development\app\middleware\egg_loader_trace.js:9:56
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+
+pid: 3028
+hostname: STU008
+
+2020-01-06 08:53:00,869 ERROR 3028 [-/127.0.0.1/-/1ms POST /v1/goodsOne/comment] nodejs.TypeError: Cannot read property 'length' of undefined
+    at OperatingGoodsController.comment (E:\project\shop\server\app\controller\api\operatingGoods.js:247:24)
+    at Object.callFn (E:\project\shop\server\node_modules\_egg-core@4.17.4@egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (E:\project\shop\server\node_modules\_egg-core@4.17.4@egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:190:18
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:36:12
+    at dispatch (E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:195:33)
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at E:\project\shop\server\app\middleware\isLogin.js:15:19
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at E:\project\shop\server\node_modules\_egg-development@2.4.3@egg-development\app\middleware\egg_loader_trace.js:9:56
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+
+pid: 3028
+hostname: STU008
+
+2020-01-06 08:53:16,448 ERROR 3028 [-/127.0.0.1/-/1ms POST /v1/goodsOne/comment] nodejs.TypeError: Cannot read property 'length' of undefined
+    at OperatingGoodsController.comment (E:\project\shop\server\app\controller\api\operatingGoods.js:247:24)
+    at Object.callFn (E:\project\shop\server\node_modules\_egg-core@4.17.4@egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (E:\project\shop\server\node_modules\_egg-core@4.17.4@egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:190:18
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:36:12
+    at dispatch (E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:195:33)
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at E:\project\shop\server\app\middleware\isLogin.js:15:19
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at E:\project\shop\server\node_modules\_egg-development@2.4.3@egg-development\app\middleware\egg_loader_trace.js:9:56
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+
+pid: 3028
+hostname: STU008
+
+2020-01-06 08:56:02,745 ERROR 3028 [-/127.0.0.1/-/3ms POST /v1/goodsOne/comment] nodejs.TypeError: Cannot read property 'length' of undefined
+    at OperatingGoodsController.comment (E:\project\shop\server\app\controller\api\operatingGoods.js:247:24)
+    at Object.callFn (E:\project\shop\server\node_modules\_egg-core@4.17.4@egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (E:\project\shop\server\node_modules\_egg-core@4.17.4@egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:190:18
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:36:12
+    at dispatch (E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:195:33)
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at E:\project\shop\server\app\middleware\isLogin.js:15:19
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at E:\project\shop\server\node_modules\_egg-development@2.4.3@egg-development\app\middleware\egg_loader_trace.js:9:56
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+
+pid: 3028
+hostname: STU008
+
+2020-01-06 09:01:48,456 ERROR 3028 [-/127.0.0.1/-/2ms POST /v1/goodsOne/comment] nodejs.TypeError: Cannot read property 'length' of undefined
+    at OperatingGoodsController.comment (E:\project\shop\server\app\controller\api\operatingGoods.js:247:24)
+    at Object.callFn (E:\project\shop\server\node_modules\_egg-core@4.17.4@egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (E:\project\shop\server\node_modules\_egg-core@4.17.4@egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:190:18
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:36:12
+    at dispatch (E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:195:33)
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at E:\project\shop\server\app\middleware\isLogin.js:15:19
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at E:\project\shop\server\node_modules\_egg-development@2.4.3@egg-development\app\middleware\egg_loader_trace.js:9:56
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+
+pid: 3028
+hostname: STU008
+
+2020-01-06 09:05:35,553 ERROR 3028 [-/127.0.0.1/-/2ms POST /v1/goodsOne/comment] nodejs.TypeError: Cannot read property 'length' of undefined
+    at OperatingGoodsController.comment (E:\project\shop\server\app\controller\api\operatingGoods.js:247:24)
+    at Object.callFn (E:\project\shop\server\node_modules\_egg-core@4.17.4@egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (E:\project\shop\server\node_modules\_egg-core@4.17.4@egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:190:18
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:36:12
+    at dispatch (E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:195:33)
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at E:\project\shop\server\app\middleware\isLogin.js:15:19
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at E:\project\shop\server\node_modules\_egg-development@2.4.3@egg-development\app\middleware\egg_loader_trace.js:9:56
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+
+pid: 3028
+hostname: STU008
+
+2020-01-06 09:05:37,497 ERROR 3028 [-/127.0.0.1/-/1ms POST /v1/goodsOne/comment] nodejs.TypeError: Cannot read property 'length' of undefined
+    at OperatingGoodsController.comment (E:\project\shop\server\app\controller\api\operatingGoods.js:247:24)
+    at Object.callFn (E:\project\shop\server\node_modules\_egg-core@4.17.4@egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (E:\project\shop\server\node_modules\_egg-core@4.17.4@egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:190:18
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:36:12
+    at dispatch (E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:195:33)
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at E:\project\shop\server\app\middleware\isLogin.js:15:19
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at E:\project\shop\server\node_modules\_egg-development@2.4.3@egg-development\app\middleware\egg_loader_trace.js:9:56
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+
+pid: 3028
+hostname: STU008
+
+2020-01-06 09:08:21,595 ERROR 3028 [-/127.0.0.1/-/18ms POST /v1/goodsOne/comment] nodejs.ENOENTError: ENOENT: no such file or directory, open 'E:\project\shop\server\app\public\avatar\15782729015777aam5bbaa53j10_10e+25e0d3f98cb050b264c167d27.png'
+ENOENTError: ENOENT: no such file or directory, open 'E:\project\shop\server\app\public\avatar\15782729015777aam5bbaa53j10_10e+25e0d3f98cb050b264c167d27.png'
+errno: -4058
+code: "ENOENT"
+syscall: "open"
+path: "E:\\project\\shop\\server\\app\\public\\avatar\\15782729015777aam5bbaa53j10_10e+25e0d3f98cb050b264c167d27.png"
+name: "ENOENTError"
+pid: 3028
+hostname: STU008
+
+2020-01-06 09:08:32,746 ERROR 3028 [-/127.0.0.1/-/1ms POST /v1/goodsOne/comment] nodejs.TypeError: Cannot read property 'length' of undefined
+    at OperatingGoodsController.comment (E:\project\shop\server\app\controller\api\operatingGoods.js:247:24)
+    at Object.callFn (E:\project\shop\server\node_modules\_egg-core@4.17.4@egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (E:\project\shop\server\node_modules\_egg-core@4.17.4@egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:190:18
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:36:12
+    at dispatch (E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:195:33)
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at E:\project\shop\server\app\middleware\isLogin.js:15:19
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at E:\project\shop\server\node_modules\_egg-development@2.4.3@egg-development\app\middleware\egg_loader_trace.js:9:56
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+
+pid: 3028
+hostname: STU008
+
+2020-01-06 09:12:10,865 ERROR 3028 [-/127.0.0.1/-/2ms POST /v1/goodsOne/comment] nodejs.ENOENTError: ENOENT: no such file or directory, open 'E:\project\shop\server\app\public\avatar\15782731308647aam5bbaa53j10_10e+25e0d3f98cb050b264c167d27.png'
+ENOENTError: ENOENT: no such file or directory, open 'E:\project\shop\server\app\public\avatar\15782731308647aam5bbaa53j10_10e+25e0d3f98cb050b264c167d27.png'
+errno: -4058
+code: "ENOENT"
+syscall: "open"
+path: "E:\\project\\shop\\server\\app\\public\\avatar\\15782731308647aam5bbaa53j10_10e+25e0d3f98cb050b264c167d27.png"
+name: "ENOENTError"
+pid: 3028
+hostname: STU008
+
+2020-01-06 09:13:44,689 ERROR 3028 [-/127.0.0.1/-/1ms POST /v1/goodsOne/comment] nodejs.ENOENTError: ENOENT: no such file or directory, open 'E:\project\shop\server\app\public\avatar\15782732246887aam5bbaa53j10_10e+25e0d3f98cb050b264c167d27.png'
+ENOENTError: ENOENT: no such file or directory, open 'E:\project\shop\server\app\public\avatar\15782732246887aam5bbaa53j10_10e+25e0d3f98cb050b264c167d27.png'
+errno: -4058
+code: "ENOENT"
+syscall: "open"
+path: "E:\\project\\shop\\server\\app\\public\\avatar\\15782732246887aam5bbaa53j10_10e+25e0d3f98cb050b264c167d27.png"
+name: "ENOENTError"
+pid: 3028
+hostname: STU008
+
+2020-01-06 09:14:36,458 ERROR 3028 [-/127.0.0.1/-/2ms POST /v1/goodsOne/comment] nodejs.ENOENTError: ENOENT: no such file or directory, open 'E:\project\shop\server\app\public\avatar\15782732764577aam5bbaa53j10_10e+25e0d3f98cb050b264c167d27.png'
+ENOENTError: ENOENT: no such file or directory, open 'E:\project\shop\server\app\public\avatar\15782732764577aam5bbaa53j10_10e+25e0d3f98cb050b264c167d27.png'
+errno: -4058
+code: "ENOENT"
+syscall: "open"
+path: "E:\\project\\shop\\server\\app\\public\\avatar\\15782732764577aam5bbaa53j10_10e+25e0d3f98cb050b264c167d27.png"
+name: "ENOENTError"
+pid: 3028
+hostname: STU008
+
+2020-01-06 09:16:51,113 ERROR 3028 [-/127.0.0.1/-/2ms POST /v1/goodsOne/comment] nodejs.ENOENTError: ENOENT: no such file or directory, open 'E:\project\shop\server\app\public\avatar\15782734111127aam5bbaa53j10_10e+25e0d3f98cb050b264c167d27.png'
+ENOENTError: ENOENT: no such file or directory, open 'E:\project\shop\server\app\public\avatar\15782734111127aam5bbaa53j10_10e+25e0d3f98cb050b264c167d27.png'
+errno: -4058
+code: "ENOENT"
+syscall: "open"
+path: "E:\\project\\shop\\server\\app\\public\\avatar\\15782734111127aam5bbaa53j10_10e+25e0d3f98cb050b264c167d27.png"
+name: "ENOENTError"
+pid: 3028
+hostname: STU008
+
+2020-01-06 09:17:37,271 ERROR 3028 [-/127.0.0.1/-/2ms POST /v1/goodsOne/comment] nodejs.ENOENTError: ENOENT: no such file or directory, open 'E:\project\shop\server\app\public\avatar\15782734572707aam5bbaa53j10_10e+25e0d3f98cb050b264c167d27.png'
+ENOENTError: ENOENT: no such file or directory, open 'E:\project\shop\server\app\public\avatar\15782734572707aam5bbaa53j10_10e+25e0d3f98cb050b264c167d27.png'
+errno: -4058
+code: "ENOENT"
+syscall: "open"
+path: "E:\\project\\shop\\server\\app\\public\\avatar\\15782734572707aam5bbaa53j10_10e+25e0d3f98cb050b264c167d27.png"
+name: "ENOENTError"
+pid: 3028
+hostname: STU008
+
+2020-01-06 09:17:54,278 ERROR 3028 [-/127.0.0.1/-/1ms POST /v1/goodsOne/comment] nodejs.TypeError: Cannot read property 'length' of undefined
+    at OperatingGoodsController.comment (E:\project\shop\server\app\controller\api\operatingGoods.js:247:24)
+    at Object.callFn (E:\project\shop\server\node_modules\_egg-core@4.17.4@egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (E:\project\shop\server\node_modules\_egg-core@4.17.4@egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:190:18
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:36:12
+    at dispatch (E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:195:33)
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at E:\project\shop\server\app\middleware\isLogin.js:15:19
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at E:\project\shop\server\node_modules\_egg-development@2.4.3@egg-development\app\middleware\egg_loader_trace.js:9:56
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+
+pid: 3028
+hostname: STU008
+
+2020-01-06 09:18:15,890 ERROR 3028 [-/127.0.0.1/-/1ms POST /v1/goodsOne/comment] nodejs.TypeError: Cannot read property 'length' of undefined
+    at OperatingGoodsController.comment (E:\project\shop\server\app\controller\api\operatingGoods.js:247:24)
+    at Object.callFn (E:\project\shop\server\node_modules\_egg-core@4.17.4@egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (E:\project\shop\server\node_modules\_egg-core@4.17.4@egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:190:18
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:36:12
+    at dispatch (E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:195:33)
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at E:\project\shop\server\app\middleware\isLogin.js:15:19
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at E:\project\shop\server\node_modules\_egg-development@2.4.3@egg-development\app\middleware\egg_loader_trace.js:9:56
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+
+pid: 3028
+hostname: STU008
+
+2020-01-06 09:18:25,518 ERROR 3028 [-/127.0.0.1/-/2ms POST /v1/goodsOne/comment] nodejs.ENOENTError: ENOENT: no such file or directory, open 'E:\project\shop\server\app\public\avatar\15782735055167aam5bbaa53j10_10e+25e0d3f98cb050b264c167d27.png'
+ENOENTError: ENOENT: no such file or directory, open 'E:\project\shop\server\app\public\avatar\15782735055167aam5bbaa53j10_10e+25e0d3f98cb050b264c167d27.png'
+errno: -4058
+code: "ENOENT"
+syscall: "open"
+path: "E:\\project\\shop\\server\\app\\public\\avatar\\15782735055167aam5bbaa53j10_10e+25e0d3f98cb050b264c167d27.png"
+name: "ENOENTError"
+pid: 3028
+hostname: STU008
+
+2020-01-06 09:18:29,728 ERROR 3028 [-/127.0.0.1/-/1ms POST /v1/goodsOne/comment] nodejs.TypeError: Cannot read property 'length' of undefined
+    at OperatingGoodsController.comment (E:\project\shop\server\app\controller\api\operatingGoods.js:247:24)
+    at Object.callFn (E:\project\shop\server\node_modules\_egg-core@4.17.4@egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (E:\project\shop\server\node_modules\_egg-core@4.17.4@egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:190:18
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:36:12
+    at dispatch (E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:195:33)
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at E:\project\shop\server\app\middleware\isLogin.js:15:19
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at E:\project\shop\server\node_modules\_egg-development@2.4.3@egg-development\app\middleware\egg_loader_trace.js:9:56
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+
+pid: 3028
+hostname: STU008
+
+2020-01-06 09:20:33,491 ERROR 3028 [-/127.0.0.1/-/1ms POST /v1/goodsOne/comment] nodejs.TypeError: Cannot read property 'length' of undefined
+    at OperatingGoodsController.comment (E:\project\shop\server\app\controller\api\operatingGoods.js:247:24)
+    at Object.callFn (E:\project\shop\server\node_modules\_egg-core@4.17.4@egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (E:\project\shop\server\node_modules\_egg-core@4.17.4@egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:190:18
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:36:12
+    at dispatch (E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:195:33)
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at E:\project\shop\server\app\middleware\isLogin.js:15:19
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at E:\project\shop\server\node_modules\_egg-development@2.4.3@egg-development\app\middleware\egg_loader_trace.js:9:56
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+
+pid: 3028
+hostname: STU008
+
+2020-01-06 09:20:40,832 ERROR 3028 [-/127.0.0.1/-/1ms POST /v1/goodsOne/comment] nodejs.TypeError: Cannot read property 'length' of undefined
+    at OperatingGoodsController.comment (E:\project\shop\server\app\controller\api\operatingGoods.js:247:24)
+    at Object.callFn (E:\project\shop\server\node_modules\_egg-core@4.17.4@egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (E:\project\shop\server\node_modules\_egg-core@4.17.4@egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:190:18
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:36:12
+    at dispatch (E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:195:33)
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at E:\project\shop\server\app\middleware\isLogin.js:15:19
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at E:\project\shop\server\node_modules\_egg-development@2.4.3@egg-development\app\middleware\egg_loader_trace.js:9:56
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+
+pid: 3028
+hostname: STU008
+
+2020-01-06 09:39:47,922 ERROR 3028 [-/127.0.0.1/-/2ms POST /v1/goodsOne/comment] nodejs.ENOENTError: ENOENT: no such file or directory, open 'E:\project\shop\server\app\public\avatar\15782747879207aam5bbaa53j10_10e+25e0d3f98cb050b264c167d27.png'
+ENOENTError: ENOENT: no such file or directory, open 'E:\project\shop\server\app\public\avatar\15782747879207aam5bbaa53j10_10e+25e0d3f98cb050b264c167d27.png'
+errno: -4058
+code: "ENOENT"
+syscall: "open"
+path: "E:\\project\\shop\\server\\app\\public\\avatar\\15782747879207aam5bbaa53j10_10e+25e0d3f98cb050b264c167d27.png"
+name: "ENOENTError"
+pid: 3028
+hostname: STU008
+
+2020-01-06 09:39:58,469 ERROR 3028 [-/127.0.0.1/-/1ms POST /v1/goodsOne/comment] nodejs.TypeError: Cannot read property 'length' of undefined
+    at OperatingGoodsController.comment (E:\project\shop\server\app\controller\api\operatingGoods.js:247:24)
+    at Object.callFn (E:\project\shop\server\node_modules\_egg-core@4.17.4@egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (E:\project\shop\server\node_modules\_egg-core@4.17.4@egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:190:18
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:36:12
+    at dispatch (E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:195:33)
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at E:\project\shop\server\app\middleware\isLogin.js:15:19
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at E:\project\shop\server\node_modules\_egg-development@2.4.3@egg-development\app\middleware\egg_loader_trace.js:9:56
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+
+pid: 3028
+hostname: STU008
+
+2020-01-06 09:46:38,725 ERROR 3028 [-/127.0.0.1/-/1ms POST /v1/goodsOne/comment] nodejs.TypeError: Cannot read property 'length' of undefined
+    at OperatingGoodsController.comment (E:\project\shop\server\app\controller\api\operatingGoods.js:247:24)
+    at Object.callFn (E:\project\shop\server\node_modules\_egg-core@4.17.4@egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (E:\project\shop\server\node_modules\_egg-core@4.17.4@egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:190:18
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:36:12
+    at dispatch (E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:195:33)
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at E:\project\shop\server\app\middleware\isLogin.js:15:19
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at E:\project\shop\server\node_modules\_egg-development@2.4.3@egg-development\app\middleware\egg_loader_trace.js:9:56
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+
+pid: 3028
+hostname: STU008
+
+2020-01-06 09:53:04,148 ERROR 3028 [-/127.0.0.1/-/1ms POST /v1/goodsOne/comment] nodejs.TypeError: Cannot read property 'length' of undefined
+    at OperatingGoodsController.comment (E:\project\shop\server\app\controller\api\operatingGoods.js:247:24)
+    at Object.callFn (E:\project\shop\server\node_modules\_egg-core@4.17.4@egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (E:\project\shop\server\node_modules\_egg-core@4.17.4@egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:190:18
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:36:12
+    at dispatch (E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:195:33)
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at E:\project\shop\server\app\middleware\isLogin.js:15:19
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at E:\project\shop\server\node_modules\_egg-development@2.4.3@egg-development\app\middleware\egg_loader_trace.js:9:56
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+
+pid: 3028
+hostname: STU008
+
+2020-01-06 09:53:06,536 ERROR 3028 [-/127.0.0.1/-/1ms POST /v1/goodsOne/comment] nodejs.TypeError: Cannot read property 'length' of undefined
+    at OperatingGoodsController.comment (E:\project\shop\server\app\controller\api\operatingGoods.js:247:24)
+    at Object.callFn (E:\project\shop\server\node_modules\_egg-core@4.17.4@egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (E:\project\shop\server\node_modules\_egg-core@4.17.4@egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:190:18
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:36:12
+    at dispatch (E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:195:33)
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at E:\project\shop\server\app\middleware\isLogin.js:15:19
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at E:\project\shop\server\node_modules\_egg-development@2.4.3@egg-development\app\middleware\egg_loader_trace.js:9:56
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+
+pid: 3028
+hostname: STU008
+
+2020-01-06 09:53:21,316 ERROR 3028 [-/127.0.0.1/-/2ms POST /v1/goodsOne/comment] nodejs.TypeError: Cannot read property 'length' of undefined
+    at OperatingGoodsController.comment (E:\project\shop\server\app\controller\api\operatingGoods.js:247:24)
+    at Object.callFn (E:\project\shop\server\node_modules\_egg-core@4.17.4@egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (E:\project\shop\server\node_modules\_egg-core@4.17.4@egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:190:18
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:36:12
+    at dispatch (E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:195:33)
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at E:\project\shop\server\app\middleware\isLogin.js:15:19
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at E:\project\shop\server\node_modules\_egg-development@2.4.3@egg-development\app\middleware\egg_loader_trace.js:9:56
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+
+pid: 3028
+hostname: STU008
+
+2020-01-06 09:54:36,141 ERROR 3028 [-/127.0.0.1/-/1ms POST /v1/goodsOne/comment] nodejs.TypeError: Cannot read property 'length' of undefined
+    at OperatingGoodsController.comment (E:\project\shop\server\app\controller\api\operatingGoods.js:247:24)
+    at Object.callFn (E:\project\shop\server\node_modules\_egg-core@4.17.4@egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (E:\project\shop\server\node_modules\_egg-core@4.17.4@egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:190:18
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:36:12
+    at dispatch (E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:195:33)
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at E:\project\shop\server\app\middleware\isLogin.js:15:19
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at E:\project\shop\server\node_modules\_egg-development@2.4.3@egg-development\app\middleware\egg_loader_trace.js:9:56
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+
+pid: 3028
+hostname: STU008
+
+2020-01-06 09:55:29,912 ERROR 3028 [-/127.0.0.1/-/1ms POST /v1/goodsOne/comment] nodejs.TypeError: Cannot read property 'length' of undefined
+    at OperatingGoodsController.comment (E:\project\shop\server\app\controller\api\operatingGoods.js:247:24)
+    at Object.callFn (E:\project\shop\server\node_modules\_egg-core@4.17.4@egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (E:\project\shop\server\node_modules\_egg-core@4.17.4@egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:190:18
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:36:12
+    at dispatch (E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:195:33)
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at E:\project\shop\server\app\middleware\isLogin.js:15:19
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at E:\project\shop\server\node_modules\_egg-development@2.4.3@egg-development\app\middleware\egg_loader_trace.js:9:56
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+
+pid: 3028
+hostname: STU008
+
+2020-01-06 09:56:01,950 ERROR 3028 [-/127.0.0.1/-/1ms POST /v1/goodsOne/comment] nodejs.TypeError: Cannot read property 'length' of undefined
+    at OperatingGoodsController.comment (E:\project\shop\server\app\controller\api\operatingGoods.js:247:24)
+    at Object.callFn (E:\project\shop\server\node_modules\_egg-core@4.17.4@egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (E:\project\shop\server\node_modules\_egg-core@4.17.4@egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:190:18
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:36:12
+    at dispatch (E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:195:33)
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at E:\project\shop\server\app\middleware\isLogin.js:15:19
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at E:\project\shop\server\node_modules\_egg-development@2.4.3@egg-development\app\middleware\egg_loader_trace.js:9:56
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+
+pid: 3028
+hostname: STU008
+
+2020-01-06 09:56:11,663 ERROR 3028 [-/127.0.0.1/-/2ms POST /v1/goodsOne/comment] nodejs.TypeError: Cannot read property 'length' of undefined
+    at OperatingGoodsController.comment (E:\project\shop\server\app\controller\api\operatingGoods.js:247:24)
+    at Object.callFn (E:\project\shop\server\node_modules\_egg-core@4.17.4@egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (E:\project\shop\server\node_modules\_egg-core@4.17.4@egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:190:18
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:36:12
+    at dispatch (E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:195:33)
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at E:\project\shop\server\app\middleware\isLogin.js:15:19
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at E:\project\shop\server\node_modules\_egg-development@2.4.3@egg-development\app\middleware\egg_loader_trace.js:9:56
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+
+pid: 3028
+hostname: STU008
+
+2020-01-06 09:56:18,832 ERROR 3028 [-/127.0.0.1/-/2ms POST /v1/goodsOne/comment] nodejs.TypeError: Cannot read property 'length' of undefined
+    at OperatingGoodsController.comment (E:\project\shop\server\app\controller\api\operatingGoods.js:247:24)
+    at Object.callFn (E:\project\shop\server\node_modules\_egg-core@4.17.4@egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (E:\project\shop\server\node_modules\_egg-core@4.17.4@egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:190:18
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:36:12
+    at dispatch (E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:195:33)
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at E:\project\shop\server\app\middleware\isLogin.js:15:19
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at E:\project\shop\server\node_modules\_egg-development@2.4.3@egg-development\app\middleware\egg_loader_trace.js:9:56
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+
+pid: 3028
+hostname: STU008
+
+2020-01-06 09:56:49,028 ERROR 3028 [-/127.0.0.1/-/2ms POST /v1/goodsOne/comment] nodejs.TypeError: Cannot read property 'length' of undefined
+    at OperatingGoodsController.comment (E:\project\shop\server\app\controller\api\operatingGoods.js:247:24)
+    at Object.callFn (E:\project\shop\server\node_modules\_egg-core@4.17.4@egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (E:\project\shop\server\node_modules\_egg-core@4.17.4@egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:190:18
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:36:12
+    at dispatch (E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:195:33)
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at E:\project\shop\server\app\middleware\isLogin.js:15:19
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at E:\project\shop\server\node_modules\_egg-development@2.4.3@egg-development\app\middleware\egg_loader_trace.js:9:56
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+
+pid: 3028
+hostname: STU008
+
+2020-01-06 10:03:32,305 ERROR 3028 [-/127.0.0.1/-/1ms POST /v1/goodsOne/comment] nodejs.TypeError: Cannot read property 'length' of undefined
+    at OperatingGoodsController.comment (E:\project\shop\server\app\controller\api\operatingGoods.js:247:24)
+    at Object.callFn (E:\project\shop\server\node_modules\_egg-core@4.17.4@egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (E:\project\shop\server\node_modules\_egg-core@4.17.4@egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:190:18
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:36:12
+    at dispatch (E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:195:33)
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at E:\project\shop\server\app\middleware\isLogin.js:15:19
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at E:\project\shop\server\node_modules\_egg-development@2.4.3@egg-development\app\middleware\egg_loader_trace.js:9:56
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+
+pid: 3028
+hostname: STU008
+
+2020-01-06 10:09:23,664 ERROR 3028 [-/127.0.0.1/-/1ms POST /v1/goodsOne/comment] nodejs.TypeError: Cannot read property 'length' of undefined
+    at OperatingGoodsController.comment (E:\project\shop\server\app\controller\api\operatingGoods.js:247:24)
+    at Object.callFn (E:\project\shop\server\node_modules\_egg-core@4.17.4@egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (E:\project\shop\server\node_modules\_egg-core@4.17.4@egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:190:18
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:36:12
+    at dispatch (E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:195:33)
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at E:\project\shop\server\app\middleware\isLogin.js:15:19
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at E:\project\shop\server\node_modules\_egg-development@2.4.3@egg-development\app\middleware\egg_loader_trace.js:9:56
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+
+pid: 3028
+hostname: STU008
+
+2020-01-06 10:10:06,659 ERROR 3028 [-/127.0.0.1/-/2ms POST /v1/goodsOne/comment] nodejs.TypeError: Cannot read property 'length' of undefined
+    at OperatingGoodsController.comment (E:\project\shop\server\app\controller\api\operatingGoods.js:247:24)
+    at Object.callFn (E:\project\shop\server\node_modules\_egg-core@4.17.4@egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (E:\project\shop\server\node_modules\_egg-core@4.17.4@egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:190:18
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:36:12
+    at dispatch (E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:195:33)
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at E:\project\shop\server\app\middleware\isLogin.js:15:19
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at E:\project\shop\server\node_modules\_egg-development@2.4.3@egg-development\app\middleware\egg_loader_trace.js:9:56
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+
+pid: 3028
+hostname: STU008
+
+2020-01-06 10:10:23,623 ERROR 3028 [-/127.0.0.1/-/1ms POST /v1/goodsOne/comment] nodejs.TypeError: Cannot read property 'length' of undefined
+    at OperatingGoodsController.comment (E:\project\shop\server\app\controller\api\operatingGoods.js:247:24)
+    at Object.callFn (E:\project\shop\server\node_modules\_egg-core@4.17.4@egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (E:\project\shop\server\node_modules\_egg-core@4.17.4@egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:190:18
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:36:12
+    at dispatch (E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:195:33)
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at E:\project\shop\server\app\middleware\isLogin.js:15:19
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at E:\project\shop\server\node_modules\_egg-development@2.4.3@egg-development\app\middleware\egg_loader_trace.js:9:56
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+
+pid: 3028
+hostname: STU008
+
+2020-01-06 10:10:54,482 ERROR 3028 [-/127.0.0.1/-/1ms POST /v1/goodsOne/comment] nodejs.TypeError: Cannot read property 'length' of undefined
+    at OperatingGoodsController.comment (E:\project\shop\server\app\controller\api\operatingGoods.js:247:24)
+    at Object.callFn (E:\project\shop\server\node_modules\_egg-core@4.17.4@egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (E:\project\shop\server\node_modules\_egg-core@4.17.4@egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:190:18
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:36:12
+    at dispatch (E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:195:33)
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at E:\project\shop\server\app\middleware\isLogin.js:15:19
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at E:\project\shop\server\node_modules\_egg-development@2.4.3@egg-development\app\middleware\egg_loader_trace.js:9:56
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+
+pid: 3028
+hostname: STU008
+
+2020-01-06 10:12:43,154 ERROR 3028 [-/127.0.0.1/-/1ms POST /v1/goodsOne/comment] nodejs.TypeError: Cannot read property 'length' of undefined
+    at OperatingGoodsController.comment (E:\project\shop\server\app\controller\api\operatingGoods.js:247:24)
+    at Object.callFn (E:\project\shop\server\node_modules\_egg-core@4.17.4@egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (E:\project\shop\server\node_modules\_egg-core@4.17.4@egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:190:18
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:36:12
+    at dispatch (E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:195:33)
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at E:\project\shop\server\app\middleware\isLogin.js:15:19
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at E:\project\shop\server\node_modules\_egg-development@2.4.3@egg-development\app\middleware\egg_loader_trace.js:9:56
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+
+pid: 3028
+hostname: STU008
+
+2020-01-06 10:16:55,502 ERROR 3028 [-/127.0.0.1/-/1ms POST /v1/goodsOne/comment] nodejs.TypeError: Cannot read property 'length' of undefined
+    at OperatingGoodsController.comment (E:\project\shop\server\app\controller\api\operatingGoods.js:247:24)
+    at Object.callFn (E:\project\shop\server\node_modules\_egg-core@4.17.4@egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (E:\project\shop\server\node_modules\_egg-core@4.17.4@egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:190:18
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:36:12
+    at dispatch (E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:195:33)
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at E:\project\shop\server\app\middleware\isLogin.js:15:19
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at E:\project\shop\server\node_modules\_egg-development@2.4.3@egg-development\app\middleware\egg_loader_trace.js:9:56
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+
+pid: 3028
+hostname: STU008
+
+2020-01-06 11:25:23,019 ERROR 3028 [-/127.0.0.1/-/17ms POST /v1/evaluateOne] nodejs.Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters
+    at new ObjectID (E:\project\shop\server\node_modules\_bson@1.1.3@bson\lib\bson\objectid.js:59:11)
+    at ObjectID [as ObjectId] (E:\project\shop\server\node_modules\_bson@1.1.3@bson\lib\bson\objectid.js:40:43)
+    at UserController.evaluateOne (E:\project\shop\server\app\controller\api\user.js:453:52)
+    at Object.callFn (E:\project\shop\server\node_modules\_egg-core@4.17.4@egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (E:\project\shop\server\node_modules\_egg-core@4.17.4@egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:190:18
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:36:12
+    at dispatch (E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:195:33)
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at E:\project\shop\server\app\middleware\isLogin.js:15:19
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+
+pid: 3028
+hostname: STU008
+
+2020-01-06 11:26:06,062 ERROR 3028 [-/127.0.0.1/-/1ms POST /v1/evaluateOne] nodejs.Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters
+    at new ObjectID (E:\project\shop\server\node_modules\_bson@1.1.3@bson\lib\bson\objectid.js:59:11)
+    at ObjectID [as ObjectId] (E:\project\shop\server\node_modules\_bson@1.1.3@bson\lib\bson\objectid.js:40:43)
+    at UserController.evaluateOne (E:\project\shop\server\app\controller\api\user.js:453:52)
+    at Object.callFn (E:\project\shop\server\node_modules\_egg-core@4.17.4@egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (E:\project\shop\server\node_modules\_egg-core@4.17.4@egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:190:18
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:36:12
+    at dispatch (E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:195:33)
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at E:\project\shop\server\app\middleware\isLogin.js:15:19
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+
+pid: 3028
+hostname: STU008
+
+2020-01-06 11:26:16,216 ERROR 3028 [-/127.0.0.1/-/1ms POST /v1/evaluateOne] nodejs.Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters
+    at new ObjectID (E:\project\shop\server\node_modules\_bson@1.1.3@bson\lib\bson\objectid.js:59:11)
+    at ObjectID [as ObjectId] (E:\project\shop\server\node_modules\_bson@1.1.3@bson\lib\bson\objectid.js:40:43)
+    at UserController.evaluateOne (E:\project\shop\server\app\controller\api\user.js:453:52)
+    at Object.callFn (E:\project\shop\server\node_modules\_egg-core@4.17.4@egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (E:\project\shop\server\node_modules\_egg-core@4.17.4@egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:190:18
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:36:12
+    at dispatch (E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:195:33)
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at E:\project\shop\server\app\middleware\isLogin.js:15:19
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+
+pid: 3028
+hostname: STU008
+
+2020-01-06 11:26:49,815 ERROR 3028 [-/127.0.0.1/-/1ms POST /v1/evaluateOne] nodejs.Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters
+    at new ObjectID (E:\project\shop\server\node_modules\_bson@1.1.3@bson\lib\bson\objectid.js:59:11)
+    at ObjectID [as ObjectId] (E:\project\shop\server\node_modules\_bson@1.1.3@bson\lib\bson\objectid.js:40:43)
+    at UserController.evaluateOne (E:\project\shop\server\app\controller\api\user.js:453:52)
+    at Object.callFn (E:\project\shop\server\node_modules\_egg-core@4.17.4@egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (E:\project\shop\server\node_modules\_egg-core@4.17.4@egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:190:18
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:36:12
+    at dispatch (E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:195:33)
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at E:\project\shop\server\app\middleware\isLogin.js:15:19
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+
+pid: 3028
+hostname: STU008
+
+2020-01-06 11:26:53,754 ERROR 3028 [-/127.0.0.1/-/2ms POST /v1/evaluateOne] nodejs.Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters
+    at new ObjectID (E:\project\shop\server\node_modules\_bson@1.1.3@bson\lib\bson\objectid.js:59:11)
+    at ObjectID [as ObjectId] (E:\project\shop\server\node_modules\_bson@1.1.3@bson\lib\bson\objectid.js:40:43)
+    at UserController.evaluateOne (E:\project\shop\server\app\controller\api\user.js:453:52)
+    at Object.callFn (E:\project\shop\server\node_modules\_egg-core@4.17.4@egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (E:\project\shop\server\node_modules\_egg-core@4.17.4@egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:190:18
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:36:12
+    at dispatch (E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:195:33)
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at E:\project\shop\server\app\middleware\isLogin.js:15:19
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+
+pid: 3028
+hostname: STU008
+
+2020-01-06 11:31:37,002 ERROR 3028 [-/127.0.0.1/-/1ms POST /v1/evaluateOne] nodejs.Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters
+    at new ObjectID (E:\project\shop\server\node_modules\_bson@1.1.3@bson\lib\bson\objectid.js:59:11)
+    at ObjectID [as ObjectId] (E:\project\shop\server\node_modules\_bson@1.1.3@bson\lib\bson\objectid.js:40:43)
+    at UserController.evaluateOne (E:\project\shop\server\app\controller\api\user.js:453:52)
+    at Object.callFn (E:\project\shop\server\node_modules\_egg-core@4.17.4@egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (E:\project\shop\server\node_modules\_egg-core@4.17.4@egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:190:18
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at E:\project\shop\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:36:12
+    at dispatch (E:\project\shop\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:195:33)
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at E:\project\shop\server\app\middleware\isLogin.js:15:19
+    at dispatch (E:\project\shop\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+
+pid: 3028
+hostname: STU008
+

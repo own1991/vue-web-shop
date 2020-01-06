@@ -22,10 +22,6 @@ export default new Vuex.Store({
         pushBrowseList(state, data) {
             state.browseList.push(data)
         },
-        editshopList(state, data) {
-            state.shopList.map(item => item.check = data)
-        },
-
     },
     getters: {
         getSum: state => { //通过方法访问

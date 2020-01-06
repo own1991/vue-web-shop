@@ -50,7 +50,7 @@ export default {
         // 所有商品的id
         orderId: this.ids,
         // 总价格
-        totalPrice: this.sum,
+        // totalPrice: this.sum,
         // 用来判断是购物车结算还是直接购买
         // idDirect: fasle,
         // 商品数量
@@ -59,9 +59,6 @@ export default {
       //如果时立即购买，则传入以下值
       if (this.$route.params.item) {
         obj.orderId = [this.$route.params.item.id];
-        obj.totalPrice =
-          this.$route.params.item.count *
-          this.$route.params.item.present_price.toFixed(2);
         obj.idDirect = true;
       }
       console.log(obj);

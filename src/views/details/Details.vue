@@ -14,9 +14,9 @@
         <div v-html="goodsOne.detail"></div>
       </van-tab>
       <van-tab title="用户评论" class="desc">
-        <div v-if="!flag">暂无评论</div>
+        <div v-if="comment.length===0">暂无评论</div>
         <div v-else>
-          <detail-comm />
+          <detail-comm v-for="item in comment" :key="item.id" :item="item" />
         </div>
       </van-tab>
     </van-tabs>
@@ -34,7 +34,9 @@ export default {
   data() {
     return {
       goodsOne: {},
-      active: 0
+      active: 0,
+      flag: false,
+      comment:[]
     };
   },
   beforeRouteLeave(to, from, next) {
@@ -58,9 +60,11 @@ export default {
       this.$api.goodOne(this.$route.query.id).then(res => {
         if (res.code === 200) {
           this.goodsOne = res.goods.goodsOne;
+          this.comment=res.goods.comment
+          console.log(this.comment);
         }
       });
-    }
+    },
   },
   mounted() {
     this.getgood();

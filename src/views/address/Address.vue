@@ -9,6 +9,7 @@
       address
       @add="onAdd"
       @edit="onEdit"
+      default-tag-text="默认"
       @select="setDefaultAddress"
     />
     <div class="msg" v-if="list.length===0">暂无收货地址~~</div>
@@ -50,21 +51,6 @@ export default {
         }
       });
     },
-    //设置默认地址
-    setDefaultAddress(item) {
-      if (!item.isDefault) {
-        this.$api.setDefaultAddress(item.id).then(res => {
-          if (res.code === 200) {
-            this.$toast("修改成功");
-            this.chosenAddressId = item.id;
-            this.getAddress();
-          }
-        });
-      } else {
-        this.$toast("这个地址已经是默认地址了");
-        this.chosenAddressId = item.id;
-      }
-    }
   },
   mounted() {
     this.getAddress();

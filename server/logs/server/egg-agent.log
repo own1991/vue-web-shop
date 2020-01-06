@@ -36,3 +36,13 @@ pid: 6036
 hostname: Trayvon
 
 2020-01-06 00:27:03,166 WARN 6036 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2020-01-06 08:15:32,626 INFO 7376 [egg:logger] init all loggers with options: {"dir":"E:\\project\\shop\\server\\logs\\server","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"server-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"agent"}
+2020-01-06 08:15:32,642 INFO 7376 [egg:core] dump config after load, 9ms
+2020-01-06 08:15:32,930 INFO 7376 [egg-watcher] Start watching: ["E:\\project\\shop\\server\\app","E:\\project\\shop\\server\\config","E:\\project\\shop\\server\\mocks","E:\\project\\shop\\server\\mocks_proxy","E:\\project\\shop\\server\\app.js"]
+2020-01-06 08:15:32,930 INFO 7376 [egg-watcher] Start watching: "E:\\project\\shop\\server\\app"
+2020-01-06 08:15:32,931 INFO 7376 [egg-watcher] Start watching: "E:\\project\\shop\\server\\config"
+2020-01-06 08:15:32,932 INFO 7376 [egg-watcher] Start watching: "E:\\project\\shop\\server\\mocks"
+2020-01-06 08:15:32,934 INFO 7376 [egg-watcher] Start watching: "E:\\project\\shop\\server\\mocks_proxy"
+2020-01-06 08:15:32,935 INFO 7376 [egg-watcher] Start watching: "E:\\project\\shop\\server\\app.js"
+2020-01-06 08:15:32,937 INFO 7376 [egg-watcher:agent] watcher start success
+2020-01-06 08:15:33,034 INFO 7376 [egg:core] dump config after ready, 15ms

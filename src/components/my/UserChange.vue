@@ -81,12 +81,15 @@ export default {
   methods: {
     getuser() {
       this.$api.user().then(res => {
-        this.userInfo = res.userInfo;
-        this.currentDate = new Date(
-          this.userInfo.year,
-          this.userInfo.month,
-          this.userInfo.day
-        );
+        if (res.code === 200) {
+          this.userInfo = res.userInfo;
+          this.currentDate = new Date(
+            this.userInfo.year,
+            this.userInfo.month-1,
+            this.userInfo.day
+          );
+          console.log( this.userInfo);
+        }
       });
     },
     confirm(val) {
@@ -166,7 +169,6 @@ input,
 }
 .datetime-picker {
   border: none;
-
   z-index: 99;
   width: 100%;
   position: absolute;

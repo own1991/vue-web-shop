@@ -26,7 +26,8 @@
 export default {
   data() {
     return {
-      tobeOne: {}
+      tobeOne: {},
+      checked: false
     };
   },
   props: {},
@@ -38,34 +39,39 @@ export default {
       });
     },
     setComment() {
-      this.$api
-        .comment({
-          id: "5e0c95e7f967144a0446d231",
-          rate: this.tobeOne.rate,
-          content: this.tobeOne.content,
-          anonymous: true,
-          _id: this.tobeOne._id,
-          order_id: this.tobeOne.order_id,
-          image: []
-        })
-        .then(res => {
-          console.log(res);
-        });
+      let obj = {};
+      // comment  商品评论(id,rate,content, anonymous(是否匿名), _id, order_id, image=[])
+      obj.id = this.tobeOne.cid;
+      obj.rate = this.tobeOne.rate;
+      obj.content = this.tobeOne.content;
+      obj.anonymous = this.checked;
+      obj._id = this.tobeOne._id;
+      obj.order_id = this.tobeOne.order_id;
+      obj.image = [];
+      console.log(obj);
+      this.$api.comment(obj).then(res => {
+        if (res.code === 200) {
+          this.$toast(res.msg);
+          this.$router.push("/evaluate");
+        } else {
+          this.$toast(res.msg);
+        }
+      });
     },
     getgood() {
-      console.log(this.$route.query.id);
-      this.$api.goodOne(this.$route.query.id).then(res => {
+      this.$api.tobeEvaluated().then(res => {
         if (res.code === 200) {
-          console.log(res.goods.goodsOne);
+          this.tobeOne = res.data.list.filter(
+            item => item.cid === this.$route.query.id
+          )[0];
+          console.log(this.tobeOne);
         }
       });
     }
 
-    // comment  商品评论(id,rate,content, anonymous(是否匿名), _id, order_id, image=[])
     // comment({ ...args }) {}
   },
   mounted() {
-    this.tobeEvaluated();
     this.getgood();
   },
   watch: {},

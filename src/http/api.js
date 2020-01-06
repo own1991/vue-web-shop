@@ -47,7 +47,7 @@ export default {
         })
     },
     deleteShop(id) {
-        return service.req('/deleteShop', { _id: id })
+        return service.post('/deleteShop', id)
     },
 
     // ===============================================================================================================
@@ -56,7 +56,7 @@ export default {
      * placeOrder 提交订单 参数：address:收货地址,tel:电话，orderId：所有商品的id，totalPrice：总价格,idDirect:用来判断是购物车结算还是直接购买,count:商品数量
      */
     placeOrder({...args }) {
-        return service.req('/order', args)
+        return service.post('/order', args)
     },
 
     // ===============================================================================================================
@@ -105,7 +105,7 @@ export default {
     },
 
     saveUser({...args }) {
-        return service.req(`/saveUser`, args)
+        return service.post(`/saveUser`, args)
     },
 
     getOrderNum() {
@@ -113,7 +113,7 @@ export default {
     },
 
     comment({...args }) {
-        return service.req(`/goodsOne/comment`, args)
+        return service.post(`/goodsOne/comment`, args)
     },
     // ===============================================================================================================
     /**
@@ -153,7 +153,7 @@ export default {
     },
 
     postAddress({...args }) {
-        return service.req(`/address`, args)
+        return service.post(`/address`, args)
     },
 
     deleteAddress(id) {
