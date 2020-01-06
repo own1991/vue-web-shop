@@ -10,7 +10,7 @@
       @add="onAdd"
       @edit="onEdit"
       default-tag-text="默认"
-      @select="setDefaultAddress"
+      @select="setAddress"
     />
     <div class="msg" v-if="list.length===0">暂无收货地址~~</div>
   </div>
@@ -51,6 +51,8 @@ export default {
         }
       });
     },
+    //设置地址
+    setAddress() {}
   },
   mounted() {
     this.getAddress();
@@ -62,11 +64,11 @@ export default {
 </script>
 
 <style scoped lang='scss'>
-/deep/ .van-radio__icon{
+/deep/ .van-radio__icon {
   border: 1px solid gray;
-  border-radius: 50%
+  border-radius: 50%;
 }
-.msg{
+.msg {
   font-size: 20px;
   color: gray;
   text-align: center;

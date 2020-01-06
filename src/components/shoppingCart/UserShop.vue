@@ -19,7 +19,13 @@
       <van-button class="btn" type="primary" @click="del()">删除</van-button>
       <van-button class="btn" type="primary" @click="$goto('/shoppingPayMent')">结算</van-button>
     </div>
-    <div v-else>暂无数据</div>
+    <div v-else class="msg">
+      <div class="image">
+        <img src="../../assets/shop.png" alt />
+      </div>
+      <div class="detail">您的购物车还是空的</div>
+      <div class="goto" @click="$goto('/')">去购物</div>
+    </div>
     <better-scroll class="wrapper">
       <div class="goodsbox" v-for="item in $store.state.shopList" :key="item.id">
         <div class="checkbox">
@@ -96,7 +102,7 @@ export default {
   watch: {},
   computed: {
     shopList() {
-      if(this.$store.state.shopList){
+      if (this.$store.state.shopList) {
         return this.$store.state.shopList;
       }
     },
@@ -183,6 +189,32 @@ export default {
     position: absolute;
     right: 10px;
     bottom: 10px;
+  }
+}
+.msg {
+  text-align: center;
+  padding: 10px;
+  .image {
+    margin: 20px auto;
+    background: rgb(235, 235, 235);
+    padding: 30px;
+    width: 128px;
+    height: 128px;
+    border-radius: 50%;
+  }
+  .detail {
+    margin: 40px;
+    font-size: 24px;
+    color: gray;
+  }
+  .goto {
+    padding: 10px;
+    color: gray;
+    border-radius: 30px;
+    font-size: 20px;
+    width: 100px;
+    margin: 0 auto;
+    border: 1px solid rgb(0, 0, 0);
   }
 }
 </style>

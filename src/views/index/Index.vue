@@ -5,29 +5,27 @@
       <!-- 顶部组件 -->
       <index-top />
     </van-sticky>
-    <!-- 下拉刷新 -->
-    <van-pull-refresh v-model="isLoading" @refresh="onRefresh">
-      <better-scroll class="wrapper">
-        <div>
-          <!-- 轮播图组件 -->
-          <index-slides :slidesData="Data.slides" class="slides" />
-          <!-- 分类组件 -->
-          <index-category :categoryData="Data.category" class="category" />
-          <!-- AD -->
-          <img :src="advertesPicture" alt class="advertesPicture" />
-          <!-- 推荐 -->
-          <index-recommend :recommendData="Data.recommend" class="recommend" />
-          <!-- 商品楼 -->
-          <index-floor :title="floorName.floor1" floor="1F" :data="Data.floor1" />
-          <!-- 商品楼 -->
-          <index-floor :title="floorName.floor2" floor="2F" :data="Data.floor2" />
-          <!-- 商品楼 -->
-          <index-floor :title="floorName.floor3" floor="3F" :data="Data.floor3" />
-          <!-- 热销商品 -->
-          <index-hotGoods :hotGoodsData="Data.hotGoods" />
-        </div>
-      </better-scroll>
-    </van-pull-refresh>
+    <!-- better-scroll组件 -->
+    <better-scroll class="wrapper">
+      <div>
+        <!-- 轮播图组件 -->
+        <index-slides :slidesData="Data.slides" class="slides" />
+        <!-- 分类组件 -->
+        <index-category :categoryData="Data.category" class="category" />
+        <!-- AD -->
+        <img :src="advertesPicture" alt class="advertesPicture" />
+        <!-- 推荐 -->
+        <index-recommend :recommendData="Data.recommend" class="recommend" />
+        <!-- 商品楼 -->
+        <index-floor :title="floorName.floor1" floor="1F" :data="Data.floor1" />
+        <!-- 商品楼 -->
+        <index-floor :title="floorName.floor2" floor="2F" :data="Data.floor2" />
+        <!-- 商品楼 -->
+        <index-floor :title="floorName.floor3" floor="3F" :data="Data.floor3" />
+        <!-- 热销商品 -->
+        <index-hotGoods :hotGoodsData="Data.hotGoods" />
+      </div>
+    </better-scroll>
   </div>
 </template>
 <script>
@@ -44,7 +42,7 @@ export default {
       advertesPicture: null,
       isLoading: false,
       floorName: {},
-      flag:true
+      flag: true
     };
   },
   props: {},
@@ -54,7 +52,7 @@ export default {
     indexCategory,
     indexRecommend,
     indexFloor,
-    indexHotGoods,
+    indexHotGoods
   },
   methods: {
     getData() {

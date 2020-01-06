@@ -84,6 +84,11 @@ export default {
     }
   },
   mounted() {
+     window.addEventListener('load', () => { // 滚动事件变为 scroll
+          if (this.$route.path !== '/') { // /print 表示首页
+                this.$router.replace('/') // 切换到首页
+          }
+    })
     console.log(this.$route.params);
     this.getDefaultAddress();
   },
