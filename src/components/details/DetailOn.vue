@@ -6,8 +6,8 @@
       <div>运费：0</div>
       <div>剩余：{{item.amount}}</div>
       <div @click="collection(item)">
-        <div v-if="flag">点击收藏</div>
-        <div v-else>取消收藏</div>
+        <div v-if="flag">点击收藏<van-icon name="like" /></div>
+        <div v-else>取消收藏<van-icon name="like" /></div>
       </div>
     </div>
     <div class="store">

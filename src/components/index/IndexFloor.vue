@@ -67,14 +67,9 @@ export default {
 }
 .box {
   width: 100%;
-  height: 300px;
-  .desc:nth-child(1) {
-    height: 200px !important;
-  }
+  height: 320px;
   .desc {
     width: 50%;
-    height: 100px;
-    background: blue;
     float: left;
     img {
       width: 100%;

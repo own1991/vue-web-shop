@@ -80,6 +80,7 @@ export default {
   }
   img {
     width: 50px;
+    height: 50px;
   }
   .shopping-cart {
     width: 14px;

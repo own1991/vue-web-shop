@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
-
+import { Dialog } from 'vant';
 Vue.use(VueRouter)
 
 const routes = [{
@@ -215,7 +215,28 @@ router.beforeEach((to, from, next) => {
     if (to.meta.title) {
         document.title = to.meta.title;
     }
+    let arr = ['my', 'home', 'category', 'shoppingCart', 'details', 'browse', 'city', 'login']
+    if (!localStorage.getItem('nickname')) {
+        if (arr.includes(to.name)) {
+            next()
+        } else {
+            Dialog
+                .alert({
+                    title: "登录后才可启用此功能", //加上标题
+                    message: "是否跳转登录/注册界面",
+                    showCancelButton: true
+                })
+                .then(() => {
+                    next('/login')
+                })
+                .catch(() => {
+
+                });
+        }
+
+    }
     next()
+
 })
 
 export default router

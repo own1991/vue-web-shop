@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <div class="adress-box" v-if="!defaultAddress">
+    <div class="adress-box" v-if="!defaultAddress.name">
       <div class="add" @click="$goto('/address')">点击添加收货地址</div>
     </div>
     <div v-else>
@@ -42,7 +42,9 @@ export default {
   },
   components: {},
   methods: {},
-  mounted() {},
+  mounted() {
+    console.log(this.defaultAddress);
+  },
   watch: {},
   computed: {}
 };

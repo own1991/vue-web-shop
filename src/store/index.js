@@ -13,7 +13,8 @@ export default new Vuex.Store({
         shopList: [],
         address: '',
         Num: '',
-        tobeEvaluated: {}
+        tobeEvaluated: {},
+        shippingAddress: {}
     },
     mutations: {
         pushKeywords(state, data) {

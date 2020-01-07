@@ -16,8 +16,10 @@
         <div v-if="checkeds.length>0">请确认订单</div>
       </div>
       <van-divider :style="{ padding: '0 3px' }" />
-      <van-button class="btn" type="primary" @click="del()">删除</van-button>
-      <van-button class="btn" type="primary" @click="$goto('/shoppingPayMent')">结算</van-button>
+      <div v-if="flag">
+        <van-button class="btn" type="primary" @click="del()">删除</van-button>
+        <van-button class="btn" type="primary" @click="$goto('/shoppingPayMent')">结算</van-button>
+      </div>
     </div>
     <div v-else class="msg">
       <div class="image">
@@ -35,7 +37,7 @@
           <img :src="item.image_path" alt />
         </div>
         <div class="desc">
-          <div class="title">{{item.name}}</div>
+          <div class="title van-ellipsis">{{item.name}}</div>
           <div class="price">￥{{item.mallPrice}}</div>
           <van-stepper class="stepper" v-model="item.count" @change="onChange(item)" />
         </div>
@@ -45,40 +47,52 @@
 </template>
 
 <script>
-import betterScroll from "../slot/BetterScroll";
 export default {
   data() {
     return {
       checkeds: [1],
-      checked: false
+      checked: false,
     };
   },
   props: {},
-  components: {
-    betterScroll
-  },
+  components: {},
   methods: {
+    //删除按钮
     del() {
-      let arr = [];
-      this.$store.state.shopList.map(item => {
-        if (item.check) {
-          arr.push(item.cid);
-        }
-      });
-      this.$api.deleteShop(arr).then(res => {
-        if (res.code === 200) {
-          this.$toast("删除完毕");
-          this.getCardData();
-        }
-      });
+      this.$dialog
+        .alert({
+          title: "提示框", //加上标题
+          message: "是否删除？", //改变弹出框的内容
+          showCancelButton: true //展示取水按钮
+        })
+        .then(() => {
+          let arr = [];
+          this.$store.state.shopList.map(item => {
+            if (item.check) {
+              arr.push(item.cid);
+            }
+          });
+          this.$api.deleteShop(arr).then(res => {
+            if (res.code === 200) {
+              this.$toast("删除完毕");
+              this.getCardData();
+            }
+          });
+        })
+        .catch(() => {
+          this.$toast("取消删除");
+        });
     },
+    //全选改变复选状态
     changeAll() {
       this.checked = !this.checked;
       this.$store.state.shopList.map(item => (item.check = this.checked));
     },
+    //复选改变全选状态
     change() {
       this.checked = this.$store.state.shopList.every(item => item.check);
     },
+    //获取数据
     getCardData() {
       this.$api.getCard().then(res => {
         if (res.code === 200) {
@@ -108,6 +122,11 @@ export default {
     },
     sum() {
       return this.$store.getters.getSum;
+    },
+    flag() {
+      if (this.$store.state.shopList.some(item => item.check)) {
+        return true;
+      } else return;
     }
   }
 };
@@ -170,7 +189,7 @@ export default {
   }
 
   img {
-    margin: 10px;
+    margin: 10px 0;
     width: 80px;
     border: 1px solid rgb(209, 209, 209);
   }
@@ -179,10 +198,12 @@ export default {
     color: red;
   }
   .title {
+    width: 200px;
     font-size: 14px;
     margin: 10px;
   }
   .price {
+    font-size: 14px;
     margin: 40px 10px;
   }
   .stepper {
@@ -198,13 +219,17 @@ export default {
     margin: 20px auto;
     background: rgb(235, 235, 235);
     padding: 30px;
-    width: 128px;
-    height: 128px;
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
+    img {
+      width: 100px;
+      height: 100px;
+    }
   }
   .detail {
     margin: 40px;
-    font-size: 24px;
+    font-size: 20px;
     color: gray;
   }
   .goto {

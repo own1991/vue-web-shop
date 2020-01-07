@@ -28,9 +28,20 @@ export default {
   },
   methods: {
     del(item) {
-      this.$api.cancelCollection(item.cid).then(res => {
-        this.getbrowseList();
-      });
+      this.$dialog
+        .alert({
+          title: "提示框", //加上标题
+          message: "是否删除？", //改变弹出框的内容
+          showCancelButton: true //展示取水按钮
+        })
+        .then(() => {
+          this.$api.cancelCollection(item.cid).then(res => {
+            this.getbrowseList();
+          });
+        })
+        .catch(() => {
+          this.$toast("取消删除");
+        });
     },
     getbrowseList() {
       this.$api.getCollection().then(res => {

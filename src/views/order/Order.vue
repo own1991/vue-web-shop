@@ -7,10 +7,18 @@
       <div slot="title">我的订单</div>
     </global-top>
     <van-tabs v-model="active" @click="onClick">
-      <van-tab name="0" title="全部">开发中，敬请期待</van-tab>
-      <van-tab name="1" title="待支付">开发中，敬请期待</van-tab>
-      <van-tab name="2" title="待发货">开发中，敬请期待</van-tab>
-      <van-tab name="3" title="待收货">开发中，敬请期待</van-tab>
+      <van-tab name="0" title="全部">
+        <div class="coming-soon">开发中，敬请期待</div>
+      </van-tab>
+      <van-tab name="1" title="待支付">
+        <div class="coming-soon">开发中，敬请期待</div>
+      </van-tab>
+      <van-tab name="2" title="待发货">
+        <div class="coming-soon">开发中，敬请期待</div>
+      </van-tab>
+      <van-tab name="3" title="待收货">
+        <div class="coming-soon">开发中，敬请期待</div>
+      </van-tab>
       <van-tab name="4" title="已完成">
         <div v-for="detail in list" :key="detail.id" class="box">
           <div class="box-top">
@@ -74,13 +82,19 @@ export default {
     }
   },
   watch: {},
-  computed: {}
+  computed: {},
 };
 </script>
 
 <style scoped lang='scss'>
 .container {
   background: rgb(236, 236, 236);
+}
+.coming-soon {
+  background: white;
+  font-size: 18px;
+  text-align: center;
+  padding: 30px 10px;
 }
 /deep/.van-tab {
   width: 15% !important;
@@ -109,11 +123,10 @@ export default {
   background: white;
   padding: 10px;
   border-radius: 10px;
-  .box-top{
+  .box-top {
     display: flex;
     justify-content: space-between;
     padding: 10px 0;
-    
   }
   .order_id {
     font-size: 14px;

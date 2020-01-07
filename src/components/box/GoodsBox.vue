@@ -8,7 +8,7 @@
         <img :src="item.image_path" alt />
       </div>
       <div>
-        <div class="title van-ellipsis" v-html="$util.keyWord(item.name,keyword)"></div>
+        <div class="title van-ellipsis" v-html="detail"></div>
         <div class="price">
           ￥{{item.present_price}}
           <span>{{item.orl_price}}</span>
@@ -19,6 +19,7 @@
 </template>
 
 <script>
+import util from "../../js/util.js";
 export default {
   data() {
     return {};
@@ -44,9 +45,14 @@ export default {
       this.$router.push({ name: "details", query: { id: item } });
     }
   },
-  mounted() {},
+  mounted() {
+  },
   watch: {},
-  computed: {}
+  computed: {
+    detail(){
+      return util.keyWord(this.item.name,this.keyword)
+    }
+  }
 };
 </script>
 

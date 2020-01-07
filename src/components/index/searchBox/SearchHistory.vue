@@ -12,10 +12,6 @@
       </div>
     </div>
     <div v-else class="mian">暂无历史记录</div>
-    <!-- 删除的弹框 -->
-    <van-dialog v-model="show" title="提示" show-cancel-button @confirm="okay">
-      <div>是否删除</div>
-    </van-dialog>
   </div>
 </template>
 
@@ -23,17 +19,23 @@
 export default {
   props: {},
   data() {
-    return {
-      show: false
-    };
+    return {};
   },
   components: {},
   methods: {
     del() {
-      this.show = true;
-    },
-    okay() {
-      this.$store.state.keywords = [];
+      this.$dialog
+        .alert({
+          title: "提示框", //加上标题
+          message: "是否删除？", //改变弹出框的内容
+          showCancelButton: true //展示取水按钮
+        })
+        .then(() => {
+          this.$store.state.keywords = [];
+        })
+        .catch(() => {
+          this.$toast("取消删除");
+        });
     },
     change(item) {
       this.$parent.keyword = item;

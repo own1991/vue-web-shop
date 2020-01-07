@@ -26,9 +26,20 @@ export default {
   },
   methods: {
     del(detail) {
-      this.$store.state.browseList = this.$store.state.browseList.filter(
-        item => item.id !== detail.id
-      );
+      this.$dialog
+        .alert({
+          title: "提示框", //加上标题
+          message: "是否删除？", //改变弹出框的内容
+          showCancelButton: true //展示取水按钮
+        })
+        .then(() => {
+          this.$store.state.browseList = this.$store.state.browseList.filter(
+            item => item.id !== detail.id
+          );
+        })
+        .catch(() => {
+          this.$toast("取消删除");
+        });
     }
   },
   mounted() {},

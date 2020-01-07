@@ -28,7 +28,7 @@ export default {
   data() {
     return {
       items: [],
-      defaultAddress: {},
+
       list: []
     };
   },
@@ -38,7 +38,7 @@ export default {
   },
   methods: {
     onSubmit() {
-      if (!this.defaultAddress) {
+      if (!this.defaultAddress.name) {
         this.$toast("无收货地址，无法购买");
         return;
       }
@@ -49,10 +49,6 @@ export default {
         tel: this.defaultAddress.tel,
         // 所有商品的id
         orderId: this.ids,
-        // 总价格
-        // totalPrice: this.sum,
-        // 用来判断是购物车结算还是直接购买
-        // idDirect: fasle,
         // 商品数量
         count: this.count
       };
@@ -61,7 +57,6 @@ export default {
         obj.orderId = [this.$route.params.item.id];
         obj.idDirect = true;
       }
-      console.log(obj);
       this.$api.placeOrder(obj).then(res => {
         if (res.code === 200) {
           this.$toast(res.msg);
@@ -69,28 +64,23 @@ export default {
         }
       });
     },
-    getDefaultAddress() {
-      this.$api.getAddress().then(res => {
-        if (this.code === 200) {
-          this.list = res.address;
-        }
-      });
+    getdata() {
       this.$api.getDefaultAddress().then(res => {
-        if (res.code === 200) {
-          this.defaultAddress = res.defaultAdd;
-          console.log(res);
+        if (res.defaultAdd) {
+          this.$store.state.shippingAddress = res.defaultAdd;
         }
       });
     }
   },
   mounted() {
-     window.addEventListener('load', () => { // 滚动事件变为 scroll
-          if (this.$route.path !== '/') { // /print 表示首页
-                this.$router.replace('/') // 切换到首页
-          }
-    })
+    window.addEventListener("load", () => {
+      // 滚动事件变为 scroll
+      if (this.$route.path !== "/") {
+        this.$router.replace("/"); // 切换到首页
+      }
+    });
+    this.getdata()
     console.log(this.$route.params);
-    this.getDefaultAddress();
   },
   watch: {},
   computed: {
@@ -126,6 +116,9 @@ export default {
         }
       });
       return arr;
+    },
+    defaultAddress() {
+      return this.$store.state.shippingAddress;
     }
   }
 };

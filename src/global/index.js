@@ -1,5 +1,4 @@
 import Vue from 'vue'
-import util from '../js/util'
 //封装全局跳转方法
 Vue.prototype.$goto = function(val) {
     if (val.indexOf("/") !== -1) {
@@ -9,17 +8,30 @@ Vue.prototype.$goto = function(val) {
     }
 }
 
-//挂载js
-Vue.prototype.$util = util
-
 // 添加购物车
 Vue.prototype.$addShop = function(item) {
-    this.$api.addShop(item).then(res => {
-        if (res.code === 200) {
-            this.$store.dispatch('getShopList')
-            this.$toast(res.msg);
-        }
-    });
+    if (!localStorage.getItem('nickname')) {
+        this.$dialog
+            .alert({
+                title: "登录后才可启用此功能", //加上标题
+                message: "是否跳转登录/注册界面",
+                showCancelButton: true
+            })
+            .then(() => {
+
+            })
+            .catch(() => {
+
+            });
+    } else {
+        this.$api.addShop(item).then(res => {
+            if (res.code === 200) {
+                this.$store.dispatch('getShopList')
+                this.$toast(res.msg);
+            }
+        });
+    }
+
 }
 
 //封装组件

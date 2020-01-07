@@ -9,24 +9,26 @@
     <div class="top-bg"></div>
     <div class="nav">
       <van-tabs v-model="active" @click="change">
-        <van-tab name="tobe" title="待评价">
-          <div class="main" v-if="tobeList.length>0">
-            <evaluate-box v-for="item in tobeList" :key="item.id" :item="item" />
-          </div>
-          <div v-if="tobeList.length===0">暂无数据</div>
-        </van-tab>
-        <van-tab name="done" title="已评价">
-          <div class="main" v-if="doneList.length>0">
-            <evaluate-box
-              v-for="item in doneList"
-              :key="item.id"
-              :_id="item._id"
-              :item="item.goods[0]"
-            />
-          </div>
-          <div v-if="doneList.length===0">暂无数据</div>
-        </van-tab>
+        <van-tab name="tobe" title="待评价"></van-tab>
+        <van-tab name="done" title="已评价"></van-tab>
       </van-tabs>
+    </div>
+    <div class="main" v-if="active==='tobe'">
+      <div v-if="tobeList.length===0" class="empty-msg">暂无数据</div>
+      <better-scroll class="wrapper">
+        <evaluate-box v-for="item in tobeList" :key="item.id" :item="item" />
+      </better-scroll>
+    </div>
+    <div class="main" v-if="active==='done'">
+      <div v-if="doneList.length===0" class="empty-msg">暂无数据</div>
+      <better-scroll class="wrapper">
+        <evaluate-box
+          v-for="item in doneList"
+          :key="item.id"
+          :_id="item._id"
+          :item="item.goods[0]"
+        />
+      </better-scroll>
     </div>
   </div>
 </template>
@@ -92,5 +94,16 @@ export default {
 }
 .main {
   margin-top: 20px;
+}
+.empty-msg {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 16px;
+}
+.wrapper {
+  width: 100%;
+  overflow: hidden;
+  position: absolute;
+  height: 58vh;
 }
 </style>

@@ -38,27 +38,40 @@ export default {
     //获取地址并转存id
     getAddress() {
       this.$api.getAddress().then(res => {
-        console.log(res.address);
-        this.list = res.address;
-        this.list.forEach(item => {
-          item.id = item._id;
-          item.address = item.addressDetail;
-        });
-      });
-      this.$api.getDefaultAddress().then(res => {
-        if (res.defaultAdd) {
-          this.chosenAddressId = res.defaultAdd._id;
+        if (res.code === 200) {
+          this.list = res.address;
+          this.list.forEach(item => {
+            item.id = item._id;
+            item.address = item.addressDetail;
+          });
+          this.$api.getDefaultAddress().then(res => {
+            if (res.code === 200) {
+              if (res.defaultAdd) {
+                this.chosenAddressId = res.defaultAdd._id;
+              } else {
+                this.chosenAddressId = this.list[0]._id;
+              }
+            }
+          });
         }
       });
+      //默认地址和选中地址判断
     },
     //设置地址
     setAddress() {}
   },
   mounted() {
+    this.$store.state.shippingAddress = {};
     this.getAddress();
   },
   updated() {},
-  watch: {},
+  watch: {
+    chosenAddressId(val) {
+      this.$store.state.shippingAddress = this.list.filter(
+        item => item._id === this.chosenAddressId
+      )[0];
+    }
+  },
   computed: {}
 };
 </script>

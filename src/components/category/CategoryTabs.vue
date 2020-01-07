@@ -10,15 +10,14 @@
       ></van-tab>
     </van-tabs>
     <div class="main">
-      <betterScroll class="wrapper">
+      <better-scroll class="wrapper">
         <category-box v-for="desc in dataList" :key="desc.id" :item="desc" />
-      </betterScroll>
+      </better-scroll>
     </div>
   </div>
 </template>
 
 <script>
-import betterScroll from "../../components/slot/BetterScroll";
 import categoryBox from "../../components/category/CategoryBox";
 export default {
   props: {
@@ -37,7 +36,6 @@ export default {
     };
   },
   components: {
-    betterScroll,
     categoryBox
   },
   methods: {
