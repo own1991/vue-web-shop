@@ -86,18 +86,18 @@ export default {
   computed: {
     // 购物车
     checkList() {
-      if (this.$route.params.item) {
-        return [this.$route.params.item];
+      if (this.$store.state.buyNow) {
+        return [this.$store.state.buyNow];
       } else {
         return this.$store.state.shopList.filter(item => item.check === true);
       }
     },
     //计算总价
     sum() {
-      if (this.$route.params.item) {
+      if (this.$store.state.buyNow) {
         return (
-          this.$route.params.item.count *
-          this.$route.params.item.present_price.toFixed(2)
+          this.$store.state.buyNow.count *
+          this.$store.state.buyNow.present_price.toFixed(2)
         );
       } else {
         return this.$store.getters.getSum;

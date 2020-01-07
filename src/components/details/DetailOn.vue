@@ -6,8 +6,18 @@
       <div>运费：0</div>
       <div>剩余：{{item.amount}}</div>
       <div @click="collection(item)">
-        <div v-if="flag">点击收藏<van-icon name="like" /></div>
-        <div v-else>取消收藏<van-icon name="like" /></div>
+        <div v-if="flag">
+          点击收藏
+          <span  class="collection">
+            <van-icon name="like-o" />
+          </span>
+        </div>
+        <div v-else>
+          取消收藏
+          <span  class="collection">
+            <van-icon name="like" />
+          </span>
+        </div>
       </div>
     </div>
     <div class="store">
@@ -106,5 +116,10 @@ export default {
 .van-icon-shop-o {
   width: 20px;
   height: 18px;
+}
+.collection {
+ font-size: 16px;
+ margin-top: -2px;
+ color: red;
 }
 </style>

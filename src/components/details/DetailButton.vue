@@ -62,6 +62,7 @@ export default {
         image_path: this.item.image_path,
         name: this.item.name
       };
+      this.$store.state.buyNow = obj;
       this.$router.push({
         name: "shoppingPayMent",
         params: { item: obj }

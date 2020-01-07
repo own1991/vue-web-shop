@@ -11,6 +11,7 @@ export default new Vuex.Store({
         currentCity: '',
         nickname: '',
         shopList: [],
+        buyNow: {},
         address: '',
         Num: '',
         tobeEvaluated: {},
