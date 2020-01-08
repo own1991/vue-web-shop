@@ -130,3 +130,13 @@ hostname: Trayvon
 2020-01-07 21:46:24,592 INFO 14844 [egg-watcher] Recieved a change event from eventSource: {"event":"change","path":"F:\\project\\Shopping\\server\\app\\model\\user.js","stat":{"dev":1647330337,"mode":33206,"nlink":1,"uid":0,"gid":0,"rdev":0,"blksize":4096,"ino":2251799813788805,"size":1111,"blocks":8,"atimeMs":1578404784591.668,"mtimeMs":1577534711581.6846,"ctimeMs":1577534711581.6846,"birthtimeMs":1577534711581.6846,"atime":"2020-01-07T13:46:24.592Z","mtime":"2019-12-28T12:05:11.582Z","ctime":"2019-12-28T12:05:11.582Z","birthtime":"2019-12-28T12:05:11.582Z"},"remove":false,"isDirectory":false,"isFile":true}
 2020-01-07 21:46:25,611 WARN 14844 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
 2020-01-07 21:46:26,849 WARN 14844 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2020-01-08 08:26:12,468 INFO 1048 [egg:logger] init all loggers with options: {"dir":"E:\\project\\shop\\server\\logs\\server","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"server-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"agent"}
+2020-01-08 08:26:12,485 INFO 1048 [egg:core] dump config after load, 9ms
+2020-01-08 08:26:12,684 INFO 1048 [egg-watcher] Start watching: ["E:\\project\\shop\\server\\app","E:\\project\\shop\\server\\config","E:\\project\\shop\\server\\mocks","E:\\project\\shop\\server\\mocks_proxy","E:\\project\\shop\\server\\app.js"]
+2020-01-08 08:26:12,684 INFO 1048 [egg-watcher] Start watching: "E:\\project\\shop\\server\\app"
+2020-01-08 08:26:12,686 INFO 1048 [egg-watcher] Start watching: "E:\\project\\shop\\server\\config"
+2020-01-08 08:26:12,686 INFO 1048 [egg-watcher] Start watching: "E:\\project\\shop\\server\\mocks"
+2020-01-08 08:26:12,687 INFO 1048 [egg-watcher] Start watching: "E:\\project\\shop\\server\\mocks_proxy"
+2020-01-08 08:26:12,687 INFO 1048 [egg-watcher] Start watching: "E:\\project\\shop\\server\\app.js"
+2020-01-08 08:26:12,688 INFO 1048 [egg-watcher:agent] watcher start success
+2020-01-08 08:26:12,724 INFO 1048 [egg:core] dump config after ready, 11ms

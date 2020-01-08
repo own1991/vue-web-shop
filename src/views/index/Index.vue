@@ -1,12 +1,12 @@
 <template>
   <div class="container">
-    <!-- 吸顶 -->
-    <van-sticky>
-      <!-- 顶部组件 -->
+    <!-- 顶部组件 -->
+    <div class="index-top">
       <index-top />
-    </van-sticky>
+    </div>
     <!-- better-scroll组件 -->
-    <better-scroll class="wrapper">
+    <div style="overflow:hidden">
+    <better-scroll class="wrapper" @incident="getData" :flag="flag" :pullDown="true">
       <div>
         <!-- 轮播图组件 -->
         <index-slides :slidesData="Data.slides" class="slides" />
@@ -26,6 +26,7 @@
         <index-hotGoods :hotGoodsData="Data.hotGoods" />
       </div>
     </better-scroll>
+    </div>
   </div>
 </template>
 <script>
@@ -42,7 +43,7 @@ export default {
       advertesPicture: null,
       isLoading: false,
       floorName: {},
-      flag: true
+      flag: false
     };
   },
   props: {},
@@ -58,17 +59,12 @@ export default {
     getData() {
       this.$api.getRecommend().then(res => {
         if ((res.code = 200)) {
+          this.flag = true;
           this.Data = res.data;
           this.advertesPicture = res.data.advertesPicture.PICTURE_ADDRESS;
           this.floorName = res.data.floorName;
         }
       });
-    },
-    onRefresh() {
-      setTimeout(() => {
-        this.$toast("刷新成功");
-        this.isLoading = false;
-      }, 500);
     }
   },
   mounted() {
@@ -102,6 +98,8 @@ export default {
   }
 }
 .wrapper {
+  margin-top: -30px;
+  z-index: -1;
   height: 84vh;
   overflow: hidden;
 }

@@ -1,6 +1,14 @@
 <template>
   <div ref="wrapper">
-    <div>
+    <div class="container">
+      <div v-if="pullDown">
+        <div v-show="before" class="before">下拉刷新</div>
+        <div v-show="!before" class="loading">
+          <div v-show="loading">
+            <van-loading size="24px">加载中...</van-loading>
+          </div>
+        </div>
+      </div>
       <slot></slot>
     </div>
   </div>
@@ -8,29 +16,51 @@
 
 <script>
 import BScroll from "@better-scroll/core";
+import PullDown from "@better-scroll/pull-down";
+BScroll.use(PullDown);
 export default {
   props: {
-    arr: {
-      type: Array,
-      default: () => []
+    flag: {
+      type: Boolean,
+      default: false
+    },
+    pullDown: {
+      type: Boolean,
+      default: false
+    },
+    loaded: {
+      type: Boolean,
+      default: false
     }
   },
   data() {
-    return {};
+    return {
+      before: true,
+      loading: false
+    };
   },
   components: {},
   methods: {
+    //创建BScroll实例（如果存在则重置，不存在则创建）
     init() {
       if (!this.bs) {
         this.bs = new BScroll(".wrapper", {
-          startY: 0,
           click: true,
           scrollY: true,
-          startY: 0,
-          probeType: 3 // listening scroll hook
+          bounceTime: 800,
+          pullDownRefresh: this.pullDown,
+          probeType: 3
         });
       } else {
         this.bs.refresh();
+      }
+      if (this.pullDown) {
+        this.bs.on("pullingDown", () => {
+          this.$parent.flag = false;
+          this.before = false;
+          this.loading = true;
+          this.$emit("incident");
+        });
       }
     }
   },
@@ -40,27 +70,57 @@ export default {
       this.init();
     });
   },
-  updated() {
-    this.$nextTick(() => {
-      this.init();
-    });
-  },
+  updated() {},
   watch: {
-    arr(val) {
-      this.bs.refresh();
-      setTimeout(() => {
-        this.bs = new BScroll(".wrapper", {
-          startY: 0,
-          scrollY: true,
-          click: true,
-          probeType: 3 // listening scroll hook
-        });
-      }, 20);
+    flag(val) {
+      if (val && this.loading) {
+        setTimeout(() => {
+          this.$toast("刷新成功");
+          this.loading = false;
+          this.before = true;
+          this.bs.refresh();
+          this.bs.finishPullDown();
+        }, 500);
+      }
+    },
+    loaded(val) {
+      if (val) {
+        this.$nextTick = () => {
+          this.init();
+        };
+      }
     }
   },
-  computed: {}
+  computed: {
+    pull() {
+      if (pullDown) {
+        return {
+          threshold: 30,
+          stop: 0
+        };
+      } else return false;
+    }
+  }
 };
 </script>
 
 <style lang='scss'>
+.before {
+  padding: 7px;
+  text-align: center;
+  font-size: 16px;
+  color: gray;
+}
+.loading {
+  padding: 5px;
+  height: 30px;
+  text-align: center;
+}
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 2s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  transform: translateY(-100%);
+}
 </style>

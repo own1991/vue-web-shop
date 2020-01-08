@@ -11,14 +11,14 @@
       <div class="total">
         <div>
           合计：
-          <span v-if="checkeds.length>0">￥{{sum}}</span>
+          <span>￥{{sum}}</span>
         </div>
-        <div v-if="checkeds.length>0">请确认订单</div>
+        <div>请确认订单</div>
       </div>
       <van-divider :style="{ padding: '0 3px' }" />
       <div v-if="flag">
         <van-button class="btn" type="primary" @click="del()">删除</van-button>
-        <van-button class="btn" type="primary" @click="$goto('/shoppingPayMent')">结算</van-button>
+        <van-button class="btn" type="primary" @click="gotoPayMent">结算</van-button>
       </div>
     </div>
     <div v-else class="msg">
@@ -50,8 +50,7 @@
 export default {
   data() {
     return {
-      checkeds: [1],
-      checked: false,
+      checked: false
     };
   },
   props: {},
@@ -107,6 +106,13 @@ export default {
         if (res.code === 200) {
           this.$store.dispatch("getShopList");
         }
+      });
+    },
+    gotoPayMent() {
+      let payList=this.$store.state.shopList.filter(item=>item.check)
+      this.$router.push({
+        name: "shoppingPayMent",
+        query: { PayMent: JSON.stringify(payList) }
       });
     }
   },

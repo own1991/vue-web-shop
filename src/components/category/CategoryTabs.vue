@@ -10,7 +10,7 @@
       ></van-tab>
     </van-tabs>
     <div class="main">
-      <better-scroll class="wrapper">
+      <better-scroll class="wrapper" :loaded="loaded">
         <category-box v-for="desc in dataList" :key="desc.id" :item="desc" />
       </better-scroll>
     </div>
@@ -28,11 +28,12 @@ export default {
     dataid: {
       type: String,
       default: ""
-    },
+    }
   },
   data() {
-    return {    
-      dataList: []
+    return {
+      dataList: [],
+      loaded: false
     };
   },
   components: {
@@ -41,20 +42,21 @@ export default {
   methods: {
     // 获取每项列表
     getDetail(name, title) {
+      this.loaded = false;
       this.$api.category(name).then(res => {
         if (res.code === 200) {
+          this.loaded = true;
           this.dataList = res.dataList;
         }
       });
     }
   },
-  mounted() {
-  },
+  mounted() {},
   watch: {
     //监听dataid的变化进行异步获取
     dataid(val) {
       this.getDetail(val, "");
-    },
+    }
   },
   computed: {}
 };

@@ -1074,3 +1074,554 @@ hostname: STU008
 pid: 3028
 hostname: STU008
 
+2020-01-08 16:44:34,940 ERROR 5040 [-/127.0.0.1/-/9ms POST /v1/order] nodejs.TypeError: Cannot read property 'count' of undefined
+    at OperatingGoodsController.order (E:\project\shop\server\app\controller\api\operatingGoods.js:197:34)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async E:\project\shop\server\app\middleware\isLogin.js:15:13
+    at async E:\project\shop\server\node_modules\_egg-development@2.4.3@egg-development\app\middleware\egg_loader_trace.js:9:50
+    at async xframe (E:\project\shop\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\xframe.js:7:5)
+    at async xssProtection (E:\project\shop\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\xssProtection.js:7:5)
+    at async nosniff (E:\project\shop\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\nosniff.js:8:5)
+    at async noopen (E:\project\shop\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\noopen.js:8:5)
+    at async session (E:\project\shop\server\node_modules\_koa-session@5.12.3@koa-session\index.js:41:7)
+    at async bodyParser (E:\project\shop\server\node_modules\_koa-bodyparser@4.2.1@koa-bodyparser\index.js:86:5)
+    at async E:\project\shop\server\node_modules\_koa-static-cache@5.1.2@koa-static-cache\index.js:51:63
+    at async notfound (E:\project\shop\server\node_modules\_egg@2.26.0@egg\app\middleware\notfound.js:5:5)
+    at async meta (E:\project\shop\server\node_modules\_egg@2.26.0@egg\app\middleware\meta.js:12:5)
+
+pid: 5040
+hostname: STU008
+
+2020-01-08 16:44:39,267 ERROR 5040 [-/127.0.0.1/-/4ms POST /v1/order] nodejs.TypeError: Cannot read property 'count' of undefined
+    at OperatingGoodsController.order (E:\project\shop\server\app\controller\api\operatingGoods.js:197:34)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async E:\project\shop\server\app\middleware\isLogin.js:15:13
+    at async E:\project\shop\server\node_modules\_egg-development@2.4.3@egg-development\app\middleware\egg_loader_trace.js:9:50
+    at async xframe (E:\project\shop\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\xframe.js:7:5)
+    at async xssProtection (E:\project\shop\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\xssProtection.js:7:5)
+    at async nosniff (E:\project\shop\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\nosniff.js:8:5)
+    at async noopen (E:\project\shop\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\noopen.js:8:5)
+    at async session (E:\project\shop\server\node_modules\_koa-session@5.12.3@koa-session\index.js:41:7)
+    at async bodyParser (E:\project\shop\server\node_modules\_koa-bodyparser@4.2.1@koa-bodyparser\index.js:86:5)
+    at async E:\project\shop\server\node_modules\_koa-static-cache@5.1.2@koa-static-cache\index.js:51:63
+    at async notfound (E:\project\shop\server\node_modules\_egg@2.26.0@egg\app\middleware\notfound.js:5:5)
+    at async meta (E:\project\shop\server\node_modules\_egg@2.26.0@egg\app\middleware\meta.js:12:5)
+
+pid: 5040
+hostname: STU008
+
+2020-01-08 16:50:56,274 ERROR 5040 [-/127.0.0.1/-/3ms POST /v1/order] nodejs.TypeError: Cannot read property 'count' of undefined
+    at OperatingGoodsController.order (E:\project\shop\server\app\controller\api\operatingGoods.js:197:34)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async E:\project\shop\server\app\middleware\isLogin.js:15:13
+    at async E:\project\shop\server\node_modules\_egg-development@2.4.3@egg-development\app\middleware\egg_loader_trace.js:9:50
+    at async xframe (E:\project\shop\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\xframe.js:7:5)
+    at async xssProtection (E:\project\shop\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\xssProtection.js:7:5)
+    at async nosniff (E:\project\shop\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\nosniff.js:8:5)
+    at async noopen (E:\project\shop\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\noopen.js:8:5)
+    at async session (E:\project\shop\server\node_modules\_koa-session@5.12.3@koa-session\index.js:41:7)
+    at async bodyParser (E:\project\shop\server\node_modules\_koa-bodyparser@4.2.1@koa-bodyparser\index.js:86:5)
+    at async E:\project\shop\server\node_modules\_koa-static-cache@5.1.2@koa-static-cache\index.js:51:63
+    at async notfound (E:\project\shop\server\node_modules\_egg@2.26.0@egg\app\middleware\notfound.js:5:5)
+    at async meta (E:\project\shop\server\node_modules\_egg@2.26.0@egg\app\middleware\meta.js:12:5)
+
+pid: 5040
+hostname: STU008
+
+2020-01-08 16:50:58,229 ERROR 5040 [-/127.0.0.1/-/3ms POST /v1/order] nodejs.TypeError: Cannot read property 'count' of undefined
+    at OperatingGoodsController.order (E:\project\shop\server\app\controller\api\operatingGoods.js:197:34)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async E:\project\shop\server\app\middleware\isLogin.js:15:13
+    at async E:\project\shop\server\node_modules\_egg-development@2.4.3@egg-development\app\middleware\egg_loader_trace.js:9:50
+    at async xframe (E:\project\shop\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\xframe.js:7:5)
+    at async xssProtection (E:\project\shop\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\xssProtection.js:7:5)
+    at async nosniff (E:\project\shop\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\nosniff.js:8:5)
+    at async noopen (E:\project\shop\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\noopen.js:8:5)
+    at async session (E:\project\shop\server\node_modules\_koa-session@5.12.3@koa-session\index.js:41:7)
+    at async bodyParser (E:\project\shop\server\node_modules\_koa-bodyparser@4.2.1@koa-bodyparser\index.js:86:5)
+    at async E:\project\shop\server\node_modules\_koa-static-cache@5.1.2@koa-static-cache\index.js:51:63
+    at async notfound (E:\project\shop\server\node_modules\_egg@2.26.0@egg\app\middleware\notfound.js:5:5)
+    at async meta (E:\project\shop\server\node_modules\_egg@2.26.0@egg\app\middleware\meta.js:12:5)
+
+pid: 5040
+hostname: STU008
+
+2020-01-08 16:50:59,081 ERROR 5040 [-/127.0.0.1/-/2ms POST /v1/order] nodejs.TypeError: Cannot read property 'count' of undefined
+    at OperatingGoodsController.order (E:\project\shop\server\app\controller\api\operatingGoods.js:197:34)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async E:\project\shop\server\app\middleware\isLogin.js:15:13
+    at async E:\project\shop\server\node_modules\_egg-development@2.4.3@egg-development\app\middleware\egg_loader_trace.js:9:50
+    at async xframe (E:\project\shop\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\xframe.js:7:5)
+    at async xssProtection (E:\project\shop\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\xssProtection.js:7:5)
+    at async nosniff (E:\project\shop\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\nosniff.js:8:5)
+    at async noopen (E:\project\shop\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\noopen.js:8:5)
+    at async session (E:\project\shop\server\node_modules\_koa-session@5.12.3@koa-session\index.js:41:7)
+    at async bodyParser (E:\project\shop\server\node_modules\_koa-bodyparser@4.2.1@koa-bodyparser\index.js:86:5)
+    at async E:\project\shop\server\node_modules\_koa-static-cache@5.1.2@koa-static-cache\index.js:51:63
+    at async notfound (E:\project\shop\server\node_modules\_egg@2.26.0@egg\app\middleware\notfound.js:5:5)
+    at async meta (E:\project\shop\server\node_modules\_egg@2.26.0@egg\app\middleware\meta.js:12:5)
+
+pid: 5040
+hostname: STU008
+
+2020-01-08 16:51:02,841 ERROR 5040 [-/127.0.0.1/-/2ms POST /v1/order] nodejs.TypeError: Cannot read property 'count' of undefined
+    at OperatingGoodsController.order (E:\project\shop\server\app\controller\api\operatingGoods.js:197:34)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async E:\project\shop\server\app\middleware\isLogin.js:15:13
+    at async E:\project\shop\server\node_modules\_egg-development@2.4.3@egg-development\app\middleware\egg_loader_trace.js:9:50
+    at async xframe (E:\project\shop\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\xframe.js:7:5)
+    at async xssProtection (E:\project\shop\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\xssProtection.js:7:5)
+    at async nosniff (E:\project\shop\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\nosniff.js:8:5)
+    at async noopen (E:\project\shop\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\noopen.js:8:5)
+    at async session (E:\project\shop\server\node_modules\_koa-session@5.12.3@koa-session\index.js:41:7)
+    at async bodyParser (E:\project\shop\server\node_modules\_koa-bodyparser@4.2.1@koa-bodyparser\index.js:86:5)
+    at async E:\project\shop\server\node_modules\_koa-static-cache@5.1.2@koa-static-cache\index.js:51:63
+    at async notfound (E:\project\shop\server\node_modules\_egg@2.26.0@egg\app\middleware\notfound.js:5:5)
+    at async meta (E:\project\shop\server\node_modules\_egg@2.26.0@egg\app\middleware\meta.js:12:5)
+
+pid: 5040
+hostname: STU008
+
+2020-01-08 16:51:03,412 ERROR 5040 [-/127.0.0.1/-/3ms POST /v1/order] nodejs.TypeError: Cannot read property 'count' of undefined
+    at OperatingGoodsController.order (E:\project\shop\server\app\controller\api\operatingGoods.js:197:34)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async E:\project\shop\server\app\middleware\isLogin.js:15:13
+    at async E:\project\shop\server\node_modules\_egg-development@2.4.3@egg-development\app\middleware\egg_loader_trace.js:9:50
+    at async xframe (E:\project\shop\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\xframe.js:7:5)
+    at async xssProtection (E:\project\shop\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\xssProtection.js:7:5)
+    at async nosniff (E:\project\shop\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\nosniff.js:8:5)
+    at async noopen (E:\project\shop\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\noopen.js:8:5)
+    at async session (E:\project\shop\server\node_modules\_koa-session@5.12.3@koa-session\index.js:41:7)
+    at async bodyParser (E:\project\shop\server\node_modules\_koa-bodyparser@4.2.1@koa-bodyparser\index.js:86:5)
+    at async E:\project\shop\server\node_modules\_koa-static-cache@5.1.2@koa-static-cache\index.js:51:63
+    at async notfound (E:\project\shop\server\node_modules\_egg@2.26.0@egg\app\middleware\notfound.js:5:5)
+    at async meta (E:\project\shop\server\node_modules\_egg@2.26.0@egg\app\middleware\meta.js:12:5)
+
+pid: 5040
+hostname: STU008
+
+2020-01-08 16:51:03,638 ERROR 5040 [-/127.0.0.1/-/3ms POST /v1/order] nodejs.TypeError: Cannot read property 'count' of undefined
+    at OperatingGoodsController.order (E:\project\shop\server\app\controller\api\operatingGoods.js:197:34)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async E:\project\shop\server\app\middleware\isLogin.js:15:13
+    at async E:\project\shop\server\node_modules\_egg-development@2.4.3@egg-development\app\middleware\egg_loader_trace.js:9:50
+    at async xframe (E:\project\shop\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\xframe.js:7:5)
+    at async xssProtection (E:\project\shop\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\xssProtection.js:7:5)
+    at async nosniff (E:\project\shop\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\nosniff.js:8:5)
+    at async noopen (E:\project\shop\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\noopen.js:8:5)
+    at async session (E:\project\shop\server\node_modules\_koa-session@5.12.3@koa-session\index.js:41:7)
+    at async bodyParser (E:\project\shop\server\node_modules\_koa-bodyparser@4.2.1@koa-bodyparser\index.js:86:5)
+    at async E:\project\shop\server\node_modules\_koa-static-cache@5.1.2@koa-static-cache\index.js:51:63
+    at async notfound (E:\project\shop\server\node_modules\_egg@2.26.0@egg\app\middleware\notfound.js:5:5)
+    at async meta (E:\project\shop\server\node_modules\_egg@2.26.0@egg\app\middleware\meta.js:12:5)
+
+pid: 5040
+hostname: STU008
+
+2020-01-08 16:51:03,797 ERROR 5040 [-/127.0.0.1/-/3ms POST /v1/order] nodejs.TypeError: Cannot read property 'count' of undefined
+    at OperatingGoodsController.order (E:\project\shop\server\app\controller\api\operatingGoods.js:197:34)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async E:\project\shop\server\app\middleware\isLogin.js:15:13
+    at async E:\project\shop\server\node_modules\_egg-development@2.4.3@egg-development\app\middleware\egg_loader_trace.js:9:50
+    at async xframe (E:\project\shop\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\xframe.js:7:5)
+    at async xssProtection (E:\project\shop\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\xssProtection.js:7:5)
+    at async nosniff (E:\project\shop\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\nosniff.js:8:5)
+    at async noopen (E:\project\shop\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\noopen.js:8:5)
+    at async session (E:\project\shop\server\node_modules\_koa-session@5.12.3@koa-session\index.js:41:7)
+    at async bodyParser (E:\project\shop\server\node_modules\_koa-bodyparser@4.2.1@koa-bodyparser\index.js:86:5)
+    at async E:\project\shop\server\node_modules\_koa-static-cache@5.1.2@koa-static-cache\index.js:51:63
+    at async notfound (E:\project\shop\server\node_modules\_egg@2.26.0@egg\app\middleware\notfound.js:5:5)
+    at async meta (E:\project\shop\server\node_modules\_egg@2.26.0@egg\app\middleware\meta.js:12:5)
+
+pid: 5040
+hostname: STU008
+
+2020-01-08 16:51:03,930 ERROR 5040 [-/127.0.0.1/-/3ms POST /v1/order] nodejs.TypeError: Cannot read property 'count' of undefined
+    at OperatingGoodsController.order (E:\project\shop\server\app\controller\api\operatingGoods.js:197:34)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async E:\project\shop\server\app\middleware\isLogin.js:15:13
+    at async E:\project\shop\server\node_modules\_egg-development@2.4.3@egg-development\app\middleware\egg_loader_trace.js:9:50
+    at async xframe (E:\project\shop\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\xframe.js:7:5)
+    at async xssProtection (E:\project\shop\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\xssProtection.js:7:5)
+    at async nosniff (E:\project\shop\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\nosniff.js:8:5)
+    at async noopen (E:\project\shop\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\noopen.js:8:5)
+    at async session (E:\project\shop\server\node_modules\_koa-session@5.12.3@koa-session\index.js:41:7)
+    at async bodyParser (E:\project\shop\server\node_modules\_koa-bodyparser@4.2.1@koa-bodyparser\index.js:86:5)
+    at async E:\project\shop\server\node_modules\_koa-static-cache@5.1.2@koa-static-cache\index.js:51:63
+    at async notfound (E:\project\shop\server\node_modules\_egg@2.26.0@egg\app\middleware\notfound.js:5:5)
+    at async meta (E:\project\shop\server\node_modules\_egg@2.26.0@egg\app\middleware\meta.js:12:5)
+
+pid: 5040
+hostname: STU008
+
+2020-01-08 16:51:04,130 ERROR 5040 [-/127.0.0.1/-/2ms POST /v1/order] nodejs.TypeError: Cannot read property 'count' of undefined
+    at OperatingGoodsController.order (E:\project\shop\server\app\controller\api\operatingGoods.js:197:34)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async E:\project\shop\server\app\middleware\isLogin.js:15:13
+    at async E:\project\shop\server\node_modules\_egg-development@2.4.3@egg-development\app\middleware\egg_loader_trace.js:9:50
+    at async xframe (E:\project\shop\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\xframe.js:7:5)
+    at async xssProtection (E:\project\shop\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\xssProtection.js:7:5)
+    at async nosniff (E:\project\shop\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\nosniff.js:8:5)
+    at async noopen (E:\project\shop\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\noopen.js:8:5)
+    at async session (E:\project\shop\server\node_modules\_koa-session@5.12.3@koa-session\index.js:41:7)
+    at async bodyParser (E:\project\shop\server\node_modules\_koa-bodyparser@4.2.1@koa-bodyparser\index.js:86:5)
+    at async E:\project\shop\server\node_modules\_koa-static-cache@5.1.2@koa-static-cache\index.js:51:63
+    at async notfound (E:\project\shop\server\node_modules\_egg@2.26.0@egg\app\middleware\notfound.js:5:5)
+    at async meta (E:\project\shop\server\node_modules\_egg@2.26.0@egg\app\middleware\meta.js:12:5)
+
+pid: 5040
+hostname: STU008
+
+2020-01-08 16:51:04,281 ERROR 5040 [-/127.0.0.1/-/2ms POST /v1/order] nodejs.TypeError: Cannot read property 'count' of undefined
+    at OperatingGoodsController.order (E:\project\shop\server\app\controller\api\operatingGoods.js:197:34)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async E:\project\shop\server\app\middleware\isLogin.js:15:13
+    at async E:\project\shop\server\node_modules\_egg-development@2.4.3@egg-development\app\middleware\egg_loader_trace.js:9:50
+    at async xframe (E:\project\shop\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\xframe.js:7:5)
+    at async xssProtection (E:\project\shop\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\xssProtection.js:7:5)
+    at async nosniff (E:\project\shop\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\nosniff.js:8:5)
+    at async noopen (E:\project\shop\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\noopen.js:8:5)
+    at async session (E:\project\shop\server\node_modules\_koa-session@5.12.3@koa-session\index.js:41:7)
+    at async bodyParser (E:\project\shop\server\node_modules\_koa-bodyparser@4.2.1@koa-bodyparser\index.js:86:5)
+    at async E:\project\shop\server\node_modules\_koa-static-cache@5.1.2@koa-static-cache\index.js:51:63
+    at async notfound (E:\project\shop\server\node_modules\_egg@2.26.0@egg\app\middleware\notfound.js:5:5)
+    at async meta (E:\project\shop\server\node_modules\_egg@2.26.0@egg\app\middleware\meta.js:12:5)
+
+pid: 5040
+hostname: STU008
+
+2020-01-08 16:51:04,499 ERROR 5040 [-/127.0.0.1/-/3ms POST /v1/order] nodejs.TypeError: Cannot read property 'count' of undefined
+    at OperatingGoodsController.order (E:\project\shop\server\app\controller\api\operatingGoods.js:197:34)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async E:\project\shop\server\app\middleware\isLogin.js:15:13
+    at async E:\project\shop\server\node_modules\_egg-development@2.4.3@egg-development\app\middleware\egg_loader_trace.js:9:50
+    at async xframe (E:\project\shop\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\xframe.js:7:5)
+    at async xssProtection (E:\project\shop\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\xssProtection.js:7:5)
+    at async nosniff (E:\project\shop\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\nosniff.js:8:5)
+    at async noopen (E:\project\shop\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\noopen.js:8:5)
+    at async session (E:\project\shop\server\node_modules\_koa-session@5.12.3@koa-session\index.js:41:7)
+    at async bodyParser (E:\project\shop\server\node_modules\_koa-bodyparser@4.2.1@koa-bodyparser\index.js:86:5)
+    at async E:\project\shop\server\node_modules\_koa-static-cache@5.1.2@koa-static-cache\index.js:51:63
+    at async notfound (E:\project\shop\server\node_modules\_egg@2.26.0@egg\app\middleware\notfound.js:5:5)
+    at async meta (E:\project\shop\server\node_modules\_egg@2.26.0@egg\app\middleware\meta.js:12:5)
+
+pid: 5040
+hostname: STU008
+
+2020-01-08 16:51:04,718 ERROR 5040 [-/127.0.0.1/-/3ms POST /v1/order] nodejs.TypeError: Cannot read property 'count' of undefined
+    at OperatingGoodsController.order (E:\project\shop\server\app\controller\api\operatingGoods.js:197:34)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async E:\project\shop\server\app\middleware\isLogin.js:15:13
+    at async E:\project\shop\server\node_modules\_egg-development@2.4.3@egg-development\app\middleware\egg_loader_trace.js:9:50
+    at async xframe (E:\project\shop\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\xframe.js:7:5)
+    at async xssProtection (E:\project\shop\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\xssProtection.js:7:5)
+    at async nosniff (E:\project\shop\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\nosniff.js:8:5)
+    at async noopen (E:\project\shop\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\noopen.js:8:5)
+    at async session (E:\project\shop\server\node_modules\_koa-session@5.12.3@koa-session\index.js:41:7)
+    at async bodyParser (E:\project\shop\server\node_modules\_koa-bodyparser@4.2.1@koa-bodyparser\index.js:86:5)
+    at async E:\project\shop\server\node_modules\_koa-static-cache@5.1.2@koa-static-cache\index.js:51:63
+    at async notfound (E:\project\shop\server\node_modules\_egg@2.26.0@egg\app\middleware\notfound.js:5:5)
+    at async meta (E:\project\shop\server\node_modules\_egg@2.26.0@egg\app\middleware\meta.js:12:5)
+
+pid: 5040
+hostname: STU008
+
+2020-01-08 16:51:04,864 ERROR 5040 [-/127.0.0.1/-/3ms POST /v1/order] nodejs.TypeError: Cannot read property 'count' of undefined
+    at OperatingGoodsController.order (E:\project\shop\server\app\controller\api\operatingGoods.js:197:34)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async E:\project\shop\server\app\middleware\isLogin.js:15:13
+    at async E:\project\shop\server\node_modules\_egg-development@2.4.3@egg-development\app\middleware\egg_loader_trace.js:9:50
+    at async xframe (E:\project\shop\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\xframe.js:7:5)
+    at async xssProtection (E:\project\shop\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\xssProtection.js:7:5)
+    at async nosniff (E:\project\shop\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\nosniff.js:8:5)
+    at async noopen (E:\project\shop\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\noopen.js:8:5)
+    at async session (E:\project\shop\server\node_modules\_koa-session@5.12.3@koa-session\index.js:41:7)
+    at async bodyParser (E:\project\shop\server\node_modules\_koa-bodyparser@4.2.1@koa-bodyparser\index.js:86:5)
+    at async E:\project\shop\server\node_modules\_koa-static-cache@5.1.2@koa-static-cache\index.js:51:63
+    at async notfound (E:\project\shop\server\node_modules\_egg@2.26.0@egg\app\middleware\notfound.js:5:5)
+    at async meta (E:\project\shop\server\node_modules\_egg@2.26.0@egg\app\middleware\meta.js:12:5)
+
+pid: 5040
+hostname: STU008
+
+2020-01-08 16:51:04,993 ERROR 5040 [-/127.0.0.1/-/3ms POST /v1/order] nodejs.TypeError: Cannot read property 'count' of undefined
+    at OperatingGoodsController.order (E:\project\shop\server\app\controller\api\operatingGoods.js:197:34)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async E:\project\shop\server\app\middleware\isLogin.js:15:13
+    at async E:\project\shop\server\node_modules\_egg-development@2.4.3@egg-development\app\middleware\egg_loader_trace.js:9:50
+    at async xframe (E:\project\shop\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\xframe.js:7:5)
+    at async xssProtection (E:\project\shop\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\xssProtection.js:7:5)
+    at async nosniff (E:\project\shop\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\nosniff.js:8:5)
+    at async noopen (E:\project\shop\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\noopen.js:8:5)
+    at async session (E:\project\shop\server\node_modules\_koa-session@5.12.3@koa-session\index.js:41:7)
+    at async bodyParser (E:\project\shop\server\node_modules\_koa-bodyparser@4.2.1@koa-bodyparser\index.js:86:5)
+    at async E:\project\shop\server\node_modules\_koa-static-cache@5.1.2@koa-static-cache\index.js:51:63
+    at async notfound (E:\project\shop\server\node_modules\_egg@2.26.0@egg\app\middleware\notfound.js:5:5)
+    at async meta (E:\project\shop\server\node_modules\_egg@2.26.0@egg\app\middleware\meta.js:12:5)
+
+pid: 5040
+hostname: STU008
+
+2020-01-08 16:51:05,181 ERROR 5040 [-/127.0.0.1/-/2ms POST /v1/order] nodejs.TypeError: Cannot read property 'count' of undefined
+    at OperatingGoodsController.order (E:\project\shop\server\app\controller\api\operatingGoods.js:197:34)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async E:\project\shop\server\app\middleware\isLogin.js:15:13
+    at async E:\project\shop\server\node_modules\_egg-development@2.4.3@egg-development\app\middleware\egg_loader_trace.js:9:50
+    at async xframe (E:\project\shop\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\xframe.js:7:5)
+    at async xssProtection (E:\project\shop\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\xssProtection.js:7:5)
+    at async nosniff (E:\project\shop\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\nosniff.js:8:5)
+    at async noopen (E:\project\shop\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\noopen.js:8:5)
+    at async session (E:\project\shop\server\node_modules\_koa-session@5.12.3@koa-session\index.js:41:7)
+    at async bodyParser (E:\project\shop\server\node_modules\_koa-bodyparser@4.2.1@koa-bodyparser\index.js:86:5)
+    at async E:\project\shop\server\node_modules\_koa-static-cache@5.1.2@koa-static-cache\index.js:51:63
+    at async notfound (E:\project\shop\server\node_modules\_egg@2.26.0@egg\app\middleware\notfound.js:5:5)
+    at async meta (E:\project\shop\server\node_modules\_egg@2.26.0@egg\app\middleware\meta.js:12:5)
+
+pid: 5040
+hostname: STU008
+
+2020-01-08 16:51:05,296 ERROR 5040 [-/127.0.0.1/-/2ms POST /v1/order] nodejs.TypeError: Cannot read property 'count' of undefined
+    at OperatingGoodsController.order (E:\project\shop\server\app\controller\api\operatingGoods.js:197:34)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async E:\project\shop\server\app\middleware\isLogin.js:15:13
+    at async E:\project\shop\server\node_modules\_egg-development@2.4.3@egg-development\app\middleware\egg_loader_trace.js:9:50
+    at async xframe (E:\project\shop\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\xframe.js:7:5)
+    at async xssProtection (E:\project\shop\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\xssProtection.js:7:5)
+    at async nosniff (E:\project\shop\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\nosniff.js:8:5)
+    at async noopen (E:\project\shop\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\noopen.js:8:5)
+    at async session (E:\project\shop\server\node_modules\_koa-session@5.12.3@koa-session\index.js:41:7)
+    at async bodyParser (E:\project\shop\server\node_modules\_koa-bodyparser@4.2.1@koa-bodyparser\index.js:86:5)
+    at async E:\project\shop\server\node_modules\_koa-static-cache@5.1.2@koa-static-cache\index.js:51:63
+    at async notfound (E:\project\shop\server\node_modules\_egg@2.26.0@egg\app\middleware\notfound.js:5:5)
+    at async meta (E:\project\shop\server\node_modules\_egg@2.26.0@egg\app\middleware\meta.js:12:5)
+
+pid: 5040
+hostname: STU008
+
+2020-01-08 16:51:05,408 ERROR 5040 [-/127.0.0.1/-/3ms POST /v1/order] nodejs.TypeError: Cannot read property 'count' of undefined
+    at OperatingGoodsController.order (E:\project\shop\server\app\controller\api\operatingGoods.js:197:34)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async E:\project\shop\server\app\middleware\isLogin.js:15:13
+    at async E:\project\shop\server\node_modules\_egg-development@2.4.3@egg-development\app\middleware\egg_loader_trace.js:9:50
+    at async xframe (E:\project\shop\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\xframe.js:7:5)
+    at async xssProtection (E:\project\shop\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\xssProtection.js:7:5)
+    at async nosniff (E:\project\shop\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\nosniff.js:8:5)
+    at async noopen (E:\project\shop\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\noopen.js:8:5)
+    at async session (E:\project\shop\server\node_modules\_koa-session@5.12.3@koa-session\index.js:41:7)
+    at async bodyParser (E:\project\shop\server\node_modules\_koa-bodyparser@4.2.1@koa-bodyparser\index.js:86:5)
+    at async E:\project\shop\server\node_modules\_koa-static-cache@5.1.2@koa-static-cache\index.js:51:63
+    at async notfound (E:\project\shop\server\node_modules\_egg@2.26.0@egg\app\middleware\notfound.js:5:5)
+    at async meta (E:\project\shop\server\node_modules\_egg@2.26.0@egg\app\middleware\meta.js:12:5)
+
+pid: 5040
+hostname: STU008
+
+2020-01-08 16:51:10,348 ERROR 5040 [-/127.0.0.1/-/2ms POST /v1/order] nodejs.TypeError: Cannot read property 'count' of undefined
+    at OperatingGoodsController.order (E:\project\shop\server\app\controller\api\operatingGoods.js:197:34)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async E:\project\shop\server\app\middleware\isLogin.js:15:13
+    at async E:\project\shop\server\node_modules\_egg-development@2.4.3@egg-development\app\middleware\egg_loader_trace.js:9:50
+    at async xframe (E:\project\shop\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\xframe.js:7:5)
+    at async xssProtection (E:\project\shop\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\xssProtection.js:7:5)
+    at async nosniff (E:\project\shop\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\nosniff.js:8:5)
+    at async noopen (E:\project\shop\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\noopen.js:8:5)
+    at async session (E:\project\shop\server\node_modules\_koa-session@5.12.3@koa-session\index.js:41:7)
+    at async bodyParser (E:\project\shop\server\node_modules\_koa-bodyparser@4.2.1@koa-bodyparser\index.js:86:5)
+    at async E:\project\shop\server\node_modules\_koa-static-cache@5.1.2@koa-static-cache\index.js:51:63
+    at async notfound (E:\project\shop\server\node_modules\_egg@2.26.0@egg\app\middleware\notfound.js:5:5)
+    at async meta (E:\project\shop\server\node_modules\_egg@2.26.0@egg\app\middleware\meta.js:12:5)
+
+pid: 5040
+hostname: STU008
+
+2020-01-08 16:51:11,297 ERROR 5040 [-/127.0.0.1/-/2ms POST /v1/order] nodejs.TypeError: Cannot read property 'count' of undefined
+    at OperatingGoodsController.order (E:\project\shop\server\app\controller\api\operatingGoods.js:197:34)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async E:\project\shop\server\app\middleware\isLogin.js:15:13
+    at async E:\project\shop\server\node_modules\_egg-development@2.4.3@egg-development\app\middleware\egg_loader_trace.js:9:50
+    at async xframe (E:\project\shop\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\xframe.js:7:5)
+    at async xssProtection (E:\project\shop\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\xssProtection.js:7:5)
+    at async nosniff (E:\project\shop\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\nosniff.js:8:5)
+    at async noopen (E:\project\shop\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\noopen.js:8:5)
+    at async session (E:\project\shop\server\node_modules\_koa-session@5.12.3@koa-session\index.js:41:7)
+    at async bodyParser (E:\project\shop\server\node_modules\_koa-bodyparser@4.2.1@koa-bodyparser\index.js:86:5)
+    at async E:\project\shop\server\node_modules\_koa-static-cache@5.1.2@koa-static-cache\index.js:51:63
+    at async notfound (E:\project\shop\server\node_modules\_egg@2.26.0@egg\app\middleware\notfound.js:5:5)
+    at async meta (E:\project\shop\server\node_modules\_egg@2.26.0@egg\app\middleware\meta.js:12:5)
+
+pid: 5040
+hostname: STU008
+
+2020-01-08 16:51:11,735 ERROR 5040 [-/127.0.0.1/-/3ms POST /v1/order] nodejs.TypeError: Cannot read property 'count' of undefined
+    at OperatingGoodsController.order (E:\project\shop\server\app\controller\api\operatingGoods.js:197:34)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async E:\project\shop\server\app\middleware\isLogin.js:15:13
+    at async E:\project\shop\server\node_modules\_egg-development@2.4.3@egg-development\app\middleware\egg_loader_trace.js:9:50
+    at async xframe (E:\project\shop\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\xframe.js:7:5)
+    at async xssProtection (E:\project\shop\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\xssProtection.js:7:5)
+    at async nosniff (E:\project\shop\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\nosniff.js:8:5)
+    at async noopen (E:\project\shop\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\noopen.js:8:5)
+    at async session (E:\project\shop\server\node_modules\_koa-session@5.12.3@koa-session\index.js:41:7)
+    at async bodyParser (E:\project\shop\server\node_modules\_koa-bodyparser@4.2.1@koa-bodyparser\index.js:86:5)
+    at async E:\project\shop\server\node_modules\_koa-static-cache@5.1.2@koa-static-cache\index.js:51:63
+    at async notfound (E:\project\shop\server\node_modules\_egg@2.26.0@egg\app\middleware\notfound.js:5:5)
+    at async meta (E:\project\shop\server\node_modules\_egg@2.26.0@egg\app\middleware\meta.js:12:5)
+
+pid: 5040
+hostname: STU008
+
+2020-01-08 16:51:15,418 ERROR 5040 [-/127.0.0.1/-/3ms POST /v1/order] nodejs.TypeError: Cannot read property 'count' of undefined
+    at OperatingGoodsController.order (E:\project\shop\server\app\controller\api\operatingGoods.js:197:34)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async E:\project\shop\server\app\middleware\isLogin.js:15:13
+    at async E:\project\shop\server\node_modules\_egg-development@2.4.3@egg-development\app\middleware\egg_loader_trace.js:9:50
+    at async xframe (E:\project\shop\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\xframe.js:7:5)
+    at async xssProtection (E:\project\shop\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\xssProtection.js:7:5)
+    at async nosniff (E:\project\shop\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\nosniff.js:8:5)
+    at async noopen (E:\project\shop\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\noopen.js:8:5)
+    at async session (E:\project\shop\server\node_modules\_koa-session@5.12.3@koa-session\index.js:41:7)
+    at async bodyParser (E:\project\shop\server\node_modules\_koa-bodyparser@4.2.1@koa-bodyparser\index.js:86:5)
+    at async E:\project\shop\server\node_modules\_koa-static-cache@5.1.2@koa-static-cache\index.js:51:63
+    at async notfound (E:\project\shop\server\node_modules\_egg@2.26.0@egg\app\middleware\notfound.js:5:5)
+    at async meta (E:\project\shop\server\node_modules\_egg@2.26.0@egg\app\middleware\meta.js:12:5)
+
+pid: 5040
+hostname: STU008
+
+2020-01-08 16:52:13,513 ERROR 5040 [-/127.0.0.1/-/2ms POST /v1/order] nodejs.TypeError: Cannot read property 'count' of undefined
+    at OperatingGoodsController.order (E:\project\shop\server\app\controller\api\operatingGoods.js:197:34)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async E:\project\shop\server\app\middleware\isLogin.js:15:13
+    at async E:\project\shop\server\node_modules\_egg-development@2.4.3@egg-development\app\middleware\egg_loader_trace.js:9:50
+    at async xframe (E:\project\shop\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\xframe.js:7:5)
+    at async xssProtection (E:\project\shop\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\xssProtection.js:7:5)
+    at async nosniff (E:\project\shop\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\nosniff.js:8:5)
+    at async noopen (E:\project\shop\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\noopen.js:8:5)
+    at async session (E:\project\shop\server\node_modules\_koa-session@5.12.3@koa-session\index.js:41:7)
+    at async bodyParser (E:\project\shop\server\node_modules\_koa-bodyparser@4.2.1@koa-bodyparser\index.js:86:5)
+    at async E:\project\shop\server\node_modules\_koa-static-cache@5.1.2@koa-static-cache\index.js:51:63
+    at async notfound (E:\project\shop\server\node_modules\_egg@2.26.0@egg\app\middleware\notfound.js:5:5)
+    at async meta (E:\project\shop\server\node_modules\_egg@2.26.0@egg\app\middleware\meta.js:12:5)
+
+pid: 5040
+hostname: STU008
+
+2020-01-08 16:52:20,705 ERROR 5040 [-/127.0.0.1/-/3ms POST /v1/order] nodejs.TypeError: Cannot read property 'count' of undefined
+    at OperatingGoodsController.order (E:\project\shop\server\app\controller\api\operatingGoods.js:197:34)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async E:\project\shop\server\app\middleware\isLogin.js:15:13
+    at async E:\project\shop\server\node_modules\_egg-development@2.4.3@egg-development\app\middleware\egg_loader_trace.js:9:50
+    at async xframe (E:\project\shop\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\xframe.js:7:5)
+    at async xssProtection (E:\project\shop\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\xssProtection.js:7:5)
+    at async nosniff (E:\project\shop\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\nosniff.js:8:5)
+    at async noopen (E:\project\shop\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\noopen.js:8:5)
+    at async session (E:\project\shop\server\node_modules\_koa-session@5.12.3@koa-session\index.js:41:7)
+    at async bodyParser (E:\project\shop\server\node_modules\_koa-bodyparser@4.2.1@koa-bodyparser\index.js:86:5)
+    at async E:\project\shop\server\node_modules\_koa-static-cache@5.1.2@koa-static-cache\index.js:51:63
+    at async notfound (E:\project\shop\server\node_modules\_egg@2.26.0@egg\app\middleware\notfound.js:5:5)
+    at async meta (E:\project\shop\server\node_modules\_egg@2.26.0@egg\app\middleware\meta.js:12:5)
+
+pid: 5040
+hostname: STU008
+
+2020-01-08 16:52:34,404 ERROR 5040 [-/127.0.0.1/-/3ms POST /v1/order] nodejs.TypeError: Cannot read property 'count' of undefined
+    at OperatingGoodsController.order (E:\project\shop\server\app\controller\api\operatingGoods.js:197:34)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async E:\project\shop\server\app\middleware\isLogin.js:15:13
+    at async E:\project\shop\server\node_modules\_egg-development@2.4.3@egg-development\app\middleware\egg_loader_trace.js:9:50
+    at async xframe (E:\project\shop\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\xframe.js:7:5)
+    at async xssProtection (E:\project\shop\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\xssProtection.js:7:5)
+    at async nosniff (E:\project\shop\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\nosniff.js:8:5)
+    at async noopen (E:\project\shop\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\noopen.js:8:5)
+    at async session (E:\project\shop\server\node_modules\_koa-session@5.12.3@koa-session\index.js:41:7)
+    at async bodyParser (E:\project\shop\server\node_modules\_koa-bodyparser@4.2.1@koa-bodyparser\index.js:86:5)
+    at async E:\project\shop\server\node_modules\_koa-static-cache@5.1.2@koa-static-cache\index.js:51:63
+    at async notfound (E:\project\shop\server\node_modules\_egg@2.26.0@egg\app\middleware\notfound.js:5:5)
+    at async meta (E:\project\shop\server\node_modules\_egg@2.26.0@egg\app\middleware\meta.js:12:5)
+
+pid: 5040
+hostname: STU008
+
+2020-01-08 16:53:32,888 ERROR 5040 [-/127.0.0.1/-/2ms POST /v1/order] nodejs.TypeError: Cannot read property 'count' of undefined
+    at OperatingGoodsController.order (E:\project\shop\server\app\controller\api\operatingGoods.js:197:34)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async E:\project\shop\server\app\middleware\isLogin.js:15:13
+    at async E:\project\shop\server\node_modules\_egg-development@2.4.3@egg-development\app\middleware\egg_loader_trace.js:9:50
+    at async xframe (E:\project\shop\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\xframe.js:7:5)
+    at async xssProtection (E:\project\shop\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\xssProtection.js:7:5)
+    at async nosniff (E:\project\shop\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\nosniff.js:8:5)
+    at async noopen (E:\project\shop\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\noopen.js:8:5)
+    at async session (E:\project\shop\server\node_modules\_koa-session@5.12.3@koa-session\index.js:41:7)
+    at async bodyParser (E:\project\shop\server\node_modules\_koa-bodyparser@4.2.1@koa-bodyparser\index.js:86:5)
+    at async E:\project\shop\server\node_modules\_koa-static-cache@5.1.2@koa-static-cache\index.js:51:63
+    at async notfound (E:\project\shop\server\node_modules\_egg@2.26.0@egg\app\middleware\notfound.js:5:5)
+    at async meta (E:\project\shop\server\node_modules\_egg@2.26.0@egg\app\middleware\meta.js:12:5)
+
+pid: 5040
+hostname: STU008
+
+2020-01-08 16:54:23,198 ERROR 5040 [-/127.0.0.1/-/4ms POST /v1/order] nodejs.TypeError: Cannot read property 'count' of undefined
+    at OperatingGoodsController.order (E:\project\shop\server\app\controller\api\operatingGoods.js:197:34)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async E:\project\shop\server\app\middleware\isLogin.js:15:13
+    at async E:\project\shop\server\node_modules\_egg-development@2.4.3@egg-development\app\middleware\egg_loader_trace.js:9:50
+    at async xframe (E:\project\shop\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\xframe.js:7:5)
+    at async xssProtection (E:\project\shop\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\xssProtection.js:7:5)
+    at async nosniff (E:\project\shop\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\nosniff.js:8:5)
+    at async noopen (E:\project\shop\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\noopen.js:8:5)
+    at async session (E:\project\shop\server\node_modules\_koa-session@5.12.3@koa-session\index.js:41:7)
+    at async bodyParser (E:\project\shop\server\node_modules\_koa-bodyparser@4.2.1@koa-bodyparser\index.js:86:5)
+    at async E:\project\shop\server\node_modules\_koa-static-cache@5.1.2@koa-static-cache\index.js:51:63
+    at async notfound (E:\project\shop\server\node_modules\_egg@2.26.0@egg\app\middleware\notfound.js:5:5)
+    at async meta (E:\project\shop\server\node_modules\_egg@2.26.0@egg\app\middleware\meta.js:12:5)
+
+pid: 5040
+hostname: STU008
+
+2020-01-08 16:54:33,775 ERROR 5040 [-/127.0.0.1/-/1ms POST /v1/order] nodejs.TypeError: Cannot read property 'count' of undefined
+    at OperatingGoodsController.order (E:\project\shop\server\app\controller\api\operatingGoods.js:197:34)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async E:\project\shop\server\app\middleware\isLogin.js:15:13
+    at async E:\project\shop\server\node_modules\_egg-development@2.4.3@egg-development\app\middleware\egg_loader_trace.js:9:50
+    at async xframe (E:\project\shop\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\xframe.js:7:5)
+    at async xssProtection (E:\project\shop\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\xssProtection.js:7:5)
+    at async nosniff (E:\project\shop\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\nosniff.js:8:5)
+    at async noopen (E:\project\shop\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\noopen.js:8:5)
+    at async session (E:\project\shop\server\node_modules\_koa-session@5.12.3@koa-session\index.js:41:7)
+    at async bodyParser (E:\project\shop\server\node_modules\_koa-bodyparser@4.2.1@koa-bodyparser\index.js:86:5)
+    at async E:\project\shop\server\node_modules\_koa-static-cache@5.1.2@koa-static-cache\index.js:51:63
+    at async notfound (E:\project\shop\server\node_modules\_egg@2.26.0@egg\app\middleware\notfound.js:5:5)
+    at async meta (E:\project\shop\server\node_modules\_egg@2.26.0@egg\app\middleware\meta.js:12:5)
+
+pid: 5040
+hostname: STU008
+

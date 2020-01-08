@@ -12,7 +12,7 @@
         v-for="item in checkList"
         :key="item.id"
         :num="item.count"
-        :price="item.present_price.toFixed(2)"
+        :price="item.present_price"
         :title="item.name"
         :thumb="item.image_path"
       />
@@ -57,6 +57,7 @@ export default {
         obj.orderId = [this.$route.params.item.id];
         obj.idDirect = true;
       }
+      console.log(obj);
       this.$api.placeOrder(obj).then(res => {
         if (res.code === 200) {
           this.$toast(res.msg);
@@ -65,43 +66,32 @@ export default {
       });
     },
     getdata() {
-      this.$api.getDefaultAddress().then(res => {
-        if (res.defaultAdd) {
-          this.$store.state.shippingAddress = res.defaultAdd;
-        }
-      });
+      if (!this.$store.state.shippingAddress.name) {
+        this.$api.getDefaultAddress().then(res => {
+          if (res.defaultAdd) {
+            this.$store.state.shippingAddress = res.defaultAdd;
+          }
+        });
+      }
     }
   },
   mounted() {
-    window.addEventListener("load", () => {
-      // 滚动事件变为 scroll
-      if (this.$route.path !== "/") {
-        this.$router.replace("/"); // 切换到首页
-      }
-    });
-    this.getdata()
-    console.log(this.$route.params);
+    this.getdata();
+    console.log(JSON.parse(this.$route.query.PayMent));
   },
   watch: {},
   computed: {
     // 购物车
     checkList() {
-      if (this.$store.state.buyNow) {
-        return [this.$store.state.buyNow];
-      } else {
-        return this.$store.state.shopList.filter(item => item.check === true);
-      }
+      return JSON.parse(this.$route.query.PayMent);
     },
     //计算总价
     sum() {
-      if (this.$store.state.buyNow) {
-        return (
-          this.$store.state.buyNow.count *
-          this.$store.state.buyNow.present_price.toFixed(2)
-        );
-      } else {
-        return this.$store.getters.getSum;
-      }
+      let sum = 0;
+      this.checkList.map(item => {
+        sum += item.count * item.present_price;
+      });
+      return sum;
     },
     // 第一个商品的数量
     count() {
@@ -110,10 +100,8 @@ export default {
     //所有商品的id
     ids() {
       let arr = [];
-      this.$store.state.shopList.map(item => {
-        if (item.check) {
-          arr.push(item.cid);
-        }
+      this.checkList.map(item => {
+        arr.push(item.cid);
       });
       return arr;
     },

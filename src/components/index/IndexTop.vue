@@ -102,7 +102,6 @@ export default {
   height: 6vh;
   padding: 1vh 0;
   background: #f2f2f2;
-  z-index: 999;
 }
 .city {
   div {

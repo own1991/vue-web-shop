@@ -65,7 +65,7 @@ export default {
       this.$store.state.buyNow = obj;
       this.$router.push({
         name: "shoppingPayMent",
-        params: { item: obj }
+        query: { PayMent: JSON.stringify([obj]) }
       });
     }
   },

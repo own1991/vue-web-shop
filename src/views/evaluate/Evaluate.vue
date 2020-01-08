@@ -15,11 +15,11 @@
     </div>
     <div class="main" v-if="active==='tobe'">
       <div v-if="tobeList.length===0" class="empty-msg">暂无数据</div>
-      <better-scroll class="wrapper">
+      <better-scroll class="wrapper" :loaded="tobeload">
         <evaluate-box v-for="item in tobeList" :key="item.id" :item="item" />
       </better-scroll>
     </div>
-    <div class="main" v-if="active==='done'">
+    <div class="main" v-if="active==='done'" :loaded="loaded">
       <div v-if="doneList.length===0" class="empty-msg">暂无数据</div>
       <better-scroll class="wrapper">
         <evaluate-box
@@ -40,7 +40,9 @@ export default {
     return {
       active: "tobe",
       tobeList: [],
-      doneList: []
+      doneList: [],
+      tobeload: false,
+      loaded: false
     };
   },
   props: {},
@@ -49,17 +51,24 @@ export default {
   },
   methods: {
     tobeEvaluated() {
+      this.tobeload = false;
       this.$api.tobeEvaluated().then(res => {
         if (res.code === 200) {
           this.tobeList = res.data.list;
+          this.tobeload = true;
           console.log(this.tobeList);
         }
       });
     },
     alreadyEvaluated() {
+      this.loaded = false;
       this.$api.alreadyEvaluated().then(res => {
-        this.doneList = res.data.list;
-        console.log(this.doneList);
+        if (res.code === 200) {
+          this.loaded = true;
+          this.doneList = res.data.list;
+
+          console.log(this.doneList);
+        }
       });
     },
     change(name) {
