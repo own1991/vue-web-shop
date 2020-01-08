@@ -10,10 +10,10 @@
       </div>
       <div class="comment_time">{{item.comment_time}}</div>
     </div>
-    <div class="content">评论内容：{{item.content}}</div>
+    <div class="content">评论内容: {{item.content}}</div>
     <div class="good-box">
       <img :src="good.image_path" alt />
-      <div class="good-name">名称{{good.name}}</div>
+      <div class="good-name">名称: {{good.name}}</div>
       <div @click="$addShop(good.id)" class="shopping-cart">
         <van-icon name="shopping-cart" />
       </div>

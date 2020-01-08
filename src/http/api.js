@@ -149,7 +149,7 @@ export default {
     },
 
     setDefaultAddress(id) {
-        return service.req(`/setDefaultAddress`, { id })
+        return service.post(`/setDefaultAddress`, { id })
     },
 
     postAddress({...args }) {

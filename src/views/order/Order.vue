@@ -19,12 +19,14 @@
       <van-tab name="3" title="待收货">
         <div class="coming-soon">开发中，敬请期待</div>
       </van-tab>
-      <van-tab name="4" title="已完成">
+      <van-tab name="4" title="已完成"></van-tab>
+      <better-scroll v-if="active==='4'" class="wrapper" :loaded="loaded">
         <div v-for="detail in list" :key="detail.id" class="box">
           <div class="box-top">
             <div class="order_id">订单编号:{{detail.order_id}}</div>
             <div class="icon">交易完成</div>
           </div>
+
           <van-card
             v-for="item in detail.order_list"
             :key="item.id"
@@ -39,7 +41,8 @@
             <div>共 {{detail.order_list |counts}} 件商品 合计：{{detail.mallPrice.toFixed(2)}}</div>
           </div>
         </div>
-      </van-tab>
+        <div class="coming-soon color" v-if="list.length<1">暂无数据</div>
+      </better-scroll>
     </van-tabs>
     <div></div>
   </div>
@@ -50,7 +53,8 @@ export default {
   data() {
     return {
       active: 4,
-      list: []
+      list: [],
+      loaded: false
     };
   },
   props: {},
@@ -60,9 +64,11 @@ export default {
       this.$router.push(`order?id=${this.active}`);
     },
     getMyOrder() {
+      this.loaded = false;
       this.$api.getMyOrder().then(res => {
         console.log(res);
         if (res.code === 200) {
+          this.loaded = true;
           this.list = res.list;
         }
       });
@@ -82,7 +88,7 @@ export default {
     }
   },
   watch: {},
-  computed: {},
+  computed: {}
 };
 </script>
 
@@ -96,8 +102,14 @@ export default {
   text-align: center;
   padding: 30px 10px;
 }
+.color {
+  background: rgb(236, 236, 236);
+}
 /deep/.van-tab {
   width: 15% !important;
+}
+/deep/.van-tabs__wrap {
+  height: 6vh;
 }
 .nav {
   display: flex;
@@ -141,5 +153,9 @@ export default {
       margin: 10px 0;
     }
   }
+}
+.wrapper {
+  height: 88vh;
+  overflow: hidden;
 }
 </style>

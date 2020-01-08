@@ -18,7 +18,7 @@ Vue.prototype.$addShop = function(item) {
                 showCancelButton: true
             })
             .then(() => {
-
+                this.$router.push('/login')
             })
             .catch(() => {
 

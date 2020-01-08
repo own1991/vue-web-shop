@@ -98,7 +98,7 @@ export default {
   }
 }
 .wrapper {
-  margin-top: -30px;
+  margin-top: -3vh;
   z-index: -1;
   height: 84vh;
   overflow: hidden;

@@ -47,7 +47,7 @@ export default {
         this.bs = new BScroll(".wrapper", {
           click: true,
           scrollY: true,
-          bounceTime: 800,
+          bounceTime: 2000,
           pullDownRefresh: this.pullDown,
           probeType: 3
         });
@@ -61,7 +61,25 @@ export default {
           this.loading = true;
           this.$emit("incident");
         });
+        this.bs.on("scroll", x => {
+          if (x === 0) {
+            this.bs.finishPullDown();
+          }
+        });
       }
+    },
+    finishPullDown() {
+      new Promise(resolve => {
+        setTimeout(() => {
+          this.bs.finishPullDown();
+          resolve();
+        }, 600);
+      });
+      setTimeout(() => {
+        this.before = true;
+        this.$toast("刷新成功");
+        this.bs.refresh();
+      }, 1500);
     }
   },
   created() {},
@@ -70,24 +88,26 @@ export default {
       this.init();
     });
   },
-  updated() {},
+  updated() {
+    this.$nextTick(() => {
+      this.init();
+    });
+  },
   watch: {
     flag(val) {
       if (val && this.loading) {
         setTimeout(() => {
-          this.$toast("刷新成功");
           this.loading = false;
-          this.before = true;
-          this.bs.refresh();
-          this.bs.finishPullDown();
-        }, 500);
+        }, 1300);
+        this.finishPullDown();
       }
     },
     loaded(val) {
       if (val) {
-        this.$nextTick = () => {
-          this.init();
-        };
+        console.log(111);
+        setTimeout(() => {
+          this.bs.refresh();
+        }, 20);
       }
     }
   },
@@ -95,7 +115,7 @@ export default {
     pull() {
       if (pullDown) {
         return {
-          threshold: 30,
+          threshold: 50,
           stop: 0
         };
       } else return false;
@@ -106,21 +126,13 @@ export default {
 
 <style lang='scss'>
 .before {
-  padding: 7px;
+  height: 3vh;
   text-align: center;
   font-size: 16px;
   color: gray;
 }
 .loading {
-  padding: 5px;
-  height: 30px;
+  padding-top: 30px;
   text-align: center;
-}
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 2s;
-}
-.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
-  transform: translateY(-100%);
 }
 </style>

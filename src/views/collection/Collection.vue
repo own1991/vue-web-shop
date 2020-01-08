@@ -3,13 +3,13 @@
     <global-top>
       <div slot="title">我的收藏</div>
     </global-top>
-    <div v-if="browseList.length>0">
+    <better-scroll class="wrapper" :loaded="loaded" v-if="browseList.length>0">
       <goods-box v-for="item in browseList" :key="item.id" :item="item">
         <div slot="close">
           <van-icon @click="del(item)" name="delete" />
         </div>
       </goods-box>
-    </div>
+    </better-scroll>
     <div v-else class="msg">暂无数据</div>
   </div>
 </template>
@@ -19,7 +19,8 @@ import goodsBox from "../../components/box/GoodsBox";
 export default {
   data() {
     return {
-      browseList: []
+      browseList: [],
+      loaded: false
     };
   },
   props: {},
@@ -44,8 +45,12 @@ export default {
         });
     },
     getbrowseList() {
+      this.loaded = false;
       this.$api.getCollection().then(res => {
-        this.browseList = res.data.list;
+        if (res.code === 200) {
+          this.loaded = true;
+          this.browseList = res.data.list;
+        }
       });
     }
   },
@@ -62,5 +67,9 @@ export default {
   padding: 40px;
   text-align: center;
   background: white;
+}
+.wrapper {
+  overflow: hidden;
+  height: 94vh;
 }
 </style>

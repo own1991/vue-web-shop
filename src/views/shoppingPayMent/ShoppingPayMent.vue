@@ -6,18 +6,24 @@
     <div>
       <shopping-address :list="list" :defaultAddress="defaultAddress"></shopping-address>
     </div>
-    <!-- <better-S -->
-    <div v-if="checkList.length>0">
-      <van-card
-        v-for="item in checkList"
-        :key="item.id"
-        :num="item.count"
-        :price="item.present_price"
-        :title="item.name"
-        :thumb="item.image_path"
-      />
-    </div>
-    <van-submit-bar :price="Number(sum)*100" button-text="提交订单" @submit="onSubmit" />
+    <better-scroll class="wrapper">
+      <div v-if="checkList.length>0">
+        <van-card
+          v-for="item in checkList"
+          :key="item.id"
+          :num="item.count"
+          :price="item.present_price"
+          :title="item.name"
+          :thumb="item.image_path"
+        />
+      </div>
+    </better-scroll>
+    <van-submit-bar
+      class="bottom-btn"
+      :price="Number(sum)*100"
+      button-text="提交订单"
+      @submit="onSubmit"
+    />
   </div>
 </template>
 
@@ -28,7 +34,6 @@ export default {
   data() {
     return {
       items: [],
-
       list: []
     };
   },
@@ -43,8 +48,11 @@ export default {
         return;
       }
       let obj = {
-        // 收货地址
-        address: this.defaultAddress.addressDetail,
+        // 收货地址province city county addressDetail
+        address: `${this.defaultAddress.province}
+        ${this.defaultAddress.city}
+        ${this.defaultAddress.county}
+        ${this.defaultAddress.addressDetail}`,
         // 电话
         tel: this.defaultAddress.tel,
         // 所有商品的id
@@ -53,8 +61,7 @@ export default {
         count: this.count
       };
       //如果时立即购买，则传入以下值
-      if (this.$route.params.item) {
-        obj.orderId = [this.$route.params.item.id];
+      if (JSON.parse(this.$route.query.PayMent)[0].idDirect) {
         obj.idDirect = true;
       }
       console.log(obj);
@@ -100,7 +107,7 @@ export default {
     //所有商品的id
     ids() {
       let arr = [];
-      this.checkList.map(item => {
+      JSON.parse(this.$route.query.PayMent).map(item => {
         arr.push(item.cid);
       });
       return arr;
@@ -113,3 +120,11 @@ export default {
 </script>
 
 <style scoped lang='scss'>
+.wrapper {
+  overflow: hidden;
+  height: 71vh;
+}
+.bottom-btn {
+  height: 8vh;
+}
+</style>

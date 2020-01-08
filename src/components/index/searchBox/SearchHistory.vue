@@ -38,7 +38,7 @@ export default {
         });
     },
     change(item) {
-      this.$parent.keyword = item;
+      this.$parent.value = item;
     }
   },
   mounted() {},

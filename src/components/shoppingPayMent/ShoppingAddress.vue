@@ -13,7 +13,9 @@
             <div>收货人:{{defaultAddress.name}}</div>
             <div>{{defaultAddress.tel}}</div>
           </div>
-          <div class="address">收货地址:{{defaultAddress.city}}{{defaultAddress.addressDetail}}</div>
+          <div
+            class="address van-ellipsis"
+          >收货地址:{{defaultAddress.city}}{{defaultAddress.county}}{{defaultAddress.addressDetail}}</div>
         </div>
         <div @click="$goto('/address')" class="address-edit">
           <van-icon name="arrow" />
@@ -52,7 +54,7 @@ export default {
 
 <style scoped lang='scss'>
 .container {
-  height: 94px;
+  height: 15vh;
 }
 .adress-box {
   display: flex;

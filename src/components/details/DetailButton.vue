@@ -56,11 +56,12 @@ export default {
     onSubmit() {
       console.log(this.item);
       let obj = {
-        id: this.item.id,
+        cid: this.item.id,
         count: this.value,
         present_price: this.item.present_price,
         image_path: this.item.image_path,
-        name: this.item.name
+        name: this.item.name,
+        idDirect:true
       };
       this.$store.state.buyNow = obj;
       this.$router.push({

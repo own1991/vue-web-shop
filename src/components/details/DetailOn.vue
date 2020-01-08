@@ -8,23 +8,23 @@
       <div @click="collection(item)">
         <div v-if="flag">
           点击收藏
-          <span  class="collection">
+          <span class="collection">
             <van-icon name="like-o" />
           </span>
         </div>
         <div v-else>
           取消收藏
-          <span  class="collection">
+          <span class="collection">
             <van-icon name="like" />
           </span>
         </div>
       </div>
     </div>
     <div class="store">
-      <div>
+      <div @click="$toast('功能开发中，敬请期待')">
         <van-icon name="shop-o" />有赞的店
       </div>
-      <div>进入店铺</div>
+      <div @click="$toast('功能开发中，敬请期待')">进入店铺</div>
     </div>
   </div>
 </template>
@@ -46,24 +46,37 @@ export default {
   methods: {
     //点击收藏
     collection(goods) {
-      if (this.flag) {
-        this.$api.collection(goods).then(res => {
-          if (res.code === 200) {
-            this.$toast(res.msg);
-            this.getisCollection(goods.id);
-          } else {
-            this.$toast("收藏失败");
-          }
-        });
+      if (!localStorage.getItem("nickname")) {
+        this.$dialog
+          .alert({
+            title: "登录后才可启用此功能", //加上标题
+            message: "是否跳转登录/注册界面",
+            showCancelButton: true
+          })
+          .then(() => {
+            this.$router.push("/login");
+          })
+          .catch(() => {});
       } else {
-        this.$api.cancelCollection(this.$route.query.id).then(res => {
-          if (res.code === 200) {
-            this.$toast(res.msg);
-            this.getisCollection(goods.id);
-          } else {
-            this.$toast("取消失败");
-          }
-        });
+        if (this.flag) {
+          this.$api.collection(goods).then(res => {
+            if (res.code === 200) {
+              this.$toast(res.msg);
+              this.getisCollection(goods.id);
+            } else {
+              this.$toast("收藏失败");
+            }
+          });
+        } else {
+          this.$api.cancelCollection(this.$route.query.id).then(res => {
+            if (res.code === 200) {
+              this.$toast(res.msg);
+              this.getisCollection(goods.id);
+            } else {
+              this.$toast("取消失败");
+            }
+          });
+        }
       }
     },
     //取消收藏
@@ -118,8 +131,8 @@ export default {
   height: 18px;
 }
 .collection {
- font-size: 16px;
- margin-top: -2px;
- color: red;
+  font-size: 16px;
+  margin-top: -2px;
+  color: red;
 }
 </style>

@@ -14,7 +14,17 @@
         </div>
       </div>
     </div>
-    <textarea class="textarea" name id cols="45" rows="10" v-model="tobeOne.content"></textarea>
+    <van-cell-group>
+      <van-field
+        v-model="tobeOne.content"
+        rows="5"
+        autosize
+        type="textarea"
+        show-word-limit
+        placeholder="请输入评价"
+      />
+      <van-uploader :after-read="afterRead" />
+    </van-cell-group>
     <van-checkbox v-model="checked">匿名评价</van-checkbox>
     <div class="btn-box">
       <van-button class="btn" type="primary" @click="setComment()">提交</van-button>
@@ -33,6 +43,7 @@ export default {
   props: {},
   components: {},
   methods: {
+    afterRead() {},
     evaluateOne() {
       this.$api.evaluateOne(this.$route.query.id).then(res => {
         console.log(res);

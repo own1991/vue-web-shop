@@ -9,7 +9,13 @@
         <van-icon v-if="nickname" name="setting" class="setting" @click="$parent.flag=true" />
       </div>
       <div>
-        <img src="../../assets/icon.svg" alt class="icon" />
+        <img v-if="!nickname" src="../../assets/icon.svg" alt class="icon" />
+        <img
+          v-else
+          src="http://img4.imgtn.bdimg.com/it/u=198369807,133263955&fm=27&gp=0.jpg"
+          alt
+          class="icon"
+        />
       </div>
       <div v-if="!nickname" @click="$goto('/login')">登录/注册</div>
       <div v-else>
@@ -73,7 +79,7 @@ export default {
             this.$store.state.nickname = "";
             localStorage.removeItem("nickname");
             this.$toast("退出成功");
-            this.$router.go(0)
+            this.$router.go(0);
           } else {
             this.$toast(res.msg);
           }
@@ -127,6 +133,7 @@ export default {
   .icon {
     width: 70px;
     height: 70px;
+    border-radius: 50%
   }
 }
 .control {

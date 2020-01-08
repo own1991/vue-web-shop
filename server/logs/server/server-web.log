@@ -1631,3 +1631,155 @@ hostname: STU008
 pid: 5040
 hostname: STU008
 
+2020-01-08 20:03:52,421 ERROR 11628 [-/127.0.0.1/-/4ms POST /v1/order] nodejs.TypeError: Cannot read property 'count' of undefined
+    at OperatingGoodsController.order (F:\project\Shopping\server\app\controller\api\operatingGoods.js:197:34)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async F:\project\Shopping\server\app\middleware\isLogin.js:15:13
+    at async F:\project\Shopping\server\node_modules\_egg-development@2.4.3@egg-development\app\middleware\egg_loader_trace.js:9:50
+    at async xframe (F:\project\Shopping\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\xframe.js:7:5)
+    at async xssProtection (F:\project\Shopping\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\xssProtection.js:7:5)
+    at async nosniff (F:\project\Shopping\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\nosniff.js:8:5)
+    at async noopen (F:\project\Shopping\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\noopen.js:8:5)
+    at async session (F:\project\Shopping\server\node_modules\_koa-session@5.12.3@koa-session\index.js:41:7)
+    at async bodyParser (F:\project\Shopping\server\node_modules\_koa-bodyparser@4.2.1@koa-bodyparser\index.js:86:5)
+    at async F:\project\Shopping\server\node_modules\_koa-static-cache@5.1.2@koa-static-cache\index.js:51:63
+    at async notfound (F:\project\Shopping\server\node_modules\_egg@2.26.0@egg\app\middleware\notfound.js:5:5)
+    at async meta (F:\project\Shopping\server\node_modules\_egg@2.26.0@egg\app\middleware\meta.js:12:5)
+
+pid: 11628
+hostname: Trayvon
+
+2020-01-08 20:04:54,135 ERROR 11628 [-/127.0.0.1/-/7ms POST /v1/order] nodejs.TypeError: Cannot read property 'count' of undefined
+    at OperatingGoodsController.order (F:\project\Shopping\server\app\controller\api\operatingGoods.js:197:34)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async F:\project\Shopping\server\app\middleware\isLogin.js:15:13
+    at async F:\project\Shopping\server\node_modules\_egg-development@2.4.3@egg-development\app\middleware\egg_loader_trace.js:9:50
+    at async xframe (F:\project\Shopping\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\xframe.js:7:5)
+    at async xssProtection (F:\project\Shopping\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\xssProtection.js:7:5)
+    at async nosniff (F:\project\Shopping\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\nosniff.js:8:5)
+    at async noopen (F:\project\Shopping\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\noopen.js:8:5)
+    at async session (F:\project\Shopping\server\node_modules\_koa-session@5.12.3@koa-session\index.js:41:7)
+    at async bodyParser (F:\project\Shopping\server\node_modules\_koa-bodyparser@4.2.1@koa-bodyparser\index.js:86:5)
+    at async F:\project\Shopping\server\node_modules\_koa-static-cache@5.1.2@koa-static-cache\index.js:51:63
+    at async notfound (F:\project\Shopping\server\node_modules\_egg@2.26.0@egg\app\middleware\notfound.js:5:5)
+    at async meta (F:\project\Shopping\server\node_modules\_egg@2.26.0@egg\app\middleware\meta.js:12:5)
+
+pid: 11628
+hostname: Trayvon
+
+2020-01-08 20:05:02,835 ERROR 11628 [-/127.0.0.1/-/2ms POST /v1/order] nodejs.TypeError: Cannot read property 'count' of undefined
+    at OperatingGoodsController.order (F:\project\Shopping\server\app\controller\api\operatingGoods.js:197:34)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async F:\project\Shopping\server\app\middleware\isLogin.js:15:13
+    at async F:\project\Shopping\server\node_modules\_egg-development@2.4.3@egg-development\app\middleware\egg_loader_trace.js:9:50
+    at async xframe (F:\project\Shopping\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\xframe.js:7:5)
+    at async xssProtection (F:\project\Shopping\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\xssProtection.js:7:5)
+    at async nosniff (F:\project\Shopping\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\nosniff.js:8:5)
+    at async noopen (F:\project\Shopping\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\noopen.js:8:5)
+    at async session (F:\project\Shopping\server\node_modules\_koa-session@5.12.3@koa-session\index.js:41:7)
+    at async bodyParser (F:\project\Shopping\server\node_modules\_koa-bodyparser@4.2.1@koa-bodyparser\index.js:86:5)
+    at async F:\project\Shopping\server\node_modules\_koa-static-cache@5.1.2@koa-static-cache\index.js:51:63
+    at async notfound (F:\project\Shopping\server\node_modules\_egg@2.26.0@egg\app\middleware\notfound.js:5:5)
+    at async meta (F:\project\Shopping\server\node_modules\_egg@2.26.0@egg\app\middleware\meta.js:12:5)
+
+pid: 11628
+hostname: Trayvon
+
+2020-01-08 20:05:20,010 ERROR 11628 [-/127.0.0.1/-/2ms POST /v1/order] nodejs.TypeError: Cannot read property 'count' of undefined
+    at OperatingGoodsController.order (F:\project\Shopping\server\app\controller\api\operatingGoods.js:197:34)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async F:\project\Shopping\server\app\middleware\isLogin.js:15:13
+    at async F:\project\Shopping\server\node_modules\_egg-development@2.4.3@egg-development\app\middleware\egg_loader_trace.js:9:50
+    at async xframe (F:\project\Shopping\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\xframe.js:7:5)
+    at async xssProtection (F:\project\Shopping\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\xssProtection.js:7:5)
+    at async nosniff (F:\project\Shopping\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\nosniff.js:8:5)
+    at async noopen (F:\project\Shopping\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\noopen.js:8:5)
+    at async session (F:\project\Shopping\server\node_modules\_koa-session@5.12.3@koa-session\index.js:41:7)
+    at async bodyParser (F:\project\Shopping\server\node_modules\_koa-bodyparser@4.2.1@koa-bodyparser\index.js:86:5)
+    at async F:\project\Shopping\server\node_modules\_koa-static-cache@5.1.2@koa-static-cache\index.js:51:63
+    at async notfound (F:\project\Shopping\server\node_modules\_egg@2.26.0@egg\app\middleware\notfound.js:5:5)
+    at async meta (F:\project\Shopping\server\node_modules\_egg@2.26.0@egg\app\middleware\meta.js:12:5)
+
+pid: 11628
+hostname: Trayvon
+
+2020-01-08 20:06:48,814 ERROR 11628 [-/127.0.0.1/-/6ms POST /v1/order] nodejs.TypeError: Cannot read property 'count' of undefined
+    at OperatingGoodsController.order (F:\project\Shopping\server\app\controller\api\operatingGoods.js:197:34)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async F:\project\Shopping\server\app\middleware\isLogin.js:15:13
+    at async F:\project\Shopping\server\node_modules\_egg-development@2.4.3@egg-development\app\middleware\egg_loader_trace.js:9:50
+    at async xframe (F:\project\Shopping\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\xframe.js:7:5)
+    at async xssProtection (F:\project\Shopping\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\xssProtection.js:7:5)
+    at async nosniff (F:\project\Shopping\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\nosniff.js:8:5)
+    at async noopen (F:\project\Shopping\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\noopen.js:8:5)
+    at async session (F:\project\Shopping\server\node_modules\_koa-session@5.12.3@koa-session\index.js:41:7)
+    at async bodyParser (F:\project\Shopping\server\node_modules\_koa-bodyparser@4.2.1@koa-bodyparser\index.js:86:5)
+    at async F:\project\Shopping\server\node_modules\_koa-static-cache@5.1.2@koa-static-cache\index.js:51:63
+    at async notfound (F:\project\Shopping\server\node_modules\_egg@2.26.0@egg\app\middleware\notfound.js:5:5)
+    at async meta (F:\project\Shopping\server\node_modules\_egg@2.26.0@egg\app\middleware\meta.js:12:5)
+
+pid: 11628
+hostname: Trayvon
+
+2020-01-08 20:06:50,872 ERROR 11628 [-/127.0.0.1/-/2ms POST /v1/order] nodejs.TypeError: Cannot read property 'count' of undefined
+    at OperatingGoodsController.order (F:\project\Shopping\server\app\controller\api\operatingGoods.js:197:34)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async F:\project\Shopping\server\app\middleware\isLogin.js:15:13
+    at async F:\project\Shopping\server\node_modules\_egg-development@2.4.3@egg-development\app\middleware\egg_loader_trace.js:9:50
+    at async xframe (F:\project\Shopping\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\xframe.js:7:5)
+    at async xssProtection (F:\project\Shopping\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\xssProtection.js:7:5)
+    at async nosniff (F:\project\Shopping\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\nosniff.js:8:5)
+    at async noopen (F:\project\Shopping\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\noopen.js:8:5)
+    at async session (F:\project\Shopping\server\node_modules\_koa-session@5.12.3@koa-session\index.js:41:7)
+    at async bodyParser (F:\project\Shopping\server\node_modules\_koa-bodyparser@4.2.1@koa-bodyparser\index.js:86:5)
+    at async F:\project\Shopping\server\node_modules\_koa-static-cache@5.1.2@koa-static-cache\index.js:51:63
+    at async notfound (F:\project\Shopping\server\node_modules\_egg@2.26.0@egg\app\middleware\notfound.js:5:5)
+    at async meta (F:\project\Shopping\server\node_modules\_egg@2.26.0@egg\app\middleware\meta.js:12:5)
+
+pid: 11628
+hostname: Trayvon
+
+2020-01-08 20:07:32,436 ERROR 11628 [-/127.0.0.1/-/6ms POST /v1/order] nodejs.TypeError: Cannot read property 'count' of undefined
+    at OperatingGoodsController.order (F:\project\Shopping\server\app\controller\api\operatingGoods.js:197:34)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async F:\project\Shopping\server\app\middleware\isLogin.js:15:13
+    at async F:\project\Shopping\server\node_modules\_egg-development@2.4.3@egg-development\app\middleware\egg_loader_trace.js:9:50
+    at async xframe (F:\project\Shopping\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\xframe.js:7:5)
+    at async xssProtection (F:\project\Shopping\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\xssProtection.js:7:5)
+    at async nosniff (F:\project\Shopping\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\nosniff.js:8:5)
+    at async noopen (F:\project\Shopping\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\noopen.js:8:5)
+    at async session (F:\project\Shopping\server\node_modules\_koa-session@5.12.3@koa-session\index.js:41:7)
+    at async bodyParser (F:\project\Shopping\server\node_modules\_koa-bodyparser@4.2.1@koa-bodyparser\index.js:86:5)
+    at async F:\project\Shopping\server\node_modules\_koa-static-cache@5.1.2@koa-static-cache\index.js:51:63
+    at async notfound (F:\project\Shopping\server\node_modules\_egg@2.26.0@egg\app\middleware\notfound.js:5:5)
+    at async meta (F:\project\Shopping\server\node_modules\_egg@2.26.0@egg\app\middleware\meta.js:12:5)
+
+pid: 11628
+hostname: Trayvon
+
+2020-01-08 20:09:10,497 ERROR 11628 [-/127.0.0.1/-/2ms POST /v1/order] nodejs.TypeError: Cannot read property 'count' of undefined
+    at OperatingGoodsController.order (F:\project\Shopping\server\app\controller\api\operatingGoods.js:197:34)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async F:\project\Shopping\server\app\middleware\isLogin.js:15:13
+    at async F:\project\Shopping\server\node_modules\_egg-development@2.4.3@egg-development\app\middleware\egg_loader_trace.js:9:50
+    at async xframe (F:\project\Shopping\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\xframe.js:7:5)
+    at async xssProtection (F:\project\Shopping\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\xssProtection.js:7:5)
+    at async nosniff (F:\project\Shopping\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\nosniff.js:8:5)
+    at async noopen (F:\project\Shopping\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\noopen.js:8:5)
+    at async session (F:\project\Shopping\server\node_modules\_koa-session@5.12.3@koa-session\index.js:41:7)
+    at async bodyParser (F:\project\Shopping\server\node_modules\_koa-bodyparser@4.2.1@koa-bodyparser\index.js:86:5)
+    at async F:\project\Shopping\server\node_modules\_koa-static-cache@5.1.2@koa-static-cache\index.js:51:63
+    at async notfound (F:\project\Shopping\server\node_modules\_egg@2.26.0@egg\app\middleware\notfound.js:5:5)
+    at async meta (F:\project\Shopping\server\node_modules\_egg@2.26.0@egg\app\middleware\meta.js:12:5)
+
+pid: 11628
+hostname: Trayvon
+

@@ -3,13 +3,13 @@
     <global-top>
       <div slot="title">最近浏览</div>
     </global-top>
-    <div v-if="browseList.length>0">
+    <better-scroll class="wrapper" v-if="browseList.length>0">
       <goods-box v-for="item in browseList" :key="item.id" :item="item">
         <div slot="close">
           <van-icon @click="del(item)" name="delete" />
         </div>
       </goods-box>
-    </div>
+    </better-scroll>
     <div v-else class="msg">暂无数据</div>
   </div>
 </template>
@@ -18,7 +18,8 @@
 import goodsBox from "../../components/box/GoodsBox";
 export default {
   data() {
-    return {};
+    return {
+    };
   },
   props: {},
   components: {
@@ -61,5 +62,9 @@ export default {
 .btn {
   width: 100%;
   height: 100%;
+}
+.wrapper{
+  overflow: hidden;
+  height: 94vh;
 }
 </style>
