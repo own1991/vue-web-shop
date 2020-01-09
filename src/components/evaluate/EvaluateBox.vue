@@ -1,12 +1,12 @@
 <template>
-  <div class="container">
-    <div class="image">
+  <div class="container"  @click="item.cid?$goto(item.cid):$goto(item.id)">
+    <div class="image"  >
       <img :src="item.image_path" alt />
     </div>
-    <div class="name">{{item.name}}</div>
+    <div class="name van-ellipsis">{{item.name}}</div>
     <div class="btn">
-      <div class="noComment" v-if="isComment===false" @click="tobes">评价晒图</div>
-      <div class="isComment" v-else @click="dones">查看评价</div>
+      <div class="noComment" v-if="isComment===false" @click.stop="tobes">评价晒图</div>
+      <div class="isComment" v-else @click.stop="dones">查看评价</div>
     </div>
   </div>
 </template>
@@ -59,6 +59,7 @@ export default {
     }
   }
   .name {
+    margin: 10px 5px;
     font-size: 14px;
   }
   .btn {

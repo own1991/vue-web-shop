@@ -3,7 +3,7 @@
     <div class="close">
       <slot name="close"></slot>
     </div>
-    <div @click="goto(item.id)" class="box">
+    <div @click="goto(item)" class="box">
       <div>
         <img :src="item.image_path" alt />
       </div>
@@ -38,19 +38,21 @@ export default {
   methods: {
     //保存关键字，并跳转
     goto(item) {
+      if (item.cid) {
+        item.id = item.cid;
+      }
       if (!this.$store.state.keywords.includes(this.keyword)) {
         this.$store.commit("pushKeywords", this.keyword);
       }
       //跳转
-      this.$router.push({ name: "details", query: { id: item } });
+      this.$router.push({ name: "details", query: { id: item.id } });
     }
   },
-  mounted() {
-  },
+  mounted() {},
   watch: {},
   computed: {
-    detail(){
-      return util.keyWord(this.item.name,this.keyword)
+    detail() {
+      return util.keyWord(this.item.name, this.keyword);
     }
   }
 };

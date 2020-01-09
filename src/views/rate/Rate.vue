@@ -25,7 +25,7 @@
       />
       <van-uploader :after-read="afterRead" />
     </van-cell-group>
-    <van-checkbox v-model="checked">匿名评价</van-checkbox>
+    <van-checkbox v-model="checked" class="check-box">匿名评价</van-checkbox>
     <div class="btn-box">
       <van-button class="btn" type="primary" @click="setComment()">提交</van-button>
     </div>
@@ -108,6 +108,7 @@ export default {
   }
   .star-title {
     margin: 20px 0;
+    font-size: 16px;
   }
 }
 .textarea {
@@ -115,6 +116,9 @@ export default {
   height: 200px;
   background: rgb(236, 236, 236);
   border: none;
+}
+.check-box{
+  font-size: 16px;
 }
 .btn-box {
   margin-top: 20px;

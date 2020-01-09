@@ -33,13 +33,13 @@
         <div class="checkbox">
           <van-checkbox v-model="item.check" checked-color="#07c160" @change="change"></van-checkbox>
         </div>
-        <div class="img">
+        <div class="img" @click="$goto(item.cid)">
           <img :src="item.image_path" alt />
         </div>
         <div class="desc">
-          <div class="title van-ellipsis">{{item.name}}</div>
+          <div class="title van-ellipsis" @click="$goto(item.cid)">{{item.name}}</div>
           <div class="price">￥{{item.mallPrice}}</div>
-          <van-stepper class="stepper" v-model="item.count" @change="onChange(item)" />
+          <van-stepper class="stepper" v-model="item.count" @click.stop="onChange(item)" />
         </div>
       </div>
     </better-scroll>
@@ -109,7 +109,7 @@ export default {
       });
     },
     gotoPayMent() {
-      let payList=this.$store.state.shopList.filter(item=>item.check)
+      let payList = this.$store.state.shopList.filter(item => item.check);
       this.$router.push({
         name: "shoppingPayMent",
         query: { PayMent: JSON.stringify(payList) }

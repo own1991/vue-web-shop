@@ -56,6 +56,7 @@ export default {
       }
       if (this.pullDown) {
         this.bs.on("pullingDown", () => {
+          this.$store.state.cancelLoad=true
           this.$parent.flag = false;
           this.before = false;
           this.loading = true;
@@ -76,6 +77,7 @@ export default {
         }, 600);
       });
       setTimeout(() => {
+        this.$store.state.cancelLoad=false
         this.before = true;
         this.$toast("刷新成功");
         this.bs.refresh();
@@ -84,16 +86,21 @@ export default {
   },
   created() {},
   mounted() {
+    //页面加载时，更新
     this.$nextTick(() => {
       this.init();
     });
+    console.log('mounted');
   },
   updated() {
+    //页面组件更新时重置
+    console.log('update');
     this.$nextTick(() => {
       this.init();
     });
   },
   watch: {
+    //监听flag，如果数据获取成功，结束pulldown的loading
     flag(val) {
       if (val && this.loading) {
         setTimeout(() => {
@@ -102,12 +109,13 @@ export default {
         this.finishPullDown();
       }
     },
+    //当异步成功，重置bs
     loaded(val) {
       if (val) {
-        console.log(111);
+        console.log('watch');
         setTimeout(() => {
           this.bs.refresh();
-        }, 20);
+        }, 500);
       }
     }
   },

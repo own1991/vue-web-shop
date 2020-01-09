@@ -1,21 +1,24 @@
 <template>
-  <div class="container">
-    <div @click="$goto('/city')" class="city">
-      <div v-if="city" class="van-ellipsis" :alt="city">{{city}}</div>
-      <div v-else class="van-ellipsis" :alt="city">获取中...</div>
-      <van-icon name="arrow-down" />
+  <div>
+    <div class="container">
+      <div @click="$goto('/city')" class="city" style="z-index:999!important">
+        <div v-if="city" class="van-ellipsis" :alt="city">{{city}}</div>
+        <div v-else class="van-ellipsis" :alt="city">获取中...</div>
+        <van-icon name="arrow-down" />
+      </div>
+      <van-search
+       style="z-index:999!important"
+        class="search"
+        v-model="value"
+        placeholder="请输入搜索关键词"
+        :show-action="show"
+        shape="round"
+        @focus="show=true"
+        @cancel="show=false"
+        background="none"
+      ></van-search>
     </div>
-    <van-search
-      class="search"
-      v-model="value"
-      placeholder="请输入搜索关键词"
-      :show-action="show"
-      shape="round"
-      @focus="show=true"
-      @cancel="show=false"
-      background="none"
-    ></van-search>
-    <keep-alive>
+    <keep-alive >
       <transition v-if="show" name="fade" @click="show=!show">
         <div class="box">
           <searchHistory v-if="keyword===''"></searchHistory>
@@ -35,7 +38,7 @@ export default {
     return {
       show: false,
       value: "",
-      keyword:""
+      keyword: ""
     };
   },
   components: {
@@ -80,8 +83,8 @@ export default {
     });
   },
   watch: {
-    value(val){
-      this.keyword=val.trim()
+    value(val) {
+      this.keyword = val.trim();
     }
   },
   computed: {
@@ -97,6 +100,8 @@ export default {
 
 <style scoped lang='scss'>
 .container {
+  position: fixed;
+  z-index: 9999;
   display: flex;
   width: 100%;
   height: 6vh;
@@ -127,8 +132,9 @@ export default {
   margin-top: 1vh;
 }
 .box {
-  position: fixed;
   margin-top: 7vh;
+  padding-top: 10px;
+  position: fixed;
   width: 100%;
   height: 93vh;
   background: white;

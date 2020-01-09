@@ -55,12 +55,12 @@ export default {
     },
     //删除地址
     onDelete(content) {
-    
-        this.$api.deleteAddress(content._id).then(res => {
-            if (res.code === 200) {
-              this.$toast("删除成功");
-              this.$router.go(-1);
-            }})
+      this.$api.deleteAddress(content._id).then(res => {
+        if (res.code === 200) {
+          this.$toast("删除成功");
+          this.$router.go(-1);
+        }
+      });
     },
     //接受params传参
     getAddress() {

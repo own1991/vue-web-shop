@@ -1,20 +1,22 @@
 <template>
-  <div>
+  <div class="container">
     <global-top>
       <div slot="title">评价中心</div>
     </global-top>
     <div class="header">
       <img :src="item.image" alt />
       <div>
-        <van-rate v-model="item.rate" />
+        <van-rate v-model="item.rate" disabled disabled-color="#ffd21e" />
       </div>
       <div class="comment_time">{{item.comment_time}}</div>
     </div>
-    <div class="content">评论内容: {{item.content}}</div>
-    <div class="good-box">
+    <div class="content">
+      <van-field v-model="item.content" rows="5" autosize readonly type="textarea" />
+    </div>
+    <div class="good-box" @click="$goto(item.goods[0].id)">
       <img :src="good.image_path" alt />
-      <div class="good-name">名称: {{good.name}}</div>
-      <div @click="$addShop(good.id)" class="shopping-cart">
+      <div class="good-name van-ellipsis">名称: {{good.name}}</div>
+      <div @click.stop="$addShop(good.id)" class="shopping-cart">
         <van-icon name="shopping-cart" />
       </div>
     </div>
@@ -57,24 +59,27 @@ export default {
 </script>
 
 <style scoped lang='scss'>
+.container {
+  width: 100%;
+}
 .header {
   display: flex;
   margin: 20px;
   font-size: 14px;
   justify-content: space-between;
-  .comment_time{
+  .comment_time {
     line-height: 20px;
   }
 }
 .content {
-  margin: 0 20px;
+  width: 375px;
   font-size: 14px;
 }
 .good-box {
   margin: 100px 20px;
   font-size: 14px;
   display: flex;
-
+  position: relative;
   .good-name {
     line-height: 60px;
   }
@@ -83,11 +88,13 @@ export default {
     height: 50px;
   }
   .shopping-cart {
+    position: absolute;
     width: 14px;
     height: 14px;
     text-align: center;
     padding: 10px;
-    margin: 15px 8px;
+    right: 15px;
+    top: 13px;
     border-radius: 50%;
     background: rgb(241, 121, 121);
   }

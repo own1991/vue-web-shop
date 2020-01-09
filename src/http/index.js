@@ -1,7 +1,7 @@
 import axios from 'axios'
 import qs from 'qs'
 // import { Loading, } from 'element-ui'
-
+import store from '../store/index'
 // let loading = null
 
 
@@ -17,12 +17,15 @@ const service = axios.create()
 service.defaults.baseURL = isProduction ? '' : '/api'
 
 // 超时时间
-// service.defaults.timeout = 10000
-// 请求头类型
-// service.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded'
+service.defaults.timeout = 10000
+    // 请求头类型
+    // service.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded'
 
 // 请求拦截器
 service.interceptors.request.use(config => {
+    if (!store.state.cancelLoad) {
+        store.state.loading = true
+    }
     // loading = Loading.service({
     //     text: '正在加载中......'
     // })
@@ -39,9 +42,12 @@ service.interceptors.request.use(config => {
 
 // 响应拦截器
 service.interceptors.response.use(response => {
-    // if (loading) {
-    //     loading.close()
-    // }
+    setTimeout(() => {
+            store.state.loading = false
+        }, 500)
+        // if (loading) {
+        //     loading.close()
+        // }
     return response.data
 }, err => {
     // if (err.response.status === 401) {

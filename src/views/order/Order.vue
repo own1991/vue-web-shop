@@ -28,6 +28,7 @@
           </div>
 
           <van-card
+           @click="$goto(item.cid)"
             v-for="item in detail.order_list"
             :key="item.id"
             :num="item.count"
@@ -52,7 +53,7 @@
 export default {
   data() {
     return {
-      active: 4,
+      active: '',
       list: [],
       loaded: false
     };

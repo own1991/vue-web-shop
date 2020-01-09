@@ -16,7 +16,7 @@
     <div class="main" v-if="active==='tobe'">
       <div v-if="tobeList.length===0" class="empty-msg">暂无数据</div>
       <better-scroll class="wrapper" :loaded="tobeload">
-        <evaluate-box v-for="item in tobeList" :key="item.id" :item="item" />
+        <evaluate-box v-for="item in tobeList" :key="item.id" :item="item"/>
       </better-scroll>
     </div>
     <div class="main" v-if="active==='done'" :loaded="loaded">
@@ -54,7 +54,7 @@ export default {
       this.tobeload = false;
       this.$api.tobeEvaluated().then(res => {
         if (res.code === 200) {
-          this.tobeList = res.data.list;
+          this.tobeList = res.data.list.reverse();
           this.tobeload = true;
           console.log(this.tobeList);
         }

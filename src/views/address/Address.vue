@@ -39,15 +39,22 @@ export default {
     getAddress() {
       this.$api.getAddress().then(res => {
         if (res.code === 200) {
-          this.list = res.address;
+          this.list = res.address.reverse();
           this.list.forEach(item => {
             item.id = item._id;
             item.address = item.addressDetail;
           });
+
           this.$api.getDefaultAddress().then(res => {
             if (res.code === 200) {
               if (res.defaultAdd) {
                 this.chosenAddressId = res.defaultAdd._id;
+                this.list.map((item, index) => {
+                  if (item._id === this.chosenAddressId) {
+                    this.list.splice(index, 1);
+                    this.list.unshift(item);
+                  }
+                });
               } else {
                 this.chosenAddressId = this.list[0]._id;
               }

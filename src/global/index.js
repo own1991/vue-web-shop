@@ -24,6 +24,7 @@ Vue.prototype.$addShop = function(item) {
 
             });
     } else {
+        this.$store.state.cancelLoad = true
         this.$api.addShop(item).then(res => {
             if (res.code === 200) {
                 this.$store.dispatch('getShopList')

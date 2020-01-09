@@ -72,4 +72,7 @@ export default {
   overflow: hidden;
   height: 94vh;
 }
+.van-icon{
+  font-size: 16px;
+}
 </style>

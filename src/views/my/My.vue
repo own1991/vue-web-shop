@@ -9,9 +9,10 @@
 import userInfo from "../../components/my/UserInfo";
 import userChange from "../../components/my/UserChange";
 export default {
+  name: "my",
   data() {
     return {
-      flag:false
+      flag: false
     };
   },
   props: {},

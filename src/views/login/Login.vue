@@ -73,9 +73,9 @@ export default {
         .then(res => {
           if (res.code === 200) {
             localStorage.setItem("nickname", this.nickname);
+            this.$store.state.nickname = this.nickname;
             history.back();
             this.$toast("登录成功");
-            
           } else {
             this.$toast(res.msg);
           }

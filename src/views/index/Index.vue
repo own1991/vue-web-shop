@@ -1,31 +1,29 @@
 <template>
   <div class="container">
     <!-- 顶部组件 -->
-    <div class="index-top">
-      <index-top />
-    </div>
+    <index-top />
     <!-- better-scroll组件 -->
     <div style="overflow:hidden">
-    <better-scroll class="wrapper" @incident="getData" :flag="flag" :pullDown="true">
-      <div>
-        <!-- 轮播图组件 -->
-        <index-slides :slidesData="Data.slides" class="slides" />
-        <!-- 分类组件 -->
-        <index-category :categoryData="Data.category" class="category" />
-        <!-- AD -->
-        <img :src="advertesPicture" alt class="advertesPicture" />
-        <!-- 推荐 -->
-        <index-recommend :recommendData="Data.recommend" class="recommend" />
-        <!-- 商品楼 -->
-        <index-floor :title="floorName.floor1" floor="1F" :data="Data.floor1" />
-        <!-- 商品楼 -->
-        <index-floor :title="floorName.floor2" floor="2F" :data="Data.floor2" />
-        <!-- 商品楼 -->
-        <index-floor :title="floorName.floor3" floor="3F" :data="Data.floor3" />
-        <!-- 热销商品 -->
-        <index-hotGoods :hotGoodsData="Data.hotGoods" />
-      </div>
-    </better-scroll>
+      <better-scroll class="wrapper" @incident="getData" :flag="flag" :pullDown="true">
+        <div>
+          <!-- 轮播图组件 -->
+          <index-slides :slidesData="Data.slides" class="slides" />
+          <!-- 分类组件 -->
+          <index-category :categoryData="Data.category" class="category" />
+          <!-- AD -->
+          <img :src="advertesPicture" alt class="advertesPicture" />
+          <!-- 推荐 -->
+          <index-recommend :recommendData="Data.recommend" class="recommend" />
+          <!-- 商品楼 -->
+          <index-floor :title="floorName.floor1" floor="1F" :data="Data.floor1" />
+          <!-- 商品楼 -->
+          <index-floor :title="floorName.floor2" floor="2F" :data="Data.floor2" />
+          <!-- 商品楼 -->
+          <index-floor :title="floorName.floor3" floor="3F" :data="Data.floor3" />
+          <!-- 热销商品 -->
+          <index-hotGoods :hotGoodsData="Data.hotGoods" />
+        </div>
+      </better-scroll>
     </div>
   </div>
 </template>
@@ -37,6 +35,7 @@ import indexRecommend from "../../components/index/IndexRecommend";
 import indexFloor from "../../components/index/IndexFloor";
 import indexHotGoods from "../../components/index/IndexHotGoods";
 export default {
+  name: "index",
   data() {
     return {
       Data: {},
@@ -98,9 +97,9 @@ export default {
   }
 }
 .wrapper {
-  margin-top: -3vh;
+  margin-top: 5vh;
   z-index: -1;
-  height: 84vh;
+  height: 87vh;
   overflow: hidden;
 }
 </style>

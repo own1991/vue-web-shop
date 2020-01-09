@@ -15,7 +15,9 @@ export default new Vuex.Store({
         address: '',
         Num: '',
         tobeEvaluated: {},
-        shippingAddress: {}
+        shippingAddress: {},
+        loading: true,
+        cancelLoad: false,
     },
     mutations: {
         pushKeywords(state, data) {
@@ -45,6 +47,7 @@ export default new Vuex.Store({
         getShopList({ state }) {
             $api.getCard().then(res => {
                 if (res.code === 200) {
+                    state.cancelLoad = false
                     let num = 0;
                     res.shopList.map(item => {
                         num += item.count;

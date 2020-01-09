@@ -31,6 +31,7 @@ export default {
 .top {
   padding-top: 6vh;
   position: relative;
+  z-index: 101;
 }
 .container {
   position: fixed;
@@ -45,6 +46,7 @@ export default {
     left: 10px;
     top: 50%;
     margin-top: -8px;
+    font-size: 16px;
   }
   .title {
     width: 80px;

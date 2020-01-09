@@ -14,12 +14,13 @@
         <div v-html="goodsOne.detail"></div>
       </van-tab>
       <van-tab title="用户评论" class="desc">
-        <div v-if="comment.length===0">暂无评论</div>
+        <div v-if="comment.length===0" class="title">暂无评论</div>
         <div v-else>
           <detail-comm v-for="item in comment" :key="item.id" :item="item" />
         </div>
       </van-tab>
     </van-tabs>
+    <div style="height:10vh"></div>
     <detail-button :item="goodsOne"></detail-button>
   </div>
 </template>
@@ -60,7 +61,7 @@ export default {
       this.$api.goodOne(this.$route.query.id).then(res => {
         if (res.code === 200) {
           this.goodsOne = res.goods.goodsOne;
-          this.comment=res.goods.comment
+          this.comment=res.goods.comment.reverse()
           console.log(this.comment);
         }
       });
@@ -95,6 +96,9 @@ export default {
     color: rgb(182, 182, 182);
     background: rgba($color: #cecece, $alpha: 0.5);
   }
+}
+.title{
+  font-size: 16px;
 }
 .desc {
   padding: 20px;

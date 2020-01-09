@@ -86,6 +86,7 @@ export default {
 /deep/ .van-goods-action {
   height: 10vh;
   z-index: 1;
+  border-top:.1px solid rgb(235, 235, 235); 
 }
 .van-popup {
   overflow: initial;

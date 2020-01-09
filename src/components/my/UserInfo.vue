@@ -18,7 +18,7 @@
         />
       </div>
       <div v-if="!nickname" @click="$goto('/login')">登录/注册</div>
-      <div v-else>
+      <div v-else class="user">
         <div>欢迎您，{{nickname}}</div>
         <div @click="outline">退出登录</div>
       </div>
@@ -51,7 +51,7 @@
         <van-icon name="arrow" />
       </div>
     </div>
-    <div class="contorl-title" @click="$goto('/browse')">
+    <div class="contorl-title end" @click="$goto('/browse')">
       <van-icon name="tosend" />
       <div>最近浏览</div>
       <div>
@@ -89,8 +89,10 @@ export default {
         });
     },
     tobeEvaluated() {
+      this.$store.state.cancelLoad = true;
       this.$api.tobeEvaluated().then(res => {
         if (res.code === 200) {
+          this.$store.state.cancelLoad = false;
           this.$store.state.tobeEvaluated = res.data.list;
         }
       });
@@ -114,6 +116,9 @@ export default {
 </script>
 
 <style scoped lang='scss'>
+.user {
+  font-size: 16px;
+}
 .user-top {
   width: 100%;
   height: 200px;
@@ -133,7 +138,7 @@ export default {
   .icon {
     width: 70px;
     height: 70px;
-    border-radius: 50%
+    border-radius: 50%;
   }
 }
 .control {
@@ -165,5 +170,11 @@ export default {
     font-size: 14px;
     color: rgb(94, 94, 94);
   }
+}
+.van-icon {
+  font-size: 16px;
+}
+.end {
+  margin-bottom: 8vh;
 }
 </style>
