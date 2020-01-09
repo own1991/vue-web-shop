@@ -33,6 +33,7 @@ export default {
     //保存地址修改
     onSave(content) {
       //判断是修改还是添加
+      console.log(content);
       if (this.$route.params.item) {
         content.id = content._id;
       }
@@ -45,12 +46,6 @@ export default {
           }
         }
       });
-      //如果是修改了默认地址，更新一下列表
-      if (content.check) {
-        this.$api.setDefaultAddress(content._id).then(res => {
-          console.log(res);
-        });
-      }
       this.$router.go(-1);
     },
     //删除地址

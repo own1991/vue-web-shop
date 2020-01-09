@@ -213,3 +213,13 @@ hostname: Trayvon
 2020-01-09 08:11:35,103 INFO 9400 [egg-watcher] Start watching: "E:\\project\\shop\\server\\app.js"
 2020-01-09 08:11:35,104 INFO 9400 [egg-watcher:agent] watcher start success
 2020-01-09 08:11:35,143 INFO 9400 [egg:core] dump config after ready, 13ms
+2020-01-09 15:24:29,962 INFO 6360 [egg:logger] init all loggers with options: {"dir":"E:\\project\\finish\\shop\\server\\logs\\server","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"server-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"agent"}
+2020-01-09 15:24:29,970 INFO 6360 [egg:core] dump config after load, 5ms
+2020-01-09 15:24:30,029 INFO 6360 [egg-watcher] Start watching: ["E:\\project\\finish\\shop\\server\\app","E:\\project\\finish\\shop\\server\\config","E:\\project\\finish\\shop\\server\\mocks","E:\\project\\finish\\shop\\server\\mocks_proxy","E:\\project\\finish\\shop\\server\\app.js"]
+2020-01-09 15:24:30,029 INFO 6360 [egg-watcher] Start watching: "E:\\project\\finish\\shop\\server\\app"
+2020-01-09 15:24:30,030 INFO 6360 [egg-watcher] Start watching: "E:\\project\\finish\\shop\\server\\config"
+2020-01-09 15:24:30,030 INFO 6360 [egg-watcher] Start watching: "E:\\project\\finish\\shop\\server\\mocks"
+2020-01-09 15:24:30,030 INFO 6360 [egg-watcher] Start watching: "E:\\project\\finish\\shop\\server\\mocks_proxy"
+2020-01-09 15:24:30,031 INFO 6360 [egg-watcher] Start watching: "E:\\project\\finish\\shop\\server\\app.js"
+2020-01-09 15:24:30,031 INFO 6360 [egg-watcher:agent] watcher start success
+2020-01-09 15:24:30,064 INFO 6360 [egg:core] dump config after ready, 14ms
