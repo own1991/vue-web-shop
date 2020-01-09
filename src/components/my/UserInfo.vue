@@ -6,10 +6,15 @@
     </global-top>
     <div class="user-top">
       <div>
-        <van-icon v-if="nickname" name="setting" class="setting" @click="$parent.flag=true" />
+        <van-icon
+          v-if="!nickname==='guest'"
+          name="setting"
+          class="setting"
+          @click="$parent.flag=true"
+        />
       </div>
       <div>
-        <img v-if="!nickname" src="../../assets/icon.svg" alt class="icon" />
+        <img v-if="nickname==='guest'" src="../../assets/icon.svg" alt class="icon" />
         <img
           v-else
           src="http://img4.imgtn.bdimg.com/it/u=198369807,133263955&fm=27&gp=0.jpg"
@@ -17,7 +22,7 @@
           class="icon"
         />
       </div>
-      <div v-if="!nickname" @click="$goto('/login')">登录/注册</div>
+      <div v-if="nickname==='guest'" @click="$goto('/login')">登录/注册</div>
       <div v-else class="user">
         <div>欢迎您，{{nickname}}</div>
         <div @click="outline">退出登录</div>
@@ -76,8 +81,9 @@ export default {
         .loginOut()
         .then(res => {
           if (res.code === 0) {
-            this.$store.state.nickname = "";
+            this.$store.state.nickname = "guest";
             localStorage.removeItem("nickname");
+            this.$store.state.history = [];
             this.$toast("退出成功");
             this.$router.go(0);
           } else {

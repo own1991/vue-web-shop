@@ -37,15 +37,17 @@ export default {
       goodsOne: {},
       active: 0,
       flag: false,
-      comment:[]
+      comment: []
     };
   },
   beforeRouteLeave(to, from, next) {
     if (
-      !this.$store.state.browseList.some(item => item.id === this.goodsOne.id)
-    ) {
-      this.$store.commit("pushBrowseList", this.goodsOne);
-    }
+      !this.$store.state.browseList.some(
+        item => item.id === this.goodsOne.id
+      ) &&
+      this.$store.state.nickname !== "guest"
+    )
+      this.$store.state.browseList.unshift(this.goodsOne);
     next();
   },
   props: {},
@@ -61,11 +63,11 @@ export default {
       this.$api.goodOne(this.$route.query.id).then(res => {
         if (res.code === 200) {
           this.goodsOne = res.goods.goodsOne;
-          this.comment=res.goods.comment.reverse()
+          this.comment = res.goods.comment.reverse();
           console.log(this.comment);
         }
       });
-    },
+    }
   },
   mounted() {
     this.getgood();
@@ -97,7 +99,7 @@ export default {
     background: rgba($color: #cecece, $alpha: 0.5);
   }
 }
-.title{
+.title {
   font-size: 16px;
 }
 .desc {

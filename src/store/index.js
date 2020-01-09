@@ -5,28 +5,34 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
     state: {
-        keywords: [],
-        browseList: [],
+        //选中的城市
         city: '',
+        //定位的城市
         currentCity: '',
-        nickname: '',
+        //用户名
+        nickname: 'guest',
+        //关键字历史记录
+        history: [],
+        //浏览记录
+        browseList: [],
+        //购物车
         shopList: [],
+        //立即购买
         buyNow: {},
+        //地址
         address: '',
+        //计数
         Num: '',
+        //待评论
         tobeEvaluated: {},
+        //收货地址
         shippingAddress: {},
+        //加载ing
         loading: true,
+        //取消加载
         cancelLoad: false,
     },
-    mutations: {
-        pushKeywords(state, data) {
-            state.keywords.push(data)
-        },
-        pushBrowseList(state, data) {
-            state.browseList.push(data)
-        },
-    },
+    mutations: {},
     getters: {
         getSum: state => { //通过方法访问
             let add = 0;

@@ -18,8 +18,7 @@
 import goodsBox from "../../components/box/GoodsBox";
 export default {
   data() {
-    return {
-    };
+    return {};
   },
   props: {},
   components: {
@@ -34,7 +33,7 @@ export default {
           showCancelButton: true //展示取水按钮
         })
         .then(() => {
-          this.$store.state.browseList = this.$store.state.browseList.filter(
+          this.browseList = this.browseList.filter(
             item => item.id !== detail.id
           );
         })
@@ -43,7 +42,9 @@ export default {
         });
     }
   },
-  mounted() {},
+  mounted() {
+    this.$store.state.loading = false;
+  },
   watch: {},
   computed: {
     browseList() {
@@ -63,7 +64,7 @@ export default {
   width: 100%;
   height: 100%;
 }
-.wrapper{
+.wrapper {
   overflow: hidden;
   height: 94vh;
 }

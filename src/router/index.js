@@ -215,7 +215,7 @@ router.beforeEach((to, from, next) => {
     if (to.meta.title) {
         document.title = to.meta.title;
     }
-    let arr = ['my', 'home', 'category', 'shoppingCart', 'details', 'browse', 'city', 'login']
+    let arr = ['my', 'home', 'category', 'shoppingCart', 'details', 'city', 'login']
     if (!localStorage.getItem('nickname')) {
         if (arr.includes(to.name)) {
             next()

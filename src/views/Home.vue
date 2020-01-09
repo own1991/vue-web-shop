@@ -29,17 +29,30 @@ export default {
   props: {},
   components: {},
   methods: {
-    getnickname() {
-      console.log(111);
+    getLocalStorage() {
+      //获取nickname
       if (localStorage.getItem("nickname")) {
         this.$store.state.nickname = localStorage.getItem("nickname");
+      }
+      //获取history
+      if (
+        localStorage.getItem(`${this.$store.state.nickname}_history`) &&
+        localStorage.getItem("nickname")
+      ) {
+        console.log(111);
+        this.$store.state.history = JSON.parse(
+          localStorage.getItem(`${this.$store.state.nickname}_history`)
+        );
       }
     }
   },
   mounted() {
-    this.getnickname();
+    this.getLocalStorage();
     this.$store.dispatch("getShopList");
     this.active = this.$route.name;
+  },
+  updated() {
+    this.getLocalStorage();
   },
   watch: {
     $route(val) {
@@ -57,6 +70,6 @@ export default {
 <style scoped lang='scss'>
 .van-tabbar {
   height: 8vh;
-  z-index: 101!important;
+  z-index: 101 !important;
 }
 </style>

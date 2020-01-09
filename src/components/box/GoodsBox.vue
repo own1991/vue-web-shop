@@ -23,7 +23,7 @@ import util from "../../js/util.js";
 export default {
   data() {
     return {
-      nickname:'guest'
+      nickname: "guest"
     };
   },
   props: {
@@ -43,25 +43,14 @@ export default {
       if (item.cid) {
         item.id = item.cid;
       }
-      if (this.$store.state.nickname) {
-        this.nickname = this.$store.state.nickname;
+      //保存history
+      if (!this.$store.state.history.includes(this.keyword)) {
+        this.$store.state.history.unshift(this.keyword);
+        localStorage.setItem(
+          `${this.$store.state.nickname}_history`,
+          JSON.stringify(this.$store.state.history)
+        );
       }
-      console.log(this.nickname);
-      // if (localStorage.getItem(`${nickname}_history`)) {
-      //   let history = JSON.parse(localStorage.getItem(`${nickname}_history`));
-      //   if (!history.includes(this.keyword)) {
-      //     localStorage.setItem(
-      //       `${nickname}_history`,
-      //       JSON.stringify(history.unshift(this.keyword))
-      //     );
-      //   }
-      // } else {
-      localStorage.setItem(
-        `${this.nickname}_history`,
-        JSON.stringify([this.keyword])
-      );
-      // }
-
       //跳转
       this.$router.push({ name: "details", query: { id: item.id } });
     }

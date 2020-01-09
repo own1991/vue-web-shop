@@ -3,8 +3,8 @@
     <global-top>
       <div slot="title">我的收藏</div>
     </global-top>
-    <better-scroll class="wrapper" :loaded="loaded" v-if="browseList.length>0">
-      <goods-box v-for="item in browseList" :key="item.id" :item="item">
+    <better-scroll class="wrapper" :loaded="loaded" v-if="Collection.length>0">
+      <goods-box v-for="item in Collection" :key="item.id" :item="item">
         <div slot="close">
           <van-icon @click="del(item)" name="delete" />
         </div>
@@ -19,7 +19,7 @@ import goodsBox from "../../components/box/GoodsBox";
 export default {
   data() {
     return {
-      browseList: [],
+      Collection: [],
       loaded: false
     };
   },
@@ -37,25 +37,25 @@ export default {
         })
         .then(() => {
           this.$api.cancelCollection(item.cid).then(res => {
-            this.getbrowseList();
+            this.getCollection();
           });
         })
         .catch(() => {
           this.$toast("取消删除");
         });
     },
-    getbrowseList() {
+    getCollection() {
       this.loaded = false;
       this.$api.getCollection().then(res => {
         if (res.code === 200) {
           this.loaded = true;
-          this.browseList = res.data.list;
+          this.Collection = res.data.list;
         }
       });
     }
   },
   mounted() {
-    this.getbrowseList();
+    this.getCollection();
   },
   watch: {},
   computed: {}
@@ -72,7 +72,7 @@ export default {
   overflow: hidden;
   height: 94vh;
 }
-.van-icon{
+.van-icon {
   font-size: 16px;
 }
 </style>

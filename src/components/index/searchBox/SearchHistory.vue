@@ -31,7 +31,8 @@ export default {
           showCancelButton: true //展示取水按钮
         })
         .then(() => {
-          localStorage.removeItem("history");
+          this.$store.state.history = [];
+          localStorage.removeItem(`${this.$store.state.nickname}_history`);
         })
         .catch(() => {
           this.$toast("取消删除");
@@ -45,11 +46,7 @@ export default {
   watch: {},
   computed: {
     keywords() {
-      if (localStorage.getItem("history")) {
-        return localStorage.getItem("history");
-      } else {
-        return [];
-      }
+      return this.$store.state.history;
     }
   }
 };
