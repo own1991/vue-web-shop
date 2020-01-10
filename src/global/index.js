@@ -36,7 +36,7 @@ Vue.prototype.$addShop = function(item) {
 }
 
 //封装组件
-import betterScroll from "../components/slot/BetterScroll";
-import Top from '../components/slot/GlobalTop'
+import betterScroll from "../components/common/BetterScroll";
+import Top from '../components/common/GlobalTop'
 Vue.component('globalTop', Top)
 Vue.component('betterScroll', betterScroll)

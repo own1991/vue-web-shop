@@ -4,7 +4,12 @@
     <index-top />
     <!-- better-scroll组件 -->
     <div style="overflow:hidden">
-      <better-scroll class="wrapper" @incident="getData" :pullDownloaded="flag" :pullDown="true">
+      <better-scroll
+        class="wrapper"
+        @incident="getData"
+        :pullDownloaded="pullDownloaded"
+        :pullDown="true"
+      >
         <div>
           <!-- 轮播图组件 -->
           <index-slides :slidesData="Data.slides" class="slides" />
@@ -42,7 +47,7 @@ export default {
       advertesPicture: null,
       isLoading: false,
       floorName: {},
-      flag: false
+      pullDownloaded: false
     };
   },
   props: {},
@@ -56,9 +61,10 @@ export default {
   },
   methods: {
     getData() {
+      this.pullDownloaded = false;
       this.$api.getRecommend().then(res => {
         if ((res.code = 200)) {
-          this.flag = true;
+          this.pullDownloaded = true;
           this.Data = res.data;
           this.advertesPicture = res.data.advertesPicture.PICTURE_ADDRESS;
           this.floorName = res.data.floorName;
@@ -95,6 +101,9 @@ export default {
     margin: 10px 10px;
     width: 355px;
   }
+}
+.recommend {
+  height: 220px;
 }
 .wrapper {
   margin-top: 5vh;

@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container-rate">
     <global-top>
       <div slot="title">评价中心</div>
     </global-top>
@@ -91,7 +91,7 @@ export default {
 </script>
 
 <style scoped lang='scss'>
-.container {
+.container-rate {
   overflow: hidden;
 }
 .goodinfo {
@@ -117,7 +117,7 @@ export default {
   background: rgb(236, 236, 236);
   border: none;
 }
-.check-box{
+.check-box {
   font-size: 16px;
 }
 .btn-box {

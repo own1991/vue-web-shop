@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container-goods">
     <div class="close">
       <slot name="close"></slot>
     </div>
@@ -66,7 +66,7 @@ export default {
 </script>
 
 <style scoped lang='scss'>
-.container {
+.container-goods {
   position: relative;
 }
 .box {

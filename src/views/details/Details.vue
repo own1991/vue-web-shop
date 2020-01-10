@@ -21,7 +21,7 @@
             :pullUp="true"
             :Uploaded="Uploaded"
             :loadedAll="Uploaded"
-            @pullingUp="getgood"
+            @pullingUp="loadmore"
           >
             <detail-comm v-for="item in comment" :key="item.id" :item="item" />
           </better-scroll>
@@ -69,19 +69,28 @@ export default {
     detailComm
   },
   methods: {
+    //获取当前页面数据
     getgood() {
-      this.Uploaded = false;
       this.$api.goodOne(this.$route.query.id, this.page).then(res => {
         if (res.code === 200) {
+          this.goodsOne = res.goods.goodsOne;
+          this.comment.push(...res.goods.comment);
+        }
+      });
+    },
+    //加载更多时的数据
+    loadmore() {
+      this.Uploaded = false;
+      this.$store.state.cancelLoad = true;
+      this.$api.goodOne(this.$route.query.id, this.page + 1).then(res => {
+        if (res.code === 200) {
           if (res.goods.count > this.comment.length) {
-            if (this.page === 1) {
-              this.goodsOne = res.goods.goodsOne;
-            }
             this.comment.push(...res.goods.comment);
             this.page++;
           } else {
             this.loadedAll = true;
           }
+          this.$store.state.cancelLoad = false;
           this.Uploaded = true;
         }
       });

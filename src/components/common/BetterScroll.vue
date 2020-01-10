@@ -1,6 +1,6 @@
 <template>
   <div ref="wrapper">
-    <div class="container">
+    <div :class="{container:scrollX}">
       <!-- 下拉刷新 -->
       <div v-if="pullDown">
         <div v-show="beforePullDown" class="before">下拉刷新</div>
@@ -59,6 +59,26 @@ export default {
     loadedAll: {
       type: Boolean,
       default: false
+    },
+    //其他绑定项
+    //绑定的dom元素名称
+    className: {
+      type: String,
+      default: ".wrapper"
+    },
+    //纵向滑动
+    scrollY: {
+      type: Boolean,
+      default: true
+    },
+    //横向滑动
+    scrollX: {
+      type: Boolean,
+      default: false
+    },
+    click: {
+      type: Boolean,
+      default: true
     }
   },
   data() {
@@ -81,9 +101,12 @@ export default {
         };
       }
       if (!this.bs) {
-        this.bs = new BScroll(".wrapper", {
-          click: true,
-          scrollY: true,
+        this.bs = new BScroll(this.className, {
+          startY: 0,
+          startX: 0,
+          click: this.click,
+          scrollY: this.scrollY,
+          scrollX: this.scrollX,
           bounceTime: 2000,
           pullDownRefresh: this.pullDown,
           probeType: 3,
@@ -96,18 +119,17 @@ export default {
       if (this.pullDown) {
         this.bs.on("pullingDown", () => {
           this.$store.state.cancelLoad = true;
-          this.$parent.flag = false;
           this.beforePullDown = false;
-          this.loading = true;
+          this.PullDownloading = true;
           setTimeout(() => {
             this.$emit("incident");
           }, 800);
         });
-        this.bs.on("scroll", x => {
-          if (x === 0) {
-            this.bs.finishPullDown();
-          }
-        });
+        // this.bs.on("scroll", x => {
+        //   if (x === 0) {
+        //     this.bs.finishPullDown();
+        //   }
+        // });
       }
       //添加上拉加载监听
       if (this.pullUp) {
@@ -132,6 +154,7 @@ export default {
         this.$store.state.cancelLoad = false;
         this.beforePullDown = true;
         this.$toast("刷新成功");
+        this.bs.scrollTo(0, 0);
         this.bs.refresh();
       }, 1500);
     },
@@ -139,14 +162,12 @@ export default {
     finishPullUp() {
       new Promise(resolve => {
         setTimeout(() => {
-          console.log(111);
           this.bs.finishPullUp();
           resolve();
         }, 600);
       });
       setTimeout(() => {
         this.$store.state.cancelLoad = false;
-        this.beforePullUp = true;
         this.bs.refresh();
       }, 1500);
     }
@@ -156,12 +177,16 @@ export default {
     //页面加载时，更新bs
     this.$nextTick(() => {
       this.init();
+      this.bs.scrollTo(0, 0);
     });
   },
   updated() {
     //页面组件更新时重置bs
     this.$nextTick(() => {
       this.bs.refresh();
+      if (!this.pullUp) {
+        this.bs.scrollTo(0, 0);
+      }
     });
   },
   watch: {
@@ -183,7 +208,7 @@ export default {
       }
     },
     Uploaded(val) {
-      if (val && this.pullUploading) {
+      if (val) {
         setTimeout(() => {
           this.beforePullUp = true;
           this.pullUploading = false;
@@ -197,6 +222,10 @@ export default {
 </script>
 
 <style lang='scss'>
+.container {
+  width: 2125px;
+  height: 190px;
+}
 .before {
   height: 3vh;
   text-align: center;

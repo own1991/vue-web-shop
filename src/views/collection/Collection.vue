@@ -53,6 +53,7 @@ export default {
           this.$toast("取消删除");
         });
     },
+    //获取收藏
     getCollection() {
       this.Uploaded = false;
       this.$store.state.cancelLoad = true;

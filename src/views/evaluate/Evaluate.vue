@@ -15,13 +15,24 @@
     </div>
     <div class="main" v-if="active==='tobe'">
       <div v-if="tobeList.length===0" class="empty-msg">暂无数据</div>
-      <bs class="wrapper1">
+
+      <!-- <better-scroll
+        v-if="active==='tobe'"
+        class="wrapper1"
+        :className="'.wrapper1'"
+        :Uploaded="Uploaded1"
+        @pullingUp="tobeEvaluated"
+      >-->
+      <div class="wrapper1">
         <evaluate-box v-for="item in tobeList" :key="item.id" :item="item" />
-      </bs>
+      </div>
+
+      <!-- </better-scroll> -->
     </div>
     <div class="main" v-if="active==='done'">
       <div v-if="doneList.length===0" class="empty-msg">暂无数据</div>
       <better-scroll
+        v-if="active==='done'"
         class="wrapper"
         :pullUp="true"
         :Uploaded="Uploaded"
@@ -40,7 +51,7 @@
 </template>
 
 <script>
-import bs from "../../components/slot/BetterScroll1";
+import BScroll from "@better-scroll/core";
 import evaluateBox from "../../components/evaluate/EvaluateBox";
 export default {
   data() {
@@ -48,25 +59,30 @@ export default {
       active: "tobe",
       tobeList: [],
       doneList: [],
-      tobeload: false,
       Uploaded: false,
       loadedAll: false,
+      Uploaded1: false,
       page: 1
     };
   },
   props: {},
   components: {
-    evaluateBox,
-    bs
+    evaluateBox
   },
   methods: {
+    init() {
+      this.bq = new BScroll(".wrapper1", {
+        click: true,
+        scrollY: true,
+        probeType: 3
+      });
+    },
     tobeEvaluated() {
-      this.tobeload = false;
+      this.Uploaded1 = false;
       this.$api.tobeEvaluated().then(res => {
         if (res.code === 200) {
           this.tobeList = res.data.list.reverse();
-          this.tobeload = true;
-          console.log(this.tobeList);
+          this.Uploaded1 = true;
         }
       });
     },
@@ -78,7 +94,8 @@ export default {
           if (res.data.count > this.doneList.length) {
             this.page++;
             this.doneList.push(...res.data.list);
-          } else {
+          } else if (res.data.count === this.doneList.length) {
+            this.Uploaded = true;
             this.loadedAll = true;
           }
           this.Uploaded = true;
@@ -124,11 +141,17 @@ export default {
   margin-top: 20px;
   font-size: 16px;
 }
-.wrapper,
+.wrapper {
+  width: 100%;
+  overflow: hidden;
+  position: absolute;
+  height: 58vh;
+}
 .wrapper1 {
   width: 100%;
   overflow: hidden;
   position: absolute;
   height: 58vh;
+  overflow-y: scroll;
 }
 </style>

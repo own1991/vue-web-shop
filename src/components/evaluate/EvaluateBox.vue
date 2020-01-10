@@ -1,6 +1,6 @@
 <template>
-  <div class="container"  @click="item.cid?$goto(item.cid):$goto(item.id)">
-    <div class="image"  >
+  <div class="container-each" @click="item.cid?$goto(item.cid):$goto(item.id)">
+    <div class="image">
       <img :src="item.image_path" alt />
     </div>
     <div class="name van-ellipsis">{{item.name}}</div>
@@ -20,7 +20,7 @@ export default {
     },
     _id: {
       type: String,
-      default: ''
+      default: ""
     }
   },
   data() {
@@ -46,7 +46,7 @@ export default {
 </script>
 
 <style scoped lang='scss'>
-.container {
+.container-each {
   margin: 0 15px;
   padding-top: 10px;
   border-bottom: 0.5px solid rgb(218, 216, 216);
@@ -75,7 +75,7 @@ export default {
       border: 1px solid red;
       color: red;
     }
-    .isComment{
+    .isComment {
       border: 1px solid gray;
       color: gray;
     }
