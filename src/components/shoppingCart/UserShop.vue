@@ -28,7 +28,7 @@
       <div class="detail">您的购物车还是空的</div>
       <div class="goto" @click="$goto('/')">去购物</div>
     </div>
-    <better-scroll class="wrapper">
+    <better-scroll v-if="flag" class="wrapper">
       <div class="goodsbox" v-for="item in $store.state.shopList" :key="item.id">
         <div class="checkbox">
           <van-checkbox v-model="item.check" checked-color="#07c160" @change="change"></van-checkbox>
