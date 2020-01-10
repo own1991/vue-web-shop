@@ -4,7 +4,7 @@
     <index-top />
     <!-- better-scroll组件 -->
     <div style="overflow:hidden">
-      <better-scroll class="wrapper" @incident="getData" :flag="flag" :pullDown="true">
+      <better-scroll class="wrapper" @incident="getData" :pullDownloaded="flag" :pullDown="true">
         <div>
           <!-- 轮播图组件 -->
           <index-slides :slidesData="Data.slides" class="slides" />

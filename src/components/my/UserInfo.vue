@@ -7,7 +7,7 @@
     <div class="user-top">
       <div>
         <van-icon
-          v-if="!nickname==='guest'"
+          v-if="nickname!=='guest'"
           name="setting"
           class="setting"
           @click="$parent.flag=true"

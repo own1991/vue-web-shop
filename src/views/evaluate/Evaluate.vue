@@ -15,13 +15,19 @@
     </div>
     <div class="main" v-if="active==='tobe'">
       <div v-if="tobeList.length===0" class="empty-msg">暂无数据</div>
-      <better-scroll class="wrapper" :loaded="tobeload">
-        <evaluate-box v-for="item in tobeList" :key="item.id" :item="item"/>
-      </better-scroll>
+      <bs class="wrapper1">
+        <evaluate-box v-for="item in tobeList" :key="item.id" :item="item" />
+      </bs>
     </div>
-    <div class="main" v-if="active==='done'" :loaded="loaded">
+    <div class="main" v-if="active==='done'">
       <div v-if="doneList.length===0" class="empty-msg">暂无数据</div>
-      <better-scroll class="wrapper">
+      <better-scroll
+        class="wrapper"
+        :pullUp="true"
+        :Uploaded="Uploaded"
+        :loadedAll="loadedAll"
+        @pullingUp="alreadyEvaluated"
+      >
         <evaluate-box
           v-for="item in doneList"
           :key="item.id"
@@ -34,6 +40,7 @@
 </template>
 
 <script>
+import bs from "../../components/slot/BetterScroll1";
 import evaluateBox from "../../components/evaluate/EvaluateBox";
 export default {
   data() {
@@ -42,12 +49,15 @@ export default {
       tobeList: [],
       doneList: [],
       tobeload: false,
-      loaded: false
+      Uploaded: false,
+      loadedAll: false,
+      page: 1
     };
   },
   props: {},
   components: {
-    evaluateBox
+    evaluateBox,
+    bs
   },
   methods: {
     tobeEvaluated() {
@@ -61,13 +71,18 @@ export default {
       });
     },
     alreadyEvaluated() {
-      this.loaded = false;
-      this.$api.alreadyEvaluated().then(res => {
+      this.Uploaded = false;
+      this.$store.state.cancelLoad = true;
+      this.$api.alreadyEvaluated(this.page).then(res => {
         if (res.code === 200) {
-          this.loaded = true;
-          this.doneList = res.data.list;
-
-          console.log(this.doneList);
+          if (res.data.count > this.doneList.length) {
+            this.page++;
+            this.doneList.push(...res.data.list);
+          } else {
+            this.loadedAll = true;
+          }
+          this.Uploaded = true;
+          this.$store.state.cancelLoad = false;
         }
       });
     },
@@ -109,7 +124,8 @@ export default {
   margin-top: 20px;
   font-size: 16px;
 }
-.wrapper {
+.wrapper,
+.wrapper1 {
   width: 100%;
   overflow: hidden;
   position: absolute;

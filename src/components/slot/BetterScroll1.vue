@@ -81,7 +81,7 @@ export default {
         };
       }
       if (!this.bs) {
-        this.bs = new BScroll(".wrapper", {
+        this.bs = new BScroll(".wrapper1", {
           click: true,
           scrollY: true,
           bounceTime: 2000,

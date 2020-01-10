@@ -16,7 +16,15 @@
       <van-tab title="用户评论" class="desc">
         <div v-if="comment.length===0" class="title">暂无评论</div>
         <div v-else>
-          <detail-comm v-for="item in comment" :key="item.id" :item="item" />
+          <better-scroll
+            class="wrapper"
+            :pullUp="true"
+            :Uploaded="Uploaded"
+            :loadedAll="Uploaded"
+            @pullingUp="getgood"
+          >
+            <detail-comm v-for="item in comment" :key="item.id" :item="item" />
+          </better-scroll>
         </div>
       </van-tab>
     </van-tabs>
@@ -37,7 +45,10 @@ export default {
       goodsOne: {},
       active: 0,
       flag: false,
-      comment: []
+      comment: [],
+      page: 1,
+      Uploaded: false,
+      loadedAll: false
     };
   },
   beforeRouteLeave(to, from, next) {
@@ -59,12 +70,19 @@ export default {
   },
   methods: {
     getgood() {
-      console.log(this.$route.query.id);
-      this.$api.goodOne(this.$route.query.id).then(res => {
+      this.Uploaded = false;
+      this.$api.goodOne(this.$route.query.id, this.page).then(res => {
         if (res.code === 200) {
-          this.goodsOne = res.goods.goodsOne;
-          this.comment = res.goods.comment.reverse();
-          console.log(this.comment);
+          if (res.goods.count > this.comment.length) {
+            if (this.page === 1) {
+              this.goodsOne = res.goods.goodsOne;
+            }
+            this.comment.push(...res.goods.comment);
+            this.page++;
+          } else {
+            this.loadedAll = true;
+          }
+          this.Uploaded = true;
         }
       });
     }
@@ -103,8 +121,12 @@ export default {
   font-size: 16px;
 }
 .desc {
-  padding: 20px;
-  margin-bottom: 10vh;
+  height: 80vh;
+  padding: 10px 5px;
   text-align: center;
+}
+.wrapper {
+  overflow: hidden;
+  height: 80vh;
 }
 </style>

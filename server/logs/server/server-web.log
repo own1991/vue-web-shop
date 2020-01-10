@@ -1783,3 +1783,57 @@ hostname: Trayvon
 pid: 11628
 hostname: Trayvon
 
+2020-01-10 11:01:58,408 ERROR 9412 [-/127.0.0.1/-/17ms POST /v1/search] nodejs.MongoError: Skip value must be non-negative, but received: -20
+    at Connection.<anonymous> (E:\project\finish\shop\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\connection\pool.js:466:61)
+    at Connection.emit (events.js:210:5)
+    at processMessage (E:\project\finish\shop\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\connection\connection.js:384:10)
+    at Socket.<anonymous> (E:\project\finish\shop\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\connection\connection.js:553:15)
+    at Socket.emit (events.js:210:5)
+    at addChunk (_stream_readable.js:326:12)
+    at readableAddChunk (_stream_readable.js:301:11)
+    at Socket.Readable.push (_stream_readable.js:235:10)
+    at TCP.onStreamRead (internal/stream_base_commons.js:182:23)
+ok: 0
+errmsg: "Skip value must be non-negative, but received: -20"
+code: 2
+codeName: "BadValue"
+name: "MongoError"
+pid: 9412
+hostname: STU008
+
+2020-01-10 11:02:12,604 ERROR 9412 [-/127.0.0.1/-/8ms POST /v1/search] nodejs.MongoError: Skip value must be non-negative, but received: -20
+    at Connection.<anonymous> (E:\project\finish\shop\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\connection\pool.js:466:61)
+    at Connection.emit (events.js:210:5)
+    at processMessage (E:\project\finish\shop\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\connection\connection.js:384:10)
+    at Socket.<anonymous> (E:\project\finish\shop\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\connection\connection.js:553:15)
+    at Socket.emit (events.js:210:5)
+    at addChunk (_stream_readable.js:326:12)
+    at readableAddChunk (_stream_readable.js:301:11)
+    at Socket.Readable.push (_stream_readable.js:235:10)
+    at TCP.onStreamRead (internal/stream_base_commons.js:182:23)
+ok: 0
+errmsg: "Skip value must be non-negative, but received: -20"
+code: 2
+codeName: "BadValue"
+name: "MongoError"
+pid: 9412
+hostname: STU008
+
+2020-01-10 11:02:22,990 ERROR 9412 [-/127.0.0.1/-/3ms POST /v1/search] nodejs.MongoError: Skip value must be non-negative, but received: -20
+    at Connection.<anonymous> (E:\project\finish\shop\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\connection\pool.js:466:61)
+    at Connection.emit (events.js:210:5)
+    at processMessage (E:\project\finish\shop\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\connection\connection.js:384:10)
+    at Socket.<anonymous> (E:\project\finish\shop\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\connection\connection.js:553:15)
+    at Socket.emit (events.js:210:5)
+    at addChunk (_stream_readable.js:326:12)
+    at readableAddChunk (_stream_readable.js:301:11)
+    at Socket.Readable.push (_stream_readable.js:235:10)
+    at TCP.onStreamRead (internal/stream_base_commons.js:182:23)
+ok: 0
+errmsg: "Skip value must be non-negative, but received: -20"
+code: 2
+codeName: "BadValue"
+name: "MongoError"
+pid: 9412
+hostname: STU008
+

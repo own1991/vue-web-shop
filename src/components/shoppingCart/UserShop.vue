@@ -28,7 +28,7 @@
       <div class="detail">您的购物车还是空的</div>
       <div class="goto" @click="$goto('/')">去购物</div>
     </div>
-    <better-scroll v-if="flag" class="wrapper">
+    <better-scroll v-if="shopList.length>0" class="wrapper">
       <div class="goodsbox" v-for="item in $store.state.shopList" :key="item.id">
         <div class="checkbox">
           <van-checkbox v-model="item.check" checked-color="#07c160" @change="change"></van-checkbox>
@@ -39,7 +39,7 @@
         <div class="desc">
           <div class="title van-ellipsis" @click="$goto(item.cid)">{{item.name}}</div>
           <div class="price">￥{{item.mallPrice}}</div>
-          <van-stepper class="stepper" v-model="item.count" @click.stop="onChange(item)" />
+          <van-stepper class="stepper" v-model="item.count" @change="onChange(item)" />
         </div>
       </div>
     </better-scroll>
@@ -102,6 +102,7 @@ export default {
     },
     // 修改商品数量
     onChange(val) {
+      console.log(1);
       this.$api.editCart(val.count, val.cid, val.mallPrice).then(res => {
         if (res.code === 200) {
           this.$store.dispatch("getShopList");

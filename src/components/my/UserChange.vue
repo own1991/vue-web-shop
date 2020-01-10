@@ -85,10 +85,10 @@ export default {
           this.userInfo = res.userInfo;
           this.currentDate = new Date(
             this.userInfo.year,
-            this.userInfo.month-1,
+            this.userInfo.month - 1,
             this.userInfo.day
           );
-          console.log( this.userInfo);
+          console.log(this.userInfo);
         }
       });
     },

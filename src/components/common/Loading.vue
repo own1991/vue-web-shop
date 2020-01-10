@@ -43,6 +43,7 @@ img {
   width: 375px;
 }
 .loading {
+  z-index: 105;
   position: absolute;
   top: 40%;
   left: 50%;

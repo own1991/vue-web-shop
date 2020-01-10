@@ -1,5 +1,4 @@
 import service from './index'
-import axios from 'axios'
 // 所有接口的api封装
 export default {
     /**
@@ -162,8 +161,10 @@ export default {
         })
     },
 
-    getCollection() {
-        return service.req('/collection/list?page=1')
+    getCollection(page = 1) {
+        return service.get(`/collection/list`, {
+            params: { page }
+        })
     },
 
     register(nickname, password, verify, sms) {
@@ -194,11 +195,15 @@ export default {
     },
 
     alreadyEvaluated(page = 1) {
-        return service.req(`/alreadyEvaluated?page=1`)
+        return service.get('/alreadyEvaluated', {
+            params: { page }
+        })
     },
 
     tobeEvaluated(page = 1) {
-        return service.req('/tobeEvaluated?page=1')
+        return service.get('/tobeEvaluated', {
+            params: { page }
+        })
     },
 
     evaluateOne(_id) {

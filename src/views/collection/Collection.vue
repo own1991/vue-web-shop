@@ -3,8 +3,15 @@
     <global-top>
       <div slot="title">我的收藏</div>
     </global-top>
-    <better-scroll class="wrapper" :loaded="loaded" v-if="Collection.length>0">
-      <goods-box v-for="item in Collection" :key="item.id" :item="item">
+    <better-scroll
+      class="wrapper"
+      :pullUp="true"
+      :Uploaded="Uploaded"
+      :loadedAll="loadedAll"
+      @pullingUp="getCollection"
+      v-if="Collections.length>0"
+    >
+      <goods-box v-for="item in Collections" :key="item.id" :item="item">
         <div slot="close">
           <van-icon @click="del(item)" name="delete" />
         </div>
@@ -19,8 +26,10 @@ import goodsBox from "../../components/box/GoodsBox";
 export default {
   data() {
     return {
-      Collection: [],
-      loaded: false
+      Collections: [],
+      Uploaded: false,
+      loadedAll: false,
+      page: 1
     };
   },
   props: {},
@@ -45,11 +54,18 @@ export default {
         });
     },
     getCollection() {
-      this.loaded = false;
-      this.$api.getCollection().then(res => {
+      this.Uploaded = false;
+      this.$store.state.cancelLoad = true;
+      this.$api.getCollection(this.page).then(res => {
         if (res.code === 200) {
-          this.loaded = true;
-          this.Collection = res.data.list;
+          if (res.data.count > this.Collections.length) {
+            this.page++;
+            this.Collections.push(...res.data.list);
+          } else {
+            this.loadedAll = true;
+          }
+          this.Uploaded = true;
+          this.$store.state.cancelLoad = false;
         }
       });
     }

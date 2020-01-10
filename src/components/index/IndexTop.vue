@@ -138,7 +138,7 @@ export default {
   width: 100%;
   height: 93vh;
   background: white;
-  z-index: 9;
+  z-index: 103;
 }
 
 .fade-enter,

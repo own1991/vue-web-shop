@@ -1,13 +1,14 @@
 <template>
   <div>
-    <better-scroll class="wrapper">
+    <better-scroll
+      class="wrapper"
+      :pullUp="true"
+      @pullingUp="getdata"
+      :Uploaded="Uploaded"
+      :loadedAll="loadedAll"
+    >
       <div>
-        <goods-box
-          v-for="item in dataList"
-          :key="item.id"
-          :item="item"
-          :keyword="keyword"
-        >
+        <goods-box v-for="item in dataList" :key="item.id" :item="item" :keyword="keyword">
           <div slot="del"></div>
         </goods-box>
       </div>
@@ -26,18 +27,28 @@ export default {
   },
   data() {
     return {
-      dataList: []
+      dataList: [],
+      page: 1,
+      length: "",
+      Uploaded: false,
+      loadedAll: false
     };
   },
   components: {
     goodsBox
   },
   methods: {
-    
     getdata() {
-      this.$api.search(this.keyword, 1).then(res => {
+      this.Uploaded = false;
+      this.$api.search(this.keyword, this.page).then(res => {
         if (res.code === 200) {
-          this.dataList = res.data.list;
+          if (res.data.count > this.dataList.length) {
+            this.page++;
+            this.dataList.push(...res.data.list);
+          } else {
+            this.loadedAll = true;
+          }
+          this.Uploaded = true;
         }
       });
     }
