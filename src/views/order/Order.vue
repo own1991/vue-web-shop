@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container-order">
     <global-top>
       <div slot="back">
         <van-icon name="arrow-left" @click="$router.push('/my')" />
@@ -28,7 +28,7 @@
           </div>
 
           <van-card
-           @click="$goto(item.cid)"
+            @click="$goto(item.cid)"
             v-for="item in detail.order_list"
             :key="item.id"
             :num="item.count"
@@ -53,7 +53,7 @@
 export default {
   data() {
     return {
-      active: '',
+      active: "",
       list: [],
       loaded: false
     };
@@ -94,7 +94,7 @@ export default {
 </script>
 
 <style scoped lang='scss'>
-.container {
+.container-order {
   background: rgb(236, 236, 236);
 }
 .coming-soon {
