@@ -32,7 +32,7 @@ export default {
         })
         .then(() => {
           this.$store.state.history = [];
-          localStorage.removeItem(`${this.$store.state.nickname}_history`);
+          localStorage.removeItem(`${localStorage.getItem('nickname')}_history`);
         })
         .catch(() => {
           this.$toast("取消删除");

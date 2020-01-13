@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container-aev">
     <global-top>
       <div slot="title">评价中心</div>
     </global-top>
@@ -59,7 +59,7 @@ export default {
 </script>
 
 <style scoped lang='scss'>
-.container {
+.container-aev {
   width: 100%;
 }
 .header {

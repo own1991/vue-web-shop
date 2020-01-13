@@ -147,6 +147,9 @@ export default {
   position: absolute;
   height: 58vh;
 }
+::-webkit-scrollbar {
+  display: none;
+}
 .wrapper1 {
   width: 100%;
   overflow: hidden;

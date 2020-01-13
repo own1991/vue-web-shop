@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container-detailOn">
     <div class="title">￥{{item.name}}</div>
     <div class="price">￥{{item.present_price}}</div>
     <div class="desc">
@@ -100,7 +100,7 @@ export default {
 </script>
 
 <style scoped lang='scss'>
-.container {
+.container-detailOn {
   background: white;
 }
 .title {

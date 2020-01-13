@@ -66,7 +66,11 @@ export default {
       //默认地址和选中地址判断
     },
     //设置地址
-    setAddress() {}
+    setAddress() {
+      if (this.$store.state.jump) {
+        this.$router.go(-1);
+      }
+    }
   },
   mounted() {
     this.$store.state.shippingAddress = {};
@@ -80,7 +84,20 @@ export default {
       )[0];
     }
   },
-  computed: {}
+  computed: {},
+  beforeRouteEnter(to, from, next) {
+    if (from.name === "shoppingPayMent") {
+      next(vm => {
+        vm.$store.state.jump = true;
+      });
+    } else if (from.name === "my") {
+      next(vm => {
+        vm.$store.state.jump = false;
+      });
+    } else {
+      next();
+    }
+  }
 };
 </script>
 

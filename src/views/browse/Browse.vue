@@ -33,8 +33,12 @@ export default {
           showCancelButton: true //展示取水按钮
         })
         .then(() => {
-          this.browseList = this.browseList.filter(
+          this.$store.state.browseList = this.browseList.filter(
             item => item.id !== detail.id
+          );
+          localStorage.setItem(
+            `${localStorage.getItem("nickname")}_browse`,
+            JSON.stringify(this.$store.state.browseList)
           );
         })
         .catch(() => {
@@ -43,6 +47,11 @@ export default {
     }
   },
   mounted() {
+    if (localStorage.getItem(`${localStorage.getItem("nickname")}_browse`)) {
+      this.$store.state.browseList = JSON.parse(
+        localStorage.getItem(`${localStorage.getItem("nickname")}_browse`)
+      );
+    }
     this.$store.state.loading = false;
   },
   watch: {},

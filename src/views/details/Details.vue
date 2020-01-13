@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container-detail">
     <!-- 返回按钮 -->
     <div class="back" @click="$router.go(-1)">
       <van-icon name="arrow-left" />
@@ -59,6 +59,10 @@ export default {
       this.$store.state.nickname !== "guest"
     )
       this.$store.state.browseList.unshift(this.goodsOne);
+    localStorage.setItem(
+      `${this.$store.state.nickname}_browse`,
+      JSON.stringify(this.$store.state.browseList)
+    );
     next();
   },
   props: {},
@@ -73,6 +77,11 @@ export default {
     getgood() {
       this.$api.goodOne(this.$route.query.id, this.page).then(res => {
         if (res.code === 200) {
+          if (!res.goods.goodsOne) {
+            console.log(11);
+            this.$toast("该商品不存在");
+            this.$router.push("/");
+          }
           this.goodsOne = res.goods.goodsOne;
           this.comment.push(...res.goods.comment);
         }
@@ -105,8 +114,8 @@ export default {
 </script>
 
 <style scoped lang='scss'>
-.container {
-  width: 100%;
+.container-detail {
+  width: 375px;
   background: white;
   position: relative;
 }

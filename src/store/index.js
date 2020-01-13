@@ -31,6 +31,7 @@ export default new Vuex.Store({
         loading: true,
         //取消加载
         cancelLoad: false,
+        jump: false,
     },
     mutations: {},
     getters: {

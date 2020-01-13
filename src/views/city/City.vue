@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container-city">
     <global-top>
       <div slot="title">城市列表</div>
     </global-top>

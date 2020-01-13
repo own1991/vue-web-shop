@@ -44,6 +44,7 @@ export default {
           localStorage.getItem(`${this.$store.state.nickname}_history`)
         );
       }
+     
     }
   },
   mounted() {

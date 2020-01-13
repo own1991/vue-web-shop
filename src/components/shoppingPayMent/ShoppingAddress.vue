@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container-add">
     <div class="adress-box" v-if="!defaultAddress.name">
       <div class="add" @click="$goto('/address')">点击添加收货地址</div>
     </div>
@@ -53,7 +53,7 @@ export default {
 </script>
 
 <style scoped lang='scss'>
-.container {
+.container-add {
   height: 15vh;
 }
 .adress-box {

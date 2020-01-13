@@ -1,6 +1,6 @@
 <template>
   <div class="usershop">
-    <div class="container" v-if="shopList.length>0">
+    <div class="container-shop" v-if="shopList.length>0">
       <div class="checkbox">
         <van-checkbox
           v-model="checked"
@@ -140,7 +140,7 @@ export default {
 </script>
 
 <style scoped lang='scss'>
-.container {
+.container-shop {
   position: relative;
   height: 13vh;
   padding: 1vh 0;

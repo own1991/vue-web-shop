@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container-login">
     <div class="back" @click="$router.go(-1)">
       <van-icon name="arrow-left" />
     </div>
@@ -74,6 +74,8 @@ export default {
           if (res.code === 200) {
             localStorage.setItem("nickname", this.nickname);
             this.$store.state.nickname = this.nickname;
+            this.$store.state.history = [];
+            this.$store.state.browseList = [];
             history.back();
             this.$toast("登录成功");
           } else {
@@ -91,6 +93,8 @@ export default {
           if (res.code === 200) {
             localStorage.setItem("nickname", this.nickname);
             this.$store.state.nickname = this.nickname;
+            this.$store.state.history = [];
+            this.$store.state.browseList = [];
             history.back();
             this.$toast("注册成功");
           } else {
@@ -124,7 +128,7 @@ export default {
 </script>
 
 <style scoped lang='scss'>
-.container {
+.container-login {
   background: url("../../assets/login.jpg");
   width: 100%;
   height: 100vh;

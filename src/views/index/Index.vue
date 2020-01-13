@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container-index">
     <!-- 顶部组件 -->
     <index-top />
     <!-- better-scroll组件 -->
@@ -81,7 +81,7 @@ export default {
 </script>
 
 <style scoped lang='scss'>
-.container {
+.container-index {
   width: 100%;
   .slides {
     height: 166px;
