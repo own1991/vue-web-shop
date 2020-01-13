@@ -52,14 +52,11 @@ export default new Vuex.Store({
     },
     actions: {
         getShopList({ state }) {
+            state.cancelLoad = true
             $api.getCard().then(res => {
                 if (res.code === 200) {
                     state.cancelLoad = false
-                    let num = 0;
-                    res.shopList.map(item => {
-                        num += item.count;
-                    });
-                    state.Num = num;
+                    state.Num = res.shopList.length;
                 }
             });
         }

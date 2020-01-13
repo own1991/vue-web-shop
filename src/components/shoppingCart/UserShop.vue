@@ -102,9 +102,10 @@ export default {
     },
     // 修改商品数量
     onChange(val) {
-      console.log(1);
+      this.$store.state.cancelLoad = true;
       this.$api.editCart(val.count, val.cid, val.mallPrice).then(res => {
         if (res.code === 200) {
+          this.$store.state.cancelLoad = false;
           this.$store.dispatch("getShopList");
         }
       });

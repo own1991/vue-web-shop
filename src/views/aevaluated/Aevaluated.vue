@@ -81,6 +81,7 @@ export default {
   display: flex;
   position: relative;
   .good-name {
+    width: 225px;
     line-height: 60px;
   }
   img {
