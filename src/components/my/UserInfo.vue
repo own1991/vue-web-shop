@@ -77,22 +77,31 @@ export default {
   components: {},
   methods: {
     outline() {
-      this.$api
-        .loginOut()
-        .then(res => {
-          if (res.code === 0) {
-            this.$store.state.nickname = "guest";
-            localStorage.removeItem("nickname");
-            this.$store.state.history = [];
-            this.$toast("退出成功");
-            this.$router.go(0);
-          } else {
-            this.$toast(res.msg);
-          }
+      this.$dialog
+        .alert({
+          title: "您是否要退出本商场", //加上标题
+          message: "本系统将保留您的浏览记录",
+          showCancelButton: true
         })
-        .catch(err => {
-          console.log(err);
-        });
+        .then(() => {
+          this.$api
+            .loginOut()
+            .then(res => {
+              if (res.code === 0) {
+                this.$store.state.nickname = "guest";
+                localStorage.removeItem("nickname");
+                this.$store.state.history = [];
+                this.$toast("退出成功");
+                this.$router.go(0);
+              } else {
+                this.$toast(res.msg);
+              }
+            })
+            .catch(err => {
+              console.log(err);
+            });
+        })
+        .catch(() => {});
     },
     tobeEvaluated() {
       this.$store.state.cancelLoad = true;
