@@ -29,7 +29,7 @@ export default {
       Collections: [],
       Uploaded: false,
       loadedAll: false,
-      page: 1
+      page: 2
     };
   },
   props: {},
@@ -46,7 +46,9 @@ export default {
         })
         .then(() => {
           this.$api.cancelCollection(item.cid).then(res => {
-            this.getCollection();
+            if(res.code===200){
+             this.Collections=this.Collections.filter(i=>item.cid!==i.cid)
+            }
           });
         })
         .catch(() => {
@@ -69,10 +71,17 @@ export default {
           this.$store.state.cancelLoad = false;
         }
       });
-    }
+    },
+    getDefault(){
+      this.$api.getCollection(1).then(res => {
+        if (res.code === 200) {
+            this.Collections=res.data.list;
+      }
+      });
+  }
   },
   mounted() {
-    this.getCollection();
+    this.getDefault();
   },
   watch: {},
   computed: {}

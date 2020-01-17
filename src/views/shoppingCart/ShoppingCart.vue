@@ -4,7 +4,7 @@
       <div slot="back"></div>
       <div slot="title">购物车</div>
     </global-top>
-    <guest-shop v-if="!nickname" />
+    <guest-shop v-if="nickname==='guest'" />
     <user-shop v-else />
   </div>
 </template>
@@ -24,7 +24,7 @@ export default {
   methods: {
     getCardData() {
       this.$api.getCard().then(res => {
-        res
+        res;
       });
     }
   },

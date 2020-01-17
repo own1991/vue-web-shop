@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container-guest">
     <img src="../../assets/order.gif" alt />
     <div class="desc">登录后才能查看订单</div>
     <van-button type="primary" class="btn" @click="$goto('/login')">请先登录</van-button>
@@ -23,7 +23,7 @@ export default {
 </script>
 
 <style scoped lang='scss'>
-.container{
+.container-guest{
     text-align: center;
     background: white;
     .desc{

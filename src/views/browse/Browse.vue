@@ -15,6 +15,7 @@
 </template>
 
 <script>
+
 import goodsBox from "../../components/box/GoodsBox";
 export default {
   data() {
@@ -24,6 +25,7 @@ export default {
   components: {
     goodsBox
   },
+  
   methods: {
     del(detail) {
       this.$dialog

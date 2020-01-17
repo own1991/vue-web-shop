@@ -28,7 +28,7 @@ export default {
   data() {
     return {
       dataList: [],
-      page: 1,
+      page: 2,
       length: "",
       Uploaded: false,
       loadedAll: false
@@ -38,6 +38,13 @@ export default {
     goodsBox
   },
   methods: {
+    getDefault(){
+        this.$api.search(this.keyword, 1).then(res => {
+        if (res.code === 200) {
+         this.dataList=res.data.list
+        }
+      });
+    },
     getdata() {
       this.Uploaded = false;
       this.$api.search(this.keyword, this.page).then(res => {
@@ -54,12 +61,12 @@ export default {
     }
   },
   mounted() {
-    this.getdata();
+    this.getDefault();
   },
   watch: {
     //   监听value值得变化
     keyword(val) {
-      this.getdata();
+      this.getDefault();
     }
   },
   computed: {}

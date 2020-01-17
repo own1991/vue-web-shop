@@ -31,7 +31,11 @@
       <van-cell>
         <div>
           性别
-          <input type="text" v-model="userInfo.gender" placeholder="请输入性别" />
+          <div class="gender">
+            <van-radio-group v-model="userInfo.gender">
+          <van-radio name="男">男</van-radio><van-radio name="女">女</van-radio><van-radio name="保密">保密</van-radio>
+        </van-radio-group>
+          </div>
         </div>
       </van-cell>
       <van-cell>
@@ -141,6 +145,12 @@ export default {
   background: white;
   z-index: 999;
 }
+.gender{
+  display:inline-block;
+}
+/deep/ .van-radio-group{
+  display: flex;
+}
 /deep/ .van-cell__value {
   padding: 0;
   display: flex;
@@ -159,7 +169,7 @@ export default {
   }
 }
 input,
-.date {
+.date,.gender {
   position: absolute;
   left: 60px;
   margin-left: 20px;
